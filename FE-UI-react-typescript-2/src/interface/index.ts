@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 export interface RouteDefinition {
   routes?: RouteDefinition[];
   element: any;
@@ -68,3 +70,11 @@ export interface RadioOption {
   value: string;
   label: string;
 }
+
+export type Props = {
+  children: ReactNode;
+};
+export type State = {
+  hasError: boolean;
+  error: Error | null;
+};

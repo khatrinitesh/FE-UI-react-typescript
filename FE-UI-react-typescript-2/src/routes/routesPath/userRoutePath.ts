@@ -1,4 +1,8 @@
 import type { RouteDefinition } from "../../interface";
+import AboutPageSection from "../../pages/aboutPageSection/AboutPageSection";
+import ContactPageSection from "../../pages/contactPageSection.tsx/ContactPageSection";
+import HomePageSection from "../../pages/homePageSection/HomePageSection";
+import ServicePageSection from "../../pages/servicePageSection/ServicePageSection";
 import NotFoundPageSection from "../../pages/notFoundPageSection/NotFoundPageSection";
 import { UserPath } from "../paths/userPath";
 
@@ -17,45 +21,21 @@ export const userRoutePath: RouteDefinition[] = [
     title: "Home Page Section",
   },
   {
-    path: UserPath.registerPath,
-    element: RegisterFormPageSection,
+    path: UserPath.aboutPath,
+    element: AboutPageSection,
     protected: false,
-    title: "Register Form Page Section",
+    title: "About Page Section",
   },
   {
-    path: UserPath.loginPath,
-    element: LoginPageSection,
+    path: UserPath.servicePath,
+    element: ServicePageSection,
     protected: false,
-    title: "Login Page Section",
+    title: "Service Page Section",
   },
   {
-    path: UserPath.resetPasswordPath,
-    element: ResetPasswordSection,
+    path: UserPath.contactPath,
+    element: ContactPageSection,
     protected: false,
-    title: "Reset Password Page Section",
-  },
-  {
-    path: UserPath.welcomePath,
-    element: LearningJourneyPageSection,
-    protected: true,
-    title: "Learning Journey Page Section",
-  },
-  {
-    path: UserPath.trainingCoursePath,
-    element: LearningJourneyCoursePageSection,
-    protected: true,
-    title: "Learning Journey Course PageSection",
-  },
-  {
-    path: UserPath.trainingCourseDetailJournalPath,
-    element: LearningJourneyCourseDetailPageSection,
-    protected: true,
-    title: "Learning Journey Course Detail PageSection",
-  },
-  {
-    path: UserPath.thankyouPath,
-    element: ThankYouPageSection,
-    protected: true,
-    title: "ThankYou Page Section",
+    title: "Contact Page Section",
   },
 ].concat(NotFoundRoute as any);
