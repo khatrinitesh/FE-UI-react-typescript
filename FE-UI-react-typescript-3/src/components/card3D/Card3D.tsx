@@ -1,4 +1,5 @@
 import useCardstore from "../../logicStore/zustand/cardStore/useCardstore";
+import "./card.css";
 
 const Card3D = () => {
   const { rotateX, rotateY, setRotation, resetRotation } = useCardstore();

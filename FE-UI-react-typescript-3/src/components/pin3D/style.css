@@ -1,0 +1,18 @@
+.pin-wrapper {
+  width: 150px;
+  height: 150px;
+  margin: 50px auto;
+  perspective: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pin {
+  font-size: 60px;
+  transition: transform 0.2s ease-out;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  user-select: none;
+  filter: drop-shadow(2px 5px 5px rgba(0, 0, 0, 0.3));
+}

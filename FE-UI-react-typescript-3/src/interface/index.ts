@@ -70,3 +70,28 @@ export interface CardActions {
   setRotation: (x: number, y: number) => void;
   resetRotation: () => void;
 }
+
+export interface PinState {
+  rotateX: number;
+  rotateY: number;
+}
+
+export interface PinActions {
+  setRotation: (x: number, y: number) => void;
+  resetRotation: () => void;
+}
+
+export interface AccordionState {
+  openItemId: string | null;
+  toggleItem: (id: string) => void;
+}
+
+export interface AccordionItemData {
+  id: string;
+  title: string;
+  content: string;
+}
+
+export interface AccordionProps {
+  items: AccordionItemData[];
+}
