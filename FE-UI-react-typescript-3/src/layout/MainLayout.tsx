@@ -1,12 +1,11 @@
 import FooterSection from "../components/footerSection/FooterSection";
 import HeaderSection from "../components/headerSection/HeaderSection";
-import { Outlet } from "react-router-dom";
 
-const MainLayout = () => {
+const MainLayout = ({ children }: MainLayoutProps) => {
   return (
-    <div className="appLayout w-full">
+    <div className="appLayout">
       <HeaderSection />
-      <div className="mainContent">{Outlet}</div>
+      <div className="mainContent">{children}</div>
       <FooterSection />
     </div>
   );

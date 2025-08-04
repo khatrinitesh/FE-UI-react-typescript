@@ -2,19 +2,27 @@ import { userRoutePath } from "./routesPath/userRoutePath";
 import { Route, Routes } from "react-router-dom";
 import { Suspense } from "react";
 import PreloaderSpinner from "../components/preloaderSpinner/PreloaderSpinner";
-import MainLayout from "../layout/MainLayout";
+import MainLayout from "./../layout/MainLayout";
 
-const RoutePath = () => {
+const RoutePath = ({
+  isFetching,
+  isLoading,
+}: {
+  isFetching: boolean;
+  isLoading: boolean;
+}) => {
+  if (isFetching || isLoading) return <PreloaderSpinner />;
+
   return (
-    <MainLayout>
-      <Suspense fallback={<PreloaderSpinner />}>
-        <Routes>
+    <Suspense fallback={<PreloaderSpinner />}>
+      <Routes>
+        <Route path="/" element={<MainLayout children={undefined} />}>
           {userRoutePath.map((route, i) => (
             <Route key={i} path={route.path} element={route.element} />
           ))}
-        </Routes>
-      </Suspense>
-    </MainLayout>
+        </Route>
+      </Routes>
+    </Suspense>
   );
 };
 

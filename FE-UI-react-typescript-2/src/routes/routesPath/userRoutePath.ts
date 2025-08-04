@@ -4,7 +4,7 @@ import ContactPageSection from "../../pages/contactPageSection.tsx/ContactPageSe
 import HomePageSection from "../../pages/homePageSection/HomePageSection";
 import ServicePageSection from "../../pages/servicePageSection/ServicePageSection";
 import NotFoundPageSection from "../../pages/notFoundPageSection/NotFoundPageSection";
-import { UserPath } from "../paths/userPath";
+import { UserPaths } from "../paths/userPath";
 
 export const NotFoundRoute: RouteDefinition = {
   path: "*",
@@ -15,25 +15,25 @@ export const NotFoundRoute: RouteDefinition = {
 
 export const userRoutePath: RouteDefinition[] = [
   {
-    path: UserPath.homePath,
+    path: UserPaths.homePath,
     element: HomePageSection,
     protected: false,
     title: "Home Page Section",
   },
   {
-    path: UserPath.aboutPath,
+    path: UserPaths.aboutPath,
     element: AboutPageSection,
     protected: false,
     title: "About Page Section",
   },
   {
-    path: UserPath.servicePath,
+    path: UserPaths.servicePath,
     element: ServicePageSection,
     protected: false,
     title: "Service Page Section",
   },
   {
-    path: UserPath.contactPath,
+    path: UserPaths.contactPath,
     element: ContactPageSection,
     protected: false,
     title: "Contact Page Section",

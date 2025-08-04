@@ -15,11 +15,7 @@ const NotFoundPageSection = () => {
       </p>
 
       <div>
-        <button
-          className=""
-          onClick={() => navigate(UserPath.homePath)}
-          label="Return Home"
-        />
+        <button className="" onClick={() => navigate(UserPath.homePath)} />
       </div>
     </div>
   );

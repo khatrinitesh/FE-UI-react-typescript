@@ -1,7 +1,7 @@
 import RoutePath from "./routes/RoutePath";
 
-function App() {
+const App = () => {
   return <RoutePath />;
-}
+};
 
 export default App;

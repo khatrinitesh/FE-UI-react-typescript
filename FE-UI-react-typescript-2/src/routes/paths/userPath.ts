@@ -1,4 +1,4 @@
-export enum UserPath {
+export enum UserPaths {
   homePath = "/",
   aboutPath = "/about",
   servicePath = "/service",

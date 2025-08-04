@@ -1,18 +1,10 @@
-import type { ReactNode } from "react";
+import type { ReactElement } from "react";
 
 export interface RouteDefinition {
-  element: any;
-  routes?: RouteDefinition[];
+  element: ReactElement;
   path: string;
-  protected?: boolean;
-  redirect?: any;
+  protection: boolean;
   title?: string;
-  requires?: any;
-  pathType?: number;
-}
-
-export interface MainLayoutProps {
-  children: React.ReactNode;
 }
 
 export interface ButtonProps {
@@ -30,9 +22,10 @@ export interface ButtonProps {
   className?: string;
   icon?: React.ReactNode;
   isLoading?: boolean;
+  children: React.ReactNode;
 }
 
-export interface InputProps {
+export interface FieldInputProps {
   type?: string;
   name?: string;
   id?: string;
@@ -45,36 +38,35 @@ export interface InputProps {
   className?: string;
 }
 
-export interface TextareaInputProps {
-  value?: string;
+export interface FieldTextAreaProps {
   placeholder?: string;
-  onChange?: (value: string) => void;
+  maxLength?: number;
+  id?: string;
+  name?: string;
+  disabled?: boolean;
+  readOnly?: boolean;
   rows?: number;
-  clearable?: boolean;
+  variant?: "default" | "outlined" | "underlined";
+  onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  className?: string;
 }
 
-export interface DropdownOption {
-  value: string;
-  label: string;
-  disabled?: boolean;
+export interface MainLayoutProps {
+  children: React.ReactNode;
 }
 
-export interface FieldDropdownProps {
-  name: string;
+export interface NavItem {
   id: string;
-  options: DropdownOption[];
-  disabled?: boolean;
-  placeholder: string;
-}
-export interface RadioOption {
-  value: string;
   label: string;
+  href: string;
 }
 
-export type Props = {
-  children: ReactNode;
-};
-export type State = {
-  hasError: boolean;
-  error: Error | null;
-};
+export interface CardState {
+  rotateX: number;
+  rotateY: number;
+}
+
+export interface CardActions {
+  setRotation: (x: number, y: number) => void;
+  resetRotation: () => void;
+}
