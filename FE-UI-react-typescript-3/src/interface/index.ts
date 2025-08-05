@@ -81,17 +81,8 @@ export interface PinActions {
   resetRotation: () => void;
 }
 
-export interface AccordionState {
-  openItemId: string | null;
-  toggleItem: (id: string) => void;
-}
-
-export interface AccordionItemData {
-  id: string;
+export interface AccordionItem {
+  id: number;
   title: string;
   content: string;
-}
-
-export interface AccordionProps {
-  items: AccordionItemData[];
 }

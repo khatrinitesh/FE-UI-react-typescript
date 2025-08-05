@@ -1,11 +1,14 @@
 import { create } from "zustand";
-import type { AccordionState } from "../../../interface";
 
-const useAccordionStore = create<AccordionState>((set) => ({
-    openItemId:null,
-    toggleItem:(id:string) => set((state) => ({
-        openItemId:state.openItemId === id ? null : id;
-    }))
-}))
+interface AccordionStore {
+  openItem: number | null;
+  toggleItem: (id: number) => void;
+}
 
+const useAccordionStore = create<AccordionStore>((set, get) => ({
+  openItem: null,
+  toggleItem: (id) => {
+    set({ openItem: get().openItem === id ? null : id });
+  },
+}));
 export default useAccordionStore;

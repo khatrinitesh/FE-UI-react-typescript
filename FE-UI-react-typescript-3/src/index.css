@@ -147,6 +147,7 @@ body {
   padding: 0;
   min-height: 100dvh;
   max-height: 100dvh;
+  overflow-x: hidden;
 }
 
 .appLayout {
@@ -159,6 +160,12 @@ body {
 .innerContent {
   padding-block: 50px;
 }
+
+/* .container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+} */
 
 @media (min-width: 1500px) {
   .container {
