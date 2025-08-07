@@ -86,3 +86,37 @@ export interface AccordionItem {
   title: string;
   content: string;
 }
+
+export interface IconAnimationState {
+  isAnimated: boolean;
+  toggleAnimation: () => void;
+}
+
+export interface SearchAnimationState {
+  isSearching: boolean;
+  toggleSearching: () => void;
+}
+
+export interface AnimationStateProps {
+  isAnimated: boolean;
+  toggleAnimation: () => void;
+}
+
+export interface ArrowAnimationState {
+  isAnimated: boolean;
+  toggleAnimation: () => void;
+}
+
+export interface AutocompleteState {
+  query: string;
+  suggestions: string[];
+  setQuery: (q: string) => void;
+  setSuggestions: (s: string[]) => void;
+}
+
+// Avatar props interface
+export interface AvatarProps {
+  src?: string;
+  alt?: string;
+  size?: number;
+}
