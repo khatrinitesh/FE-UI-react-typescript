@@ -1,6 +1,8 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { NAV_ITEMS } from "../../constants/constants";
 
+const imageAssets = import.meta.env.VITE_URL_ASSETS;
+
 const HeaderSection = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/" || location.pathname === "";
@@ -13,7 +15,11 @@ const HeaderSection = () => {
             <Link to="/">
               <img
                 className="max-w-[120px] bg-red-500 h-[40px] block mx-auto w-full"
-                src={`${isHomePage ? `/img/logo1.png` : `/img/logo2.jpeg`}`}
+                src={`${
+                  isHomePage
+                    ? `${imageAssets}/img/logo1.png`
+                    : `${imageAssets}/img/logo2.jpeg`
+                }`}
                 alt=""
               />
             </Link>

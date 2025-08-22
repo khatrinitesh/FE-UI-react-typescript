@@ -1,26 +1,23 @@
 import { useEffect } from "react";
 import { useServiceStore } from "../../store/serviceStore";
-import { Link } from "react-router-dom";
 
 const ServicePage = () => {
-  const { services, fetchServices, loading } = useServiceStore();
+  const { services, loading, error, fetchServices } = useServiceStore();
 
   useEffect(() => {
     fetchServices();
   }, []);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <p>Loading services...</p>;
+  if (error) return <p>Error: {error}</p>;
+  if (services.length === 0) return <p>No services available.</p>;
   return (
     <div className="servicePage pageSpacing">
       <div className="container mx-auto">
         ServicePage
         <ul>
-          {services.map((item) => (
-            <li key={item.id}>
-              <Link to={`/service/${item.id}`}>
-                <h3 className="font-bold text-[1.5rem]">{item.title}</h3>
-              </Link>
-            </li>
+          {services.map((service) => (
+            <li key={service.id}>{service.title}</li>
           ))}
         </ul>
       </div>

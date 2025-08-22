@@ -81,3 +81,8 @@ export interface Species {
   iso_code: string;
   common_name: string;
 }
+
+export interface User {
+  id: number;
+  name: string;
+}
