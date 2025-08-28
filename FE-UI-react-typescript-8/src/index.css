@@ -1,0 +1,49 @@
+@import "tailwindcss";
+:root {
+  --color1: #010d4a;
+  --color2: #b5f5f8;
+
+  --headTitle: 2rem;
+  --subTitle: 1.5rem;
+  --description: 1rem;
+  --small-description: 0.875rem;
+  --extra-small-description: 0.75rem;
+}
+
+.color1 {
+  color: var(--color1);
+}
+.color2 {
+  color: var(--color2);
+}
+
+.text-headTitle {
+  font-size: var(--headTitle);
+}
+.text-subTitle {
+  font-size: var(--subTitle);
+}
+.text-description {
+  font-size: var(--description);
+}
+.text-small-description {
+  font-size: var(--small-description);
+}
+.text-extra-small-description {
+  font-size: var(--extra-small-description);
+}
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.bodyWrapper,
+.rootWrapper {
+  height: 100dvh;
+  min-height: 100dvh;
+}
+
+.spacingContent {
+  padding: 30px 0;
+}
