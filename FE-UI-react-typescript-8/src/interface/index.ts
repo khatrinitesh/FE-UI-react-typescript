@@ -75,3 +75,15 @@ export interface AutoCompleteOption {
   id: number;
   label: string;
 }
+
+export const ICON_SIZE = 48;
+
+export interface IconProps {
+  size?: number;
+  active?: boolean;
+}
+
+export interface AnimatedSearchProps {
+  isSearchOpen: boolean;
+  toggleSearch: () => void;
+}

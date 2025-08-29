@@ -1,7 +1,11 @@
 import AccordionComponent from "../../components/accordionComponent/AccordionComponent";
+import AlertsComponent from "../../components/alertsComponent/AlertsComponent";
+import AnimatedSearchComponent from "../../components/animatedSearchComponent/AnimatedSearchComponent";
+import AnimateIconsComponent from "../../components/animateIconsComponent/AnimateIconsComponent";
 import AutoCompleteComponent from "../../components/autocompleteComponent/AutoCompleteComponent";
 import ThreeCardComponent from "../../components/threeCardComponent/ThreeCardComponent";
 import TimelineComponent from "../../components/timelineComponent/TimelineComponent";
+import AccordionShadcn from "../../components/ui-shadcn/accordionShadcn/AccordionShadcn";
 import { cards } from "../../constants/constants";
 
 const HomePage = () => {
@@ -9,6 +13,10 @@ const HomePage = () => {
     <div className="homePage spacingContent">
       <div className="container mx-auto">
         HomePage
+        <AccordionShadcn />
+        <AnimatedSearchComponent />
+        <AnimateIconsComponent />
+        <AlertsComponent />
         <AutoCompleteComponent />
         <AccordionComponent />
         <section

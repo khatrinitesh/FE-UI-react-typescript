@@ -102,3 +102,15 @@ export const autoCompleteOptions: AutoCompleteOption[] = [
   { id: 5, label: "Node.js" },
   { id: 6, label: "Next.js" },
 ];
+
+export type AlertType = "success" | "error" | "info" | "warning";
+
+export interface Alert {
+  id: string;
+  message: string;
+  type: AlertType;
+}
+
+export const SEARCH_PLACEHOLDER = "Search...";
+
+export const ICON_SIZE = 20;
