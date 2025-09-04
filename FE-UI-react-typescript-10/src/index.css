@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+:root {
+  --primarycolor: #0499b6;
+  --secondarycolor: #14dcf2;
+}
+.bodyWrapper,
+.rootWrapper {
+  height: 100dvh;
+  min-height: 100dvh;
+}
+
+.bodyWrapper {
+}
+
+.spacingContent {
+  padding: 30px 0;
+}
