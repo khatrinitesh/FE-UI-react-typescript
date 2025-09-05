@@ -81,3 +81,14 @@ export type State = {
   hasError: boolean;
   error: Error | null;
 };
+
+export interface FocusState {
+  activeElement: HTMLElement | null;
+  setActiveElement: (element: HTMLElement | null) => void;
+}
+
+export interface EventState {
+  lastEventType: string | null;
+  lastEventTarget: EventTarget | null;
+  setLastEvent: (event: Event) => void;
+}

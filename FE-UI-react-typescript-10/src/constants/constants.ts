@@ -7,3 +7,7 @@ export const navLinks: NavLinkItem[] = [
   { label: "Services", path: PATHS.SERVICES },
   { label: "Contact", path: PATHS.CONTACT },
 ];
+
+export const EVENT_CLICK = "click";
+export const EVENT_KEYDOWN = "keydown";
+export const EVENT_MOUSEMOVE = "mousemove";
