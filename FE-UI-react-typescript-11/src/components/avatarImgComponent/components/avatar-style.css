@@ -1,0 +1,16 @@
+.avatar {
+  display: inline-block;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease;
+  user-select: none;
+  background-color: #eee;
+}
+
+.avatar.rounded {
+  border-radius: 12px;
+}
+
+.avatar:hover {
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.7);
+}

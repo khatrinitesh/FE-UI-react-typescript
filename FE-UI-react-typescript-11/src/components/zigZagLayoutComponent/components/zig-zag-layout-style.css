@@ -1,0 +1,34 @@
+.zigzag-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.zigzag-section.reversed {
+  flex-direction: row-reverse;
+}
+
+.zigzag-image,
+.zigzag-text {
+  flex: 1;
+}
+
+.zigzag-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.zigzag-text h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.zigzag-text p {
+  font-size: 1.1rem;
+  color: #444;
+}

@@ -1,0 +1,31 @@
+.arrow {
+  padding: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.arrow.left::before {
+  content: "←";
+}
+
+.arrow.right::before {
+  content: "→";
+}
+
+.arrow.up::before {
+  content: "↑";
+}
+
+.arrow.down::before {
+  content: "↓";
+}
+
+.arrow.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

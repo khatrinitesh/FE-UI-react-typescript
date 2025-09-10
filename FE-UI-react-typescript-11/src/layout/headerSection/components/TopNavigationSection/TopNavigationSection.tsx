@@ -10,7 +10,7 @@ const TopNavigationSection = () => {
             <NavLink
               to={nav.path}
               className={({ isActive }) =>
-                `nav-link text-white font-bold text-description ${
+                `nav-link text-white font-bold text-xi-description ${
                   isActive ? "!text-red-500" : ""
                 }`
               }
