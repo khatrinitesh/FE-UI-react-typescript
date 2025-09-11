@@ -2,7 +2,11 @@ import type { AspectRatio } from "../components/apectRatioComponent/components/a
 import type { ARROW_DIRECTIONS } from "../components/arrowsComponent/component/arrowData";
 import type { AuroraTheme } from "../components/auroraComponent/components/auroraData";
 import type { AvatarSize } from "../components/avatarImgComponent/components/avatarImgData";
-import type { LayoutDirection } from "../components/zigZagLayoutComponent/components/zigZagLayoutData";
+import type { BreakpointName } from "../components/breakPointComponent/components/breakPointData";
+import type { TypewriterStatus } from "../components/typeWriterComponent/components/typeWriteData";
+import type { RatingScore } from "../components/userRatingComponent/components/userRatingData";
+import type { Role } from "../components/vortexComponent/components/vortexData";
+// import type { LayoutDirection } from "../components/zigZagLayoutComponent/components/zigZagLayoutData";
 import type { Paths } from "../routes/path";
 
 export interface lLayoutProps {
@@ -212,4 +216,58 @@ export interface ZigZagSectionProps {
 
 export interface ZigZagLayoutProps {
   sections: ZigZagSectionData[];
+}
+
+export interface VortexUser {
+  id: string;
+  name: string;
+  role: Role;
+  email?: string;
+}
+
+export interface VortexUserState {
+  user: VortexUser | null;
+  setUser: (user: VortexUser) => void;
+  clearUser: () => void;
+}
+
+export interface UserRating {
+  userId: string;
+  rating: RatingScore;
+  comment?: string;
+}
+
+export interface UserRatingState {
+  ratings: Record<string, UserRating>; // userId -> UserRating
+  setRating: (userId: string, rating: RatingScore, comment?: string) => void;
+  clearRating: (userId: string) => void;
+}
+
+export interface UserRatingProps {
+  userId: string;
+}
+
+export interface BreakpointState {
+  current: BreakpointName;
+}
+
+export interface BreakpointStore extends BreakpointState {
+  setBreakpoint: (bp: BreakpointName) => void;
+}
+
+export interface TypewriterState {
+  text: string; // full text to type
+  displayText: string; // currently displayed text
+  status: TypewriterStatus;
+}
+
+export interface TypewriterStore extends TypewriterState {
+  setText: (text: string) => void;
+  setStatus: (status: TypewriterStatus) => void;
+  setDisplayText: (text: string) => void;
+  reset: () => void;
+}
+
+export interface TypewriterProps {
+  text: string;
 }
