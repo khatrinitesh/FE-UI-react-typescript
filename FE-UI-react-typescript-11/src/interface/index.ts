@@ -271,3 +271,11 @@ export interface TypewriterStore extends TypewriterState {
 export interface TypewriterProps {
   text: string;
 }
+
+export interface TimelineItem {
+  id: number;
+  year: number;
+  date: string;
+  time: string;
+  description: string;
+}

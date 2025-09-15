@@ -11,6 +11,7 @@ import HeadTitleComponent from "../../components/headTitleComponent/HeadTitleCom
 import SearchBoxComponent from "../../components/searchboxComponent/SearchBoxComponent";
 import { tableSampleData } from "../../components/tableFormatComponent/components/tableData";
 import TableFormatComponent from "../../components/tableFormatComponent/TableFormatComponent";
+import Timeline from "../../components/timeline/timeline2/components/Timeline";
 import TypeWriterComponent from "../../components/typeWriterComponent/TypeWriterComponent";
 import UserRatingComponent from "../../components/userRatingComponent/UserRatingComponent";
 import VortexComponent from "../../components/vortexComponent/VortexComponent";
@@ -29,6 +30,7 @@ const HomePage = () => {
       <div className="container mx-auto">
         <div className="innerContent">
           <HeadTitleComponent className="">HomePage</HeadTitleComponent>
+          <Timeline />
           <TypeWriterComponent />
           <BreakPointComponent />
           <UserRatingComponent />'
