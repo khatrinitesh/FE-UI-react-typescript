@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.rootWrapper,
+.bodyWrapper {
+  height: 100dvh;
+  min-height: 100dvh;
+}
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
