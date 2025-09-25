@@ -14,6 +14,8 @@ import ChangeBgScrollSection from "../../components/changeBgScrollSection/Change
 import CharacterCounterSection from "../../components/characterCounterSection/CharacterCounterSection";
 import ChatMessageSection from "../../components/chatMessageSection/ChatMessageSection";
 import CheckCheckboxSection from "../../components/checkCheckboxSection/CheckCheckboxSection";
+import CheckoutFormSection from "../../components/checkoutFormSection/CheckoutFormSection";
+import CircleMenuMobileSection from "../../components/circleMenuMobileSection/CircleMenuMobileSection";
 
 const HomePage = () => {
   const [loading, setLoading] = useState(false);
@@ -28,11 +30,49 @@ const HomePage = () => {
   const handleCheckboxChange = (checked: boolean) => {
     console.log("Checkbox is now:", checked);
   };
+  let name: string = "test";
+  let age: number = 35;
+
+  let result1: string[] = ["happy", "sad", "understand", "misunderstand"].join(
+    ", "
+  );
+  let result2: Array<string> = ["moment", "wonderful"].join(", ");
+
+  let result3: [string, number] = ["test", 123];
+
+  type User = {
+    fname: string;
+    lname: string;
+    age: number;
+    dob?: string;
+  };
+
+  let user: User = {
+    fname: "nitesh",
+    lname: "khatri",
+    age: 35,
+    dob: "17-06-1989",
+  };
+
+  function greet(name: string): string {
+    return `hello ${name}`;
+  }
+
+  let input: string | number = "test0";
 
   return (
     <div className="homePage spacingContent">
       <div className="container mx-auto">
         <div className="innerContent">
+          {user}
+          <br />
+          {result3}
+          <br />
+          {name} - {age}
+          <br />
+          {result1} - {result2}
+          <CircleMenuMobileSection />
+          <CheckoutFormSection />
           <CheckCheckboxSection
             id="agree"
             label="I agree to the terms"
@@ -75,7 +115,6 @@ const HomePage = () => {
             className="ml-4"
             onClick={handleClickEnable}
           />
-
           <ButtonSection
             text="Download"
             isDisabled={true}

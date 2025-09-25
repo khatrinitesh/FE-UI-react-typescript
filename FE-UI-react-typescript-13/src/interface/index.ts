@@ -124,3 +124,26 @@ export interface AnimatedCheckboxProps {
   defaultChecked?: boolean;
   onChange?: (checked: boolean) => void;
 }
+
+export interface CheckoutData {
+  name: string;
+  email: string;
+  address: string;
+  paymentMethod: PaymentMethod;
+}
+
+export type PaymentMethod = "credit_card" | "paypal" | "apple_pay";
+
+export interface CheckoutState {
+  data: CheckoutData;
+  loading: boolean;
+  updateField: (field: keyof CheckoutData, value: string) => void;
+  submit: () => Promise<void>;
+}
+
+export interface CircleMenuItem {
+  id: string;
+  icon: string; // emoji or class
+  label: string;
+  action: () => void;
+}
