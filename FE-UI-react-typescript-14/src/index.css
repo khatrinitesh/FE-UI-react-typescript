@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+:root {
+}
+
+.container {
+  padding-inline: 1rem;
+}
