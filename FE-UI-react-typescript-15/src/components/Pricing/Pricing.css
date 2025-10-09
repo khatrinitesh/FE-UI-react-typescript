@@ -1,0 +1,22 @@
+.pricing {
+  text-align: center;
+}
+
+.pricing-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.pricing-card {
+  border: 1px solid #ddd;
+  padding: 30px;
+  border-radius: 10px;
+  width: 250px;
+}
+
+.price {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
