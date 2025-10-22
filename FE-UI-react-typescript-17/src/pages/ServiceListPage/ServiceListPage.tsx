@@ -2,7 +2,6 @@ import type { Comment } from "../../interface";
 import { useQuery } from "@tanstack/react-query";
 
 import HeadTitle from "../../components/HeadTitle/HeadTitle";
-import { getFullNameFromEmail } from "../../utils/utils";
 
 const fetchComments = async (): Promise<Comment[]> => {
   const res = await fetch(
