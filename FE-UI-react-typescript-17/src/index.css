@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+:root {
+}
+
+.rootWrapper,
+.bodyWrapper {
+  @apply bg-gray-100  min-h-screen;
+}
+
+.container {
+  margin: 0 auto;
+  padding-inline: 1rem;
+}
