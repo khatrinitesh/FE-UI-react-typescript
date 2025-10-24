@@ -175,3 +175,28 @@ export interface TooltipState {
 export interface InputFocusState {
   focused: boolean;
 }
+
+export interface TextImageEffectProps {
+  text: string;
+  imageUrl: string;
+  fontSize?: string;
+  width?: string;
+  height?: string;
+  className?: string;
+}
+
+export interface TextHoverEffectProps {
+  text: string;
+  fontSize?: string;
+  color?: string;
+  hoverColor?: string;
+  transitionDuration?: string;
+  className?: string;
+}
+
+export interface StrokeTextProps {
+  text: string;
+  strokeColor?: string;
+  fillColor?: string;
+  fontSize?: string;
+}

@@ -1,5 +1,8 @@
 @import "tailwindcss";
-
+::selection {
+  color: white;
+  background-color: peru;
+}
 :root {
 }
 
