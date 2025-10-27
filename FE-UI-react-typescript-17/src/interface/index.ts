@@ -200,3 +200,27 @@ export interface StrokeTextProps {
   fillColor?: string;
   fontSize?: string;
 }
+
+export interface PortfolioItem {
+  id: number;
+  name: string;
+  type: "web" | "mobile" | "design";
+  year: number;
+}
+
+export interface PanelState {
+  leftWidth: number; // Percentage of left panel
+  rightWidth: number; // Percentage of right panel
+  isDragging: boolean;
+}
+
+export interface SpeedState {
+  speed: number;
+  maxSpeed: number;
+}
+
+export interface SpeedActions {
+  setSpeed: (value: number) => void;
+  increaseSpeed: (step?: number) => void;
+  decreaseSpeed: (step?: number) => void;
+}

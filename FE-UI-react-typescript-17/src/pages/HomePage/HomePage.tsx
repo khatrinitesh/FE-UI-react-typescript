@@ -2,6 +2,9 @@ import FieldInputLabelActiveFocus from "../../components/FieldInputLabelActiveFo
 import FieldInputTel from "../../components/FieldInputTel/FieldInputTel";
 import HeadTitle from "../../components/HeadTitle/HeadTitle";
 import SideBySideTables from "../../components/SideBySideTables/SideBySideTables";
+import SpeedMeter from "../../components/SpeedMeter/SpeedMeter";
+import SplitScreen from "../../components/SplitScreen/SplitScreen";
+import StickyScrollReveal from "../../components/StickyScrollReveal/StickyScrollReveal";
 import StickySocialBar from "../../components/StickySocialBar/StickySocialBar";
 import StrokeText from "../../components/StrokeText/StrokeText";
 import SubnavigationMenu from "../../components/SubnavigationMenu/SubnavigationMenu";
@@ -47,6 +50,9 @@ const HomePage = () => {
     <div className="container">
       <HeadTitle className="">Home Page</HeadTitle>
       <p>Welcome to the home page.</p>
+      <SpeedMeter />
+      <SplitScreen />
+      <StickyScrollReveal />
       <StickySocialBar />
       <StrokeText />
       <SubnavigationMenu />
