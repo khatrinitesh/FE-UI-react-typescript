@@ -28,3 +28,35 @@ export interface ButtonProps {
   children: React.ReactNode;
   className?: string;
 }
+
+export interface AccordionItemProps {
+  id: string;
+  title: string;
+  content: string;
+}
+
+export type ToastType = "success" | "error" | "info" | "warning";
+
+export interface Toast {
+  id: string; // unique id for each toast
+  message: string;
+  type: ToastType;
+  duration?: number; // ms before auto-dismiss (optional)
+}
+
+export interface IconItem {
+  id: string;
+  name: string;
+  icon: React.ComponentType<{ className?: string }>;
+  active?: boolean;
+}
+
+export interface AnimatedIconProps {
+  item: IconItem;
+}
+export interface SearchState {
+  query: string;
+  setQuery: (value: string) => void;
+  isActive: boolean;
+  setActive: (value: boolean) => void;
+}

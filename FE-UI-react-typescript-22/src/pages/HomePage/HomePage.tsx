@@ -1,8 +1,28 @@
+import Accordion from "../../components/ui/Accordion/Accordion";
+import Alerts from "../../components/ui/Alerts/Alerts";
+import AnimatedIcon from "../../components/ui/AnimatedIcon/AnimatedIcon";
+import AnimatedSearch from "../../components/ui/AnimatedSearch/AnimatedSearch";
+import { ICONS } from "../../constants/constants";
+
 const HomePage = () => {
   return (
     <div className="homePage">
       <div className="container">
-        <h2 className="headTitle">HeadTitle</h2>
+        <h2 className="headTitle">List Repository</h2>
+        <AnimatedSearch />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "40px",
+          }}
+        >
+          {ICONS.map((item) => (
+            <AnimatedIcon key={item.id} item={item} />
+          ))}
+        </div>
+        <Alerts />
+        <Accordion />
         <p className="desc">
           Aliquip dolore exercitation officia nisi non voluptate laborum non.
           Magna in cupidatat reprehenderit nostrud occaecat do tempor cupidatat
