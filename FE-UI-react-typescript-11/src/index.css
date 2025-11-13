@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+:root {
+  /* color theme */
+  --color1: #010d4a;
+  --color2: #b5f5f8;
+
+  --font-base-default: 2vh;
+
+  /* font size */
+  --big-headline: 3.125rem; /*50*/
+  --medium-headline: 2.5rem; /*40*/
+  --normal-headline: 2rem; /*32*/
+  --small-headline: 1.875rem; /*30*/
+  --subTitle: 1.5rem; /*24*/
+  --extra-description: 1.125rem; /*18*/
+  --description: 1rem; /*16*/
+  --x-small-description: 0.875rem; /*14*/
+  --xx-small-description: 0.75rem; /*12*/
+  --xxx-small-description: 0.625rem; /*10*/
+  --xxxx-small-description: 0.5rem; /*8*/
+
+  /* font family */
+  --font-poppins-regular: "poppinsR";
+  --font-poppins-medium: "poppinsM";
+  --font-poppins-semibold: "poppinsSB";
+  --font-poppins-light: "poppinsL";
+  --font-poppins-bold: "poppinsB";
+}
+
+.font-poppins-light {
+  font-family: var(--font-poppins-light);
+}
+.font-poppins-regular {
+  font-family: var(--font-poppins-regular);
+}
+.font-poppins-medium {
+  font-family: var(--font-poppins-medium);
+}
+.font-poppins-semibold {
+  font-family: var(--font-poppins-semibold);
+}
+.font-poppins-bold {
+  font-family: var(--font-poppins-bold);
+}
+
+/* Font Size Utilities */
+.text-big-headline {
+  font-size: var(--big-headline);
+}
+
+.text-medium-headline {
+  font-size: var(--medium-headline);
+}
+
+.text-normal-headline {
+  font-size: var(--normal-headline);
+}
+
+.text-small-headline {
+  font-size: var(--small-headline);
+}
+
+.text-subtitle {
+  font-size: var(--subTitle);
+}
+
+.text-extra-description {
+  font-size: var(--extra-description);
+}
+
+.text-description {
+  font-size: var(--description);
+}
+
+.text-xi-description {
+  font-size: var(--x-small-description);
+}
+
+.text-xxi-description {
+  font-size: var(--xx-small-description);
+}
+
+.text-xxxi-description {
+  font-size: var(--xxx-small-description);
+}
+
+.text-xxxi-description {
+  font-size: var(--xxxx-small-description);
+}
+.bodyWrapper,
+.rootWrapper {
+  height: 100dvh;
+  min-height: 100dvh;
+  font-size: var(--font-base-default);
+  letter-spacing: 0px;
+  line-height: 1.1;
+  text-size-adjust: 100%;
+}
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--color4);
+  --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+.spacingContent {
+  padding: 30px 0;
+}
+
+.vScrollbar::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+  background-color: transparent;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.vScrollbar::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: var(--color4);
+}
+
+.vScrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--color3);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin 2s linear infinite;
+}

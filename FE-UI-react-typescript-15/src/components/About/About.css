@@ -1,0 +1,10 @@
+.about {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.about img {
+  width: 400px;
+  border-radius: 10px;
+}

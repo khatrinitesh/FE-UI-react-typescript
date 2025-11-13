@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+:root {
+  /* color palette */
+  --color-primary: "#000000";
+  --color-secondary: "#000000";
+  /* font name */
+  --font-poppins-bold: "";
+  --font-poppins-semibold: "";
+  --font-poppins-medium: "";
+  --font-poppins-regular: "";
+  --font-poppins-light: "";
+  /* font size */
+  --fs8: ;
+  --fs10: ;
+  --fs12: ;
+  --fs14: ;
+  --fs16: ;
+  --fs18: ;
+  --fs20: ;
+  --fs22: ;
+  --fs24: ;
+  --fs26: ;
+  --fs28: ;
+  --fs30: ;
+  --fs32: ;
+  --fs34: ;
+  --fs36: ;
+  --fs38: ;
+  --fs40: ;
+}
+
+html,
+body {
+  min-height: 100dvh;
+  height: 100dvh;
+
+  margin: 0;
+  padding: 0;
+}
+
+.headTitle {
+  font-size: var(--fs32);
+}
+.subTitle {
+  font-size: var(--fs24);
+}
+.description {
+  font-size: var(--fs16);
+}
+
+html,
+body {
+  height: 100dvh;
+  min-height: 100dvh;
+}
+
+.appLayout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100dvh;
+}
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* >1536 */
+@media (min-width: 1537px) {
+  .container {
+    max-width: 1480px;
+  }
+}

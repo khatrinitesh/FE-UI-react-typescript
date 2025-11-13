@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  --font-default: 1rem; /* 16px */
+  --headTitle: 2rem; /* 32px */
+  --bigHeadTitle: clamp(2rem, 5vw + 1rem, 3.125rem); /* 32px–50px */
+  --mediumHeadTitle: clamp(1.75rem, 4vw + 0.5rem, 2.5rem); /* 28px–40px */
+  --subTitle: 1.5rem; /* 24px */
+  --desc: 1rem; /* 16px */
+  --small-desc: 0.875rem; /* 14px */
+  --extra-small-desc: 0.75rem; /* 12px */
+
+  /* Typography Colors */
+  --primaryColor: #1a73e8; /* Blue */
+  --secondaryColor: #34a853; /* Green */
+  --tertiaryColor: #fbbc04; /* Yellow/Orange */
+  --grayColor: #6c757d; /* Neutral Gray */
+}
+.big-head-title {
+  font-size: var(--bigHeadTitle);
+  font-weight: bold;
+  color: var(--primaryColor);
+}
+
+.medium-head-title {
+  font-size: var(--mediumHeadTitle);
+  font-weight: 600;
+  color: var(--secondaryColor);
+}
+
+.sub-title {
+  font-size: var(--subTitle);
+  font-weight: 500;
+  color: var(--tertiaryColor);
+}
+
+.description {
+  font-size: var(--desc);
+  color: var(--grayColor);
+}
+
+.small-description {
+  font-size: var(--small-desc);
+  color: var(--grayColor);
+}
+
+.extra-small-description {
+  font-size: var(--extra-small-desc);
+  color: var(--grayColor);
+}
+
+.text-primary {
+  color: var(--primaryColor);
+}
+
+.text-secondary {
+  color: var(--secondaryColor);
+}
+
+.text-tertiary {
+  color: var(--tertiaryColor);
+}
+
+.text-gray {
+  color: var(--grayColor);
+}
+
+html,
+body {
+  height: 100dvh;
+  min-height: 100dvh;
+}
+
+html {
+  font-size: 16px;
+}
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (width > 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+.content {
+  background: red;
+  @media (width < 450px) {
+    background: blue;
+  }
+}
+
+.appLayout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100dvh;
+}

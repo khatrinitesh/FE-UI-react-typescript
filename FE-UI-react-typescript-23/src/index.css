@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "congenial-light";
+  src: url("/assets/fonts/congeniallight.eot"); /* IE9 Compat Modes */
+  src: url("/assets/fonts/congeniallight.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/congeniallight.woff2") format("woff2"),
+    url("/assets/fonts/congeniallight.woff") format("woff"),
+    url("/assets/fonts/congeniallight.ttf") format("truetype"),
+    url("/assets/fonts/congeniallight.svg#congeniallight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "congenial-regular";
+  src: url("/assets/fonts/congenialregular.eot"); /* IE9 Compat Modes */
+  src: url("/assets/fonts/congenialregular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/congenialregular.woff2") format("woff2"),
+    url("/assets/fonts/congenialregular.woff") format("woff"),
+    url("/assets/fonts/congenialregular.ttf") format("truetype"),
+    url("/assets/fonts/congenialregular.svg#congenialregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "congenial-medium";
+  src: url("/assets/fonts/congenialmedium.eot"); /* IE9 Compat Modes */
+  src: url("/assets/fonts/congenialmedium.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/congenialmedium.woff2") format("woff2"),
+    url("/assets/fonts/congenialmedium.woff") format("woff"),
+    url("/assets/fonts/congenialmedium.ttf") format("truetype"),
+    url("/assets/fonts/congenialmedium.svg#congenialmedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "congenial-bold";
+  src: url("/assets/fonts/congenialbold.eot"); /* IE9 Compat Modes */
+  src: url("/assets/fonts/congenialbold.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/congenialbold.woff2") format("woff2"),
+    url("/assets/fonts/congenialbold.woff") format("woff"),
+    url("/assets/fonts/congenialbold.ttf") format("truetype"),
+    url("/assets/fonts/congenialbold.svg#congenialbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ui style brand guide typgraohy */
+:root {
+  --ff-congenial-light: "congenial-light";
+  --ff-congenial-regular: "congenial-regular";
+  --ff-congenial-medium: "congenial-medium";
+  --ff-congenial-bold: "congenial-bold";
+  /* =========================
+   * Typography – Font Sizes
+   * ========================= */
+  --fs-headtitle-1: clamp(28px, 5.5vw, 52px); /*UI brand style guide*/
+  --fs-headtitle-2: clamp(28px, 4vw, 48px); /*UI brand style guide*/
+  --fs-headtitle-3: clamp(28px, 4vw, 40px); /*UI brand style guide*/
+  --fs-summary: clamp(16px, 2.2vw, 22px); /*UI brand style guide*/
+  /* --fs-text-3xl: 30px;
+  --fs-subtitle: 24px;
+  --fs-text-xl: 20px;
+  --fs-font-medium: 18px;
+  --fs-font-base: 16px;
+  --fs-font-sm-md: 15px;
+  --fs-description: 14px;
+  --fs-description-xs: 13px; */
+  /* =========================
+   * Colors
+   * ========================= */
+  /* --color-purple-1: #6c4b97; */
+  /* --color-purple-2: #6e4ca5; /*UI brand style guide*/
+  /* --color-purple-3: #6e4a8e;
+  --color-purple-4: #54458e;
+  --color-purple-5: #744fa1;
+  --color-purple-6: #6e4ca5;
+  --color-purple-7: #3a2b70; */
+  /* --color-purple-8: #4a2b7b; */ /*UI brand style guide*/
+  /* --color-lightpurple-1: #f3f2f4;
+  --color-lightpurple-2: #e5d9f2;
+  --color-lightblue: #8cd2f0; */
+  --color-gray-1: #e8e7eb;
+  /* --color-gray-2: #9ca3af;
+  --color-gray-3: #e5e7eb;
+  --color-gray-4: #5f6977; */
+}
+.congenial-light {
+  font-family: var(--ff-congenial-light);
+}
+.congenial-regular {
+  font-family: var(--ff-congenial-regular);
+}
+.congenial-medium {
+  font-family: var(--ff-congenial-medium);
+}
+.congenial-bold {
+  font-family: var(--ff-congenial-bold);
+}
+.headtitle-1 {
+  font-size: var(--fs-headtitle-1);
+}
+.headtitle-2 {
+  font-size: var(--fs-headtitle-2);
+  line-height: 1.15;
+}
+
+.headtitle-3 {
+  font-size: var(--fs-headtitle-3);
+  line-height: 1.2;
+}
+
+.summary-text {
+  font-size: var(--fs-summary);
+}
+.bodyWrapper {
+  font-family: var(--ff-congenial-regular);
+  overflow-x: hidden;
+  background-color: var(--color-gray-1);
+  min-height: 100dvh;
+  height: 100dvh;
+}
+
+/* three dots loading animation */
+@keyframes dot-bounce {
+  0%,
+  80%,
+  100% {
+    transform: scale(0.6);
+    opacity: 0.4;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-dot-bounce {
+  animation: dot-bounce 1s ease-in-out infinite;
+}
+
+/* circular progress rotate  */
+@keyframes spin-smooth {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-smooth {
+  animation: spin-smooth 1s linear infinite;
+}
+
+.scrollbar::-webkit-scrollbar {
+  display: none;
+}

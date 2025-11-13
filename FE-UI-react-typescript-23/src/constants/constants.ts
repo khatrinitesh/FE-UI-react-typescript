@@ -1,0 +1,104 @@
+import type {
+  CircularLoaderSize,
+  ConsentItem,
+  Discover,
+  Feature,
+  FooterLink,
+} from "../interface";
+import { getVideo } from "../utils/assets";
+
+export const FEATURES: Feature[] = [
+  {
+    id: 1,
+    title: "Fast performance",
+    description:
+      "Experience lightning fast load times and smooth interactions.",
+    imageUrl: "/images/performance.png",
+  },
+  {
+    id: 2,
+    title: "Beautiful Design",
+    description: "Inspired by modern design trends and intuitive UI.",
+    imageUrl: "/images/design.png",
+  },
+  {
+    id: 3,
+    title: "Scalable Architecture",
+    description: "Built for growth and reliability.",
+    imageUrl: "/images/scalable.png",
+  },
+];
+
+export const FOOTER_LINKS: FooterLink[] = [
+  { id: 1, label: "Legal notice", href: "/legal" },
+  { id: 2, label: "Privacy policy", href: "/privacy" },
+  { id: 3, label: "Terms of use", href: "/terms" },
+  { id: 4, label: "Cookies", href: "/cookies" },
+];
+
+export const examples: Discover[] = [
+  {
+    id: 1,
+    videoSrc: getVideo("BigBuckBunny.mp4"),
+    caption: "“Pour mon ami qui a pensé à mon anniversaire”",
+  },
+  {
+    id: 2,
+    videoSrc: getVideo("BigBuckBunny.mp4"),
+    caption: "“Pour ma sœur qui adore danser…”",
+  },
+  {
+    id: 3,
+    videoSrc: getVideo("BigBuckBunny.mp4"),
+    caption: "“Pour ma meilleure amie, la plus drôle ❤️”",
+  },
+];
+
+export const CONSENT_ITEMS: ConsentItem[] = [
+  {
+    id: "terms",
+    text: "I accept the terms of use and privacy policy",
+    required: true,
+  },
+  {
+    id: "data-processing",
+    text: "I accept that my data will be processed for the generation of my personalized video",
+    required: true,
+  },
+  {
+    id: "marketing",
+    text: "I agree to receive personalized commercial offers by email from the brands of the managers and partners of the Ma vie en couleurs program (e.g., MILKA, etc.), based on my profile and preferences.",
+  },
+];
+export const CONSENT_ITEMS2: ConsentItem[] = [
+  {
+    id: "terms",
+    text: "I accept the contest terms and confirm  I am over 18 years old",
+    required: false,
+  },
+];
+
+export const COLLAPSIBLE_ANIMATION_MS = 220;
+
+export const LEARN_MORE_LABEL = "Learn more";
+
+export const LEARN_MORE_MARKETING_COPY =
+  "By checking this box, you agree to receive personalized marketing " +
+  "communications from Milka and partner brands of the Ma vie en couleurs " +
+  "program. You can unsubscribe at any time by clicking the unsubscribe link " +
+  "in each email or by contacting us directly.";
+
+export const sizeMap: Record<CircularLoaderSize, number> = {
+  sm: 32,
+  md: 48,
+  lg: 80,
+};
+
+export const thicknessMap: Record<CircularLoaderSize, number> = {
+  sm: 3,
+  md: 1,
+  lg: 4,
+};
+
+export const DEFAULT_ARC_COLOR = "#8c6bae"; // soft purple
+export const DEFAULT_TRACK_COLOR = "#ffffff"; // white

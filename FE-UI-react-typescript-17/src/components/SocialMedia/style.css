@@ -1,0 +1,21 @@
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.social-btn {
+  background: #000;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 20px;
+  color: #fff; /* White icons */
+  box-shadow: 6px 6px 12px rgba(255, 255, 255, 0.05),
+    -6px -6px 12px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  color: #00bfff; /* Optional hover color (sky blue) */
+}

@@ -1,0 +1,17 @@
+/* style.css or swiperSection.css */
+.swiperSection {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.slide-content {
+  position: relative;
+  text-align: center;
+}
+
+.slide-content img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
