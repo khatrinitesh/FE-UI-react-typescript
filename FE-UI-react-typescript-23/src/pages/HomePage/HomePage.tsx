@@ -62,11 +62,11 @@ function HomePage() {
 
   return (
     <div className="relative h-dvh">
-      <div className="mainWrapper pb-[148px]">
+      <div className="mainWrapper pb-[144px]">
         {/* ✅ Sticky Header at top */}
         <StickyHeader isVisible={showHeader} />
         <Banner />
-        <VideoSection src={getVideo("BigBuckBunny.mp4")} />
+        <VideoSection src={getVideo("view.mp4")} />
         <DiscoverSection />
 
         {showFooterLinks && <FooterLink />}

@@ -105,7 +105,7 @@ const Banner = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/enter-details");
+    navigate("/enter-details-1");
   };
 
   return (

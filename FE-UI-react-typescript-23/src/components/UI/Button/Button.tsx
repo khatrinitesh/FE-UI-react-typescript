@@ -14,13 +14,12 @@ const Button = ({
   const baseClasses = `
     cursor-pointer inline-flex items-center justify-center
     gap-2
-    rounded-full
-    border border-[#c9b7ec]
+    rounded-[12px]
+    border border-[#6e4a8e]
     bg-[#f8f5fc]
     text-[#6e4a8e]
-    text-sm sm:text-base font-semibold
-    px-4 py-2.5
-    hover:bg-[#f0e7ff]
+    text-[0.813rem] 
+    px-4 py-2
     active:bg-[#e6dbff]
     disabled:opacity-60 disabled:cursor-not-allowed
     transition-colors duration-150

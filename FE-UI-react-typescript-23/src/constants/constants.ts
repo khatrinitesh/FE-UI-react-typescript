@@ -102,3 +102,9 @@ export const thicknessMap: Record<CircularLoaderSize, number> = {
 
 export const DEFAULT_ARC_COLOR = "#8c6bae"; // soft purple
 export const DEFAULT_TRACK_COLOR = "#ffffff"; // white
+
+export const inspirationItems = [
+  "Our first meeting that changed my life",
+  "The day you made me laugh to tears",
+  "That incredible adventure we lived together",
+];

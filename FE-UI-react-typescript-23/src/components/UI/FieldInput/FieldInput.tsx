@@ -1,3 +1,4 @@
+import React from "react";
 import type { FieldInputProps } from "../../../interface";
 
 const FieldInput: React.FC<FieldInputProps> = ({
@@ -9,7 +10,6 @@ const FieldInput: React.FC<FieldInputProps> = ({
   maxLength,
   disabled = false,
   className = "",
-  children,
 }) => {
   return (
     <div
@@ -18,13 +18,12 @@ const FieldInput: React.FC<FieldInputProps> = ({
         rounded-full
         border border-[#d4cbea]
         bg-[#f3f3f5]
-        px-4 h-9
+        h-9
+        px-5
         flex items-center
-
-        transition-colors transition-shadow duration-200
+        transition-all duration-200
         focus-within:border-[#6c4b97]
-        focus-within:shadow-[0_0_0_3px_rgba(181,164,199,1)]
-
+        focus-within:shadow-[0_0_0_3px_rgba(181,164,199,0.9)]
         ${disabled ? "opacity-60 cursor-not-allowed" : "cursor-text"}
         ${className}
       `}
@@ -42,16 +41,12 @@ const FieldInput: React.FC<FieldInputProps> = ({
           w-full
           bg-transparent
           text-sm congenial-regular
-          text-black
-          placeholder:text-[#9ca3af]
+          text-[#111827]
+          placeholder:text-[#b3b1c3]
           focus:outline-none
           border-none
         "
       />
-
-      {children && (
-        <div className="ml-2 flex items-center shrink-0">{children}</div>
-      )}
     </div>
   );
 };

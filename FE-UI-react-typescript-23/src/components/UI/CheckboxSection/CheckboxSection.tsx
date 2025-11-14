@@ -76,9 +76,9 @@ const CheckboxSection = ({
             </span>
 
             {/* Label text */}
-            <span className="flex-1 text-sm leading-relaxed text-[#5f6977]">
+            <span className="flex-1 text-sm leading-relaxed text-black congenial-regular">
               {item.text}
-              {item.required && <span className="text-[#e11d48] ml-1">*</span>}
+              {item.required && <span className="color-purple-1 ml-1">*</span>}
             </span>
           </button>
         );

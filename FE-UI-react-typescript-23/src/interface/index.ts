@@ -62,11 +62,10 @@ export interface FieldInputProps {
   value: string;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
-  type?: HTMLInputTypeAttribute;
+  type?: HTMLInputTypeAttribute; // optional
   maxLength?: number;
   disabled?: boolean;
   className?: string;
-  children?: ReactNode;
 }
 
 export interface OtpInputProps {
@@ -125,4 +124,28 @@ export interface MusicProgressBarProps {
   fromColor?: string;
   toColor?: string;
   showLabel?: boolean;
+}
+
+export interface ProfileStatusCardProps {
+  name: string;
+  statusText?: string;
+  avatarSrc: string;
+}
+export interface IntroMessageProps {
+  name: string;
+  avatarSrc: string;
+  children?: React.ReactNode;
+  showHeader?: boolean;
+}
+export interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  children: React.ReactNode;
+}
+
+export interface InspirationsProps {
+  title?: string;
+  items: string[];
+  onRefresh?: () => void;
+  onSelectItem?: (value: string) => void;
 }

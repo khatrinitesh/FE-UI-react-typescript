@@ -1,5 +1,5 @@
 import { getImage } from "../../utils/assets";
-import "./StickyHeader.css";
+
 import { motion } from "framer-motion";
 
 const StickyHeader = ({ isVisible }: { isVisible: boolean }) => {

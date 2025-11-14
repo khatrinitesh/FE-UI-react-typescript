@@ -84,8 +84,8 @@ const Collapsible: React.FC<CollapsibleProps> = ({
             mt-3 rounded-3xl
             bg-white
             px-4 py-4 sm:px-5 sm:py-5
-            text-sm sm:text-[15px] leading-relaxed
-            text-[#33354d]
+            text-sm leading-relaxed
+            text-black
           "
         >
           <span>{children}</span>

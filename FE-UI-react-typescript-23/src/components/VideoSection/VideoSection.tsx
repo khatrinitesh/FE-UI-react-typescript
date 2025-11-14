@@ -10,32 +10,35 @@ const VideoSection: React.FC<VideoSectionProps> = ({ src, thumbnail }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const thumbSrc = thumbnail ?? getImage("thumbnail.png");
 
-  // this ref is for the outer container that scales
   const cardRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const el = cardRef.current;
     if (!el) return;
 
-    const tween = gsap.fromTo(
+    // adjust these to match your Tailwind max-w-5xl / max-w-8xl values
+    const MAX_W_LARGE = "75rem"; // approx 8xl / 7xl (1280px)
+    const MAX_W_SMALL = "90rem"; // 5xl (1024px)
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: el,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 1.5, // higher = smoother/slower feel
+      },
+    });
+
+    // 8xl -> 5xl -> 8xl over the scroll range
+    tl.fromTo(
       el,
-      { scale: 1.5 },
-      {
-        scale: 1,
-        ease: "none",
-        transformOrigin: "center top",
-        scrollTrigger: {
-          trigger: el,
-          start: "top bottom",
-          end: "top center",
-          scrub: 1,
-        },
-      }
-    );
+      { maxWidth: MAX_W_LARGE },
+      { maxWidth: MAX_W_SMALL, ease: "none" }
+    ).to(el, { maxWidth: MAX_W_LARGE, ease: "none" });
 
     return () => {
-      tween.scrollTrigger?.kill();
-      tween.kill();
+      tl.scrollTrigger?.kill();
+      tl.kill();
     };
   }, []);
 
@@ -44,7 +47,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ src, thumbnail }) => {
       id="sectionVideo"
       className="
         w-full
-        bg-[#e5e5ea]                 /* outer grey background */
+        bg-[#e5e5ea]          
         flex flex-col items-center justify-center
         px-0 sm:px-4 py-6
       "
@@ -53,8 +56,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ src, thumbnail }) => {
       <div
         ref={cardRef}
         className="
-          w-full max-w-5xl mx-auto
-          px-4 sm:px-6
+          w-full mx-auto
           transition-transform
           origin-top
         "
@@ -62,7 +64,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ src, thumbnail }) => {
         <div
           className="
             w-full
-            bg-[#f7f5fb]              
+            bg-[#f7f5fb]   cursor-pointer            
             rounded-tl-[48px] rounded-tr-[48px]
             shadow-[0_20px_80px_rgba(0,0,0,0.12)]
             pt-10 pb-16
@@ -74,7 +76,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ src, thumbnail }) => {
             className="
               relative overflow-hidden cursor-pointer
               w-full max-w-[620px]
-              rounded-[32px]
+              rounded-[32px] 
             "
           >
             {!isPlaying && (
@@ -83,24 +85,14 @@ const VideoSection: React.FC<VideoSectionProps> = ({ src, thumbnail }) => {
                 onClick={() => setIsPlaying(true)}
                 className="
                   group relative w-full h-full
-                  rounded-[32px] overflow-hidden
+                  rounded-[32px] cursor-pointer overflow-hidden
                   block
                 "
               >
                 <img
                   src={thumbSrc}
                   alt="Video thumbnail"
-                  className="w-full h-full object-cover rounded-[32px]"
-                />
-
-                {/* dark overlay */}
-                <div
-                  className="
-                    absolute inset-0
-                    bg-black/30
-                    group-hover:bg-black/40
-                    transition-colors duration-300
-                  "
+                  className="aspect-square scale-90 object-cover rounded-[32px]"
                 />
 
                 {/* play button */}
@@ -111,7 +103,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ src, thumbnail }) => {
                       w-16 h-16 rounded-full
                       bg-white/90 text-[#6e4a8e]
                       shadow-[0_0_25px_rgba(0,0,0,0.35)]
-                      group-hover:scale-105
+                      
                       transition-transform duration-300
                     "
                   >
@@ -136,7 +128,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ src, thumbnail }) => {
                 playsInline
                 preload="metadata"
                 className="
-                  w-full h-full object-cover
+                  w-full h-full aspect-square scale-90 object-cover
                   rounded-[32px]
                 "
               />
