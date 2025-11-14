@@ -128,10 +128,15 @@
 .color-purple-3 {
   color: #4c2b87;
 }
+.color-purple-4 {
+  color: #6e4ca5;
+}
 .color-gray-1 {
   color: #6a7282;
 }
-
+.color-gray-2 {
+  color: #3b3b3b;
+}
 .summary-text {
   font-size: var(--fs-summary);
 }
@@ -177,4 +182,24 @@
 
 .scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+.intro-message-bubble {
+  opacity: 0;
+  transform: translateY(4px);
+  animation: intro-fade-in 0.4s ease-out forwards;
+}
+
+@keyframes intro-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.my-gradient-bg {
+  background-image: linear-gradient(to bottom, #f5f0fa, #fdfbff);
 }

@@ -108,3 +108,13 @@ export const inspirationItems = [
   "The day you made me laugh to tears",
   "That incredible adventure we lived together",
 ];
+
+export const ALL_INSPIRATIONS: string[] = [
+  "The first time you saw them smile.",
+  "A moment when they surprised you.",
+  "A small gesture that meant a lot.",
+  "The day everything changed for you.",
+  "A memory you wish you could relive.",
+  "A time you couldn’t stop laughing together.",
+  "The moment you knew they were special.",
+];

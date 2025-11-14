@@ -6,8 +6,6 @@ const sizeMap: Record<LoadingDotsSize, { dot: string; padding: string }> = {
   lg: { dot: "h-2.5 w-2.5", padding: "px-4 py-2.5" },
 };
 
-// default 3 light purple-ish colors
-// const DEFAULT_COLORS = ["#e7dbff", "#d8c7ff", "#c4b0ff"];
 const DOT_COLORS = ["#704da0", "#9a80bd", "#b9a7d3"] as const;
 
 const LoadingDots = ({ size = "md", className = "" }: LoadingDotsProps) => {
@@ -17,7 +15,7 @@ const LoadingDots = ({ size = "md", className = "" }: LoadingDotsProps) => {
       className={`
         inline-flex items-center justify-center
         my-[10px]
-        rounded-full
+        rounded-[24px] rounded-tl-[4px]
         bg-[#eee4ff]
         shadow-[0_10px_30px_rgba(150,120,220,0.4)]
         ${s.padding}

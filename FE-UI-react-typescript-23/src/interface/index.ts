@@ -1,9 +1,4 @@
-import type {
-  ButtonHTMLAttributes,
-  ChangeEvent,
-  HTMLInputTypeAttribute,
-  ReactNode,
-} from "react";
+import type { ButtonHTMLAttributes, ChangeEvent, ReactNode } from "react";
 
 export interface Feature {
   id: number;
@@ -48,6 +43,7 @@ export interface ConsentSectionProps {
   onChange?: (values: Record<string, boolean>) => void;
   children?: React.ReactNode; // 👈 extra content under list
   title?: string;
+  className?: string;
 }
 
 export interface CollapsibleProps {
@@ -60,12 +56,14 @@ export interface CollapsibleProps {
 export interface FieldInputProps {
   name: string;
   value: string;
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
   placeholder?: string;
-  type?: HTMLInputTypeAttribute; // optional
+  type?: string;
   maxLength?: number;
   disabled?: boolean;
   className?: string;
+  rightIcon?: React.ReactNode;
+  readOnly?: boolean;
 }
 
 export interface OtpInputProps {
@@ -132,10 +130,12 @@ export interface ProfileStatusCardProps {
   avatarSrc: string;
 }
 export interface IntroMessageProps {
-  name: string;
-  avatarSrc: string;
+  name?: string;
+  avatarSrc?: string;
   children?: React.ReactNode;
   showHeader?: boolean;
+  showBody?: boolean;
+  className?: string;
 }
 export interface ModalProps {
   isOpen: boolean;
@@ -148,4 +148,25 @@ export interface InspirationsProps {
   items: string[];
   onRefresh?: () => void;
   onSelectItem?: (value: string) => void;
+}
+
+export interface InfoBannerProps {
+  children: ReactNode;
+  className?: string;
+  showIcon?: boolean;
+}
+
+export interface UploadDropzoneProps {
+  onFilesSelected: (files: FileList | null) => void;
+  title?: string;
+  helperText?: string;
+  accept?: string;
+  multiple?: boolean;
+  disabled?: boolean;
+  className?: string;
+}
+export interface VideoPreviewProps {
+  src: string; // video file path, e.g. "/video.mp4"
+  poster?: string; // optional preview image
+  className?: string; // optional extra classes for outer wrapper
 }

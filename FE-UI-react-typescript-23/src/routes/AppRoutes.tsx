@@ -1,19 +1,23 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LayoutOne from "../layout/LayoutOne";
-import HomePage from "../pages/HomePage/HomePage";
 import LayoutTwo from "../layout/LayoutTwo";
-import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
+import HomePage from "../pages/HomePage/HomePage";
 import EnterDetailsPageOne from "../pages/EnterDetailsPageOne/EnterDetailsPageOne";
 import EnterDetailsPageTwo from "../pages/EnterDetailsPageTwo/EnterDetailsPageTwo";
 import EnterDetailsPageThree from "../pages/EnterDetailsPageThree/EnterDetailsPageThree";
 import EnterDetailsPageFour from "../pages/EnterDetailsPageFour/EnterDetailsPageFour";
 import EnterDetailsPageFive from "../pages/EnterDetailsPageFive/EnterDetailsPageFive";
 import EnterDetailsPageSix from "../pages/EnterDetailsPageSix/EnterDetailsPageSix";
+import EnterDetailsPageSeven from "../pages/EnterDetailsPageSeven/EnterDetailsPageSeven";
+import EnterDetailsPageEight from "../pages/EnterDetailsPageEight/EnterDetailsPageEight";
+import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 
 const AppRoutes = () => {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           {/* Layout 1 routes */}
           <Route element={<LayoutOne />}>
@@ -31,6 +35,14 @@ const AppRoutes = () => {
             <Route path="/enter-details-4" element={<EnterDetailsPageFour />} />
             <Route path="/enter-details-5" element={<EnterDetailsPageFive />} />
             <Route path="/enter-details-6" element={<EnterDetailsPageSix />} />
+            <Route
+              path="/enter-details-7"
+              element={<EnterDetailsPageSeven />}
+            />
+            <Route
+              path="/enter-details-8"
+              element={<EnterDetailsPageEight />}
+            />
           </Route>
 
           {/* 404 – must come last */}

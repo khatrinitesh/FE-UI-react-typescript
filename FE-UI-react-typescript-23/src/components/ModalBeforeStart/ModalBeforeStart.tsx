@@ -1,50 +1,21 @@
-// LayoutTwo.tsx
-import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { CONSENT_ITEMS } from "../../constants/constants";
+import Modal from "../Modal/Modal";
+import CheckboxSection from "../UI/CheckboxSection/CheckboxSection";
+import Collapsible from "../UI/Collapsible/Collapsible";
+import { useNavigate } from "react-router-dom";
 
-import { ErrorBoundary } from "../components/ErrorBoundary/ErrorBoundary";
-import ErrorFallbackPage from "../pages/ErrorFallbackPage/ErrorFallbackPage";
-import FixedHeader from "../components/FixedHeader/FixedHeader";
-import FixedFooter from "../components/FixedFooter/FixedFooter";
-
-// your components for modal content
-import Modal from "../components/Modal/Modal";
-import CheckboxSection from "../components/UI/CheckboxSection/CheckboxSection";
-import { CONSENT_ITEMS } from "../constants/constants";
-import Collapsible from "../components/UI/Collapsible/Collapsible";
-
-const LayoutTwo = () => {
-  const location = useLocation();
+const ModalBeforeStart = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [allChecked, setAllChecked] = useState(false);
-
-  const isFirstPage = location.pathname === "/enter-details-1";
-
   const handleConfirmModal = () => {
     if (!allChecked) return; // safety
     setIsOpen(false);
     navigate("/enter-details-2");
   };
-
   return (
     <>
-      <div className="relative min-h-dvh mt-22 bg-[#fbf9fa]">
-        <div className="mainWrapper mx-auto min-h-dvh px-6 pb-25 grid grid-rows-[auto_1fr_auto] my-gradient-bg">
-          <FixedHeader />
-
-          <ErrorBoundary fallback={<ErrorFallbackPage />}>
-            <div className="max-w-2xl px-4 py-10 w-full mx-auto">
-              <Outlet />
-            </div>
-          </ErrorBoundary>
-
-          {/* Footer: only page1 gets the modal opener */}
-          <FixedFooter
-            onOpenConsentModal={isFirstPage ? () => setIsOpen(true) : undefined}
-          />
-        </div>
-      </div>
       <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <div className="modalContent flex-1 min-h-0 px-3 md:px-5 pt-0 md:pt-10 overflow-y-auto inline-grid gap-[10px]">
           <h2 className="headtitle-3 mt-4 md:mt-0 w-full color-purple-1 congenial-bold uppercase text-center">
@@ -122,4 +93,4 @@ const LayoutTwo = () => {
   );
 };
 
-export default LayoutTwo;
+export default ModalBeforeStart;

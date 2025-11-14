@@ -10,6 +10,8 @@ const FieldInput: React.FC<FieldInputProps> = ({
   maxLength,
   disabled = false,
   className = "",
+  rightIcon,
+  readOnly = false,
 }) => {
   return (
     <div
@@ -21,6 +23,7 @@ const FieldInput: React.FC<FieldInputProps> = ({
         h-9
         px-5
         flex items-center
+        gap-2
         transition-all duration-200
         focus-within:border-[#6c4b97]
         focus-within:shadow-[0_0_0_3px_rgba(181,164,199,0.9)]
@@ -37,8 +40,9 @@ const FieldInput: React.FC<FieldInputProps> = ({
         placeholder={placeholder}
         maxLength={maxLength}
         disabled={disabled}
+        readOnly={readOnly}
         className="
-          w-full
+          flex-1
           bg-transparent
           text-sm congenial-regular
           text-[#111827]
@@ -47,6 +51,12 @@ const FieldInput: React.FC<FieldInputProps> = ({
           border-none
         "
       />
+
+      {rightIcon && (
+        <span className="flex items-center justify-center text-[#6c4b97]">
+          {rightIcon}
+        </span>
+      )}
     </div>
   );
 };

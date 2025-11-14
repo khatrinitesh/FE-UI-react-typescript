@@ -13,7 +13,7 @@ const FixedHeader = () => {
     return () => clearInterval(id);
   }, []);
   return (
-    <header className=" fixed top-0 left-0 w-full bg-[#6c4b97] shadow-[0_25px_50px_-12px_var(--tw-shadow-color,#00000040)]">
+    <header className="z-[99] fixed top-0 left-0 w-full bg-[#6c4b97] shadow-[0_25px_50px_-12px_var(--tw-shadow-color,#00000040)]">
       <div className="innerHeader flex gap-[10px] px-[1rem]">
         <div className="logoBlock">
           <img

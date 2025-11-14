@@ -1,115 +1,91 @@
-import { useEffect, useState, type ChangeEvent } from "react";
+import { SquarePen } from "lucide-react";
 import IntroMessage from "../../components/IntroMessage/IntroMessage";
-import FieldInput from "../../components/UI/FieldInput/FieldInput";
+import Button from "../../components/UI/Button/Button";
 import { getImage } from "../../utils/assets";
-import FieldTextarea from "../../components/UI/FieldTextarea/FieldTextarea";
-import Inspirations from "../../components/Inspirations/Inspirations";
-import { inspirationItems } from "../../constants/constants";
-
-interface FormData {
-  firstName: string;
-  pronouns: string;
-  relationship: string;
-}
+import { useState } from "react";
+import PromptCard from "../../components/PromptCard/PromptCard";
 
 const EnterDetailsPageFive = () => {
-  const [text, setText] = useState("");
-  const [formData, setFormData] = useState<FormData>({
-    firstName: "",
-    pronouns: "",
-    relationship: "",
-  });
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
+  const [isGenerating, setIsGenerating] = useState(true);
+  const [isEditing, setIsEditing] = useState(false);
 
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  useEffect(() => {
-    console.log("Form updated:", formData);
-  }, [formData]);
   return (
-    <div className="enterDetailsSection  w-full h-full ">
+    <div className="enterDetailsSection  w-full h-full inline-grid gap-[20px] ">
       <IntroMessage
         name="Matt Pokora"
         avatarSrc={getImage("avatar-profile.avif")}
+        className="w-full"
       >
         <span className="text-[0.938rem] congenial-regular text-white">
-          Tell me more about the person you want this song for 🎶
+          Here's your personalized song 🎵 You can generate up to 3 versions.
+          Choose the one you prefer.
         </span>
       </IntroMessage>
-      <div className="ms-5 md:ms-15 max-w-w-[88%] mx-auto">
-        <div className="fillForm bg-white border border-[#6E4A8E]/10 shadow-[0_4px_16px_rgba(110,76,165,0.15)] p-5  rounded-[24px] ">
-          <div className="formGrp mb-6">
-            <label className="block mb-2 color-purple-3 text-[0.938rem] congenial-medium">
-              Person's first name
-            </label>
-            <FieldInput
-              name="firstName"
-              placeholder="e.g: Sophie, Thomas, Alex..."
-              value={formData.firstName}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="formGrp mb-6">
-            <label className="block mb-2 color-purple-3 text-[0.938rem] congenial-medium">
-              Their pronouns
-            </label>
-            <FieldInput
-              name="pronouns"
-              placeholder="Enter pronouns..."
-              value={formData.pronouns}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="formGrp mb-6">
-            <label className="block mb-2 color-purple-3 text-[0.938rem] congenial-medium">
-              Your relationship
-            </label>
-            <FieldInput
-              name="relationship"
-              placeholder="Enter relationship..."
-              value={formData.relationship}
-              onChange={handleChange}
-            />
-          </div>
-        </div>
-      </div>
-      <IntroMessage
-        name="Matt Pokora"
-        avatarSrc={getImage("avatar-profile.avif")}
-        showHeader={false}
-      >
-        <span className="text-[0.938rem] congenial-regular text-white">
-          What special moment do you want to turn into a song? 💜
-        </span>
-      </IntroMessage>
-      <div className="ms-5 md:ms-15 max-w-w-[88%] mx-auto">
-        <div className="fillForm bg-white border border-[#6E4A8E]/10 shadow-[0_4px_16px_rgba(110,76,165,0.15)] p-5 rounded-[24px] ">
-          <div className="formGrp mb-4">
-            <label className="block mb-2 color-purple-3 text-[0.938rem] congenial-medium">
-              Describe the moment
-            </label>
-            <FieldTextarea
-              name="moment"
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-              placeholder="Describe the moment you want to immortalize..."
-              maxLength={500}
-            />
-          </div>
-          <Inspirations
-            items={inspirationItems}
-            onSelectItem={(val) => setText(val)}
-            onRefresh={() => {
-              // Clear textarea when Refresh is clicked
-              setText("");
-              // (optional) also regenerate inspirations here later
+      <PromptCard
+        title="For jjj"
+        lines={[
+          "In your smile, I find the light",
+          "That brightens all my days",
+          "Your laughter echoes like a melody",
+          "That gives meaning to all my life ✨",
+        ]}
+      />
+      <div className="ms-5 md:ms-15 max-w-w-[88%] mx-auto w-full">
+        <div className="fillForm grid gap-[5px] bg-white border border-[#6E4A8E]/10 shadow-[0_4px_16px_rgba(110,76,165,0.15)] p-5 rounded-[24px]">
+          <Button
+            disabled={isGenerating}
+            onClick={() => {
+              setIsGenerating(true);
+              console.log("clicked");
             }}
-          />
+            iconLeft={
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-4 h-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polyline points="23 4 23 10 17 10" />
+                <polyline points="1 20 1 14 7 14" />
+                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10" />
+                <path d="M20.49 15a9 9 0 0 1-14.85 3.36L1 14" />
+              </svg>
+            }
+            className="
+      mt-1 rounded-full py-3 text-[0.938rem] congenial-medium
+      border-[#eee7fa] bg-[#eee7fa] text-[#6c4b97]
+      hover:bg-[#e3ddf3]
+      disabled:bg-[#f3f2f4] disabled:text-[#9ca6b6]
+      disabled:border-[#eee7fa] disabled:shadow-none
+      disabled:cursor-not-allowed disabled:hover:bg-[#eee7fa]
+    "
+          >
+            Generate another version
+          </Button>
+
+          <Button
+            disabled={isEditing}
+            onClick={() => {
+              setIsEditing(true);
+              console.log("clicked");
+              // do your work, then setIsEditing(false)
+            }}
+            iconLeft={<SquarePen className="text-xs" />}
+            className="
+      mt-1 rounded-full py-3 text-[0.938rem] congenial-medium
+      border-[#eee7fa] bg-[#eee7fa] text-[#6c4b97]
+      hover:bg-[#e3ddf3]
+      disabled:bg-[#f3f2f4] disabled:text-[#9ca6b6]
+      disabled:border-[#eee7fa] disabled:shadow-none
+      disabled:cursor-not-allowed disabled:hover:bg-[#eee7fa]
+    "
+          >
+            Edit my instructions
+          </Button>
         </div>
       </div>
     </div>

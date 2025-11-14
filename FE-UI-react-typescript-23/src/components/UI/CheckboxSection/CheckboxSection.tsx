@@ -5,6 +5,7 @@ const CheckboxSection = ({
   items,
   onChange,
   children,
+  className,
 }: ConsentSectionProps) => {
   const [values, setValues] = useState<Record<string, boolean>>({});
 
@@ -76,7 +77,9 @@ const CheckboxSection = ({
             </span>
 
             {/* Label text */}
-            <span className="flex-1 text-sm leading-relaxed text-black congenial-regular">
+            <span
+              className={`${className} flex-1 text-sm leading-relaxed text-black congenial-regular`}
+            >
               {item.text}
               {item.required && <span className="color-purple-1 ml-1">*</span>}
             </span>

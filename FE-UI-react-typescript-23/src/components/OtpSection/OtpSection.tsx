@@ -120,7 +120,7 @@ const OtpSection = ({
         rounded-[24px]
         bg-white
         border border-[#6E4A8E]/10 shadow-[0_4px_16px_rgba(110,76,165,0.15)]
-        px-6 py-8 sm:px-10 sm:py-10
+        px-4 py-4 sm:px-10 sm:py-10
         text-center
         ${className}
       `}
@@ -146,10 +146,10 @@ const OtpSection = ({
             onKeyDown={(e) => handleKeyDown(i, e)}
             onPaste={(e) => handlePaste(i, e)}
             className={`
-              h-10 w-10 sm:h-12 sm:w-10
+              h-9 w-9 sm:h-12 sm:w-12
               text-center text-lg sm:text-xl font-semibold
 
-              rounded-[10px]
+              rounded-[15px]
               border border-[#d4c7ea]
               bg-[#f7f5fb]
 

@@ -14,18 +14,22 @@ const Inspirations: React.FC<InspirationsProps> = ({
         bg-[#f9f5fd]
         border border-[#e5d9f2]
         rounded-[16px]
-        p-4
-        shadow-[0_4px_16px_rgba(110,76,165,0.15)]
+        p-4 grid gap-[10px]
+        shadow-[0_4px_16px_rgba(110,76,165,0.08)]
       "
     >
       {/* Header */}
-      <div className="flex items-center gap-2 mb-3">
-        <span className="text-lg">💡</span>
-        <span className="text-sm congenial-medium text-[#4c2b87]">{title}</span>
+      <div className="flex items-center justify-between gap-2 mb-3">
+        <div className="flex items-center gap-2">
+          <span className="text-lg">💡</span>
+          <span className="text-sm congenial-medium text-[#4c2b87]">
+            {title}
+          </span>
+        </div>
       </div>
 
       {/* Inspiration items */}
-      <div className="flex flex-col gap-2 mb-3">
+      <div className="flex flex-col gap-2">
         {items.map((item) => (
           <button
             key={item}
@@ -39,13 +43,13 @@ const Inspirations: React.FC<InspirationsProps> = ({
               congenial-medium
               border border-[#e5d9f2]
               transition-colors duration-200
+              hover:bg-[#f1e9ff]
             "
           >
             {item}
           </button>
         ))}
       </div>
-
       <Button
         onClick={onRefresh}
         iconLeft={
@@ -66,11 +70,12 @@ const Inspirations: React.FC<InspirationsProps> = ({
           </svg>
         }
         className="
-          mt-1
-          border-[#6c4b97]
-          bg-transparent
-          text-[#6c4b97]
-        "
+            h-8 px-3
+            text-xs
+            border-[#6c4b97]
+            bg-transparent
+            text-[#6c4b97]
+          "
       >
         Refresh
       </Button>
