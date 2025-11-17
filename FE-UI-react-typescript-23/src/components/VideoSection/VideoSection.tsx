@@ -126,7 +126,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ src, thumbnail }) => {
                 preload="metadata"
                 className="
                   w-full h-full aspect-9/12 md:aspect-square scale-90 object-cover
-                  rounded-[32px]
+                  rounded-[32px] 
                 "
               />
             )}

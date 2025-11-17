@@ -45,7 +45,7 @@ const DiscoverSection = () => {
           max-w-7xl mx-auto
           overflow-x-auto md:overflow-visible
           px-4 sm:px-8
-          scroll-smooth snap-x snap-mandatory overflow-x-hidden
+          scroll-smooth snap-x snap-mandatory overflow-y-hidden
         "
       >
         {examples.map((item, i) => {
