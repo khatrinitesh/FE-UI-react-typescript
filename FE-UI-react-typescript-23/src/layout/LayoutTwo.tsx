@@ -29,8 +29,8 @@ const LayoutTwo = () => {
 
   return (
     <>
-      <div className="relative min-h-dvh mt-22 bg-[#fbf9fa]">
-        <div className="mainWrapper mx-auto min-h-dvh px-6 pb-25 grid grid-rows-[auto_1fr_auto] my-gradient-bg">
+      <div className="relative min-h-dvh mt-22 bg-[#fbf9fa] formDetailsSection">
+        <div className="mainWrapper mx-auto min-h-dvh px-6 pb-25 flex flex-col grid-rows-[auto_1fr_auto] my-gradient-bg">
           <FixedHeader />
 
           <ErrorBoundary fallback={<ErrorFallbackPage />}>

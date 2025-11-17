@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import type { FooterProps } from "../../interface";
 
-const Footer = ({ isVisible }: { isVisible: boolean }) => {
+const Footer = ({ isVisible, onHowItWorksClick }: FooterProps) => {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate("/enter-details-1");
@@ -13,9 +14,12 @@ const Footer = ({ isVisible }: { isVisible: boolean }) => {
       animate={{ y: isVisible ? 0 : 100, opacity: isVisible ? 1 : 0 }}
       transition={{ type: "spring", stiffness: 120, damping: 20 }}
     >
-      <p className="text-[#6e4a8e] text-sm underline underline-offset-4 cursor-pointer hover:text-purple-800">
+      <button
+        onClick={onHowItWorksClick}
+        className="text-[#6e4a8e] cursor-pointer text-sm underline underline-offset-4 hover:text-purple-800"
+      >
         How does it work?
-      </p>
+      </button>
       <button
         onClick={handleClick}
         className="mt-4 bg-[#90d1ee] hover:scale-105 congenial-medium  text-lg px-18  sm:px-24 md:px-34 cursor-pointer py-4 rounded-full shadow-md hover:shadow-lg  transition-all duration-300 text-[#6c4b97]"

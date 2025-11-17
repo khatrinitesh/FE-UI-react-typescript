@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { ModalProps } from "../../interface";
+import { X } from "lucide-react";
 
-const Modal = ({ isOpen, onClose, children }: ModalProps) => {
+const Modal = ({ isOpen, onClose, children, className }: ModalProps) => {
   // Close on ESC
   useEffect(() => {
     if (!isOpen) return;
@@ -29,15 +30,13 @@ const Modal = ({ isOpen, onClose, children }: ModalProps) => {
 
           {/* modal box */}
           <motion.div
-            className="
-              relative z-10
-              w-[90%] max-w-xl
+            className={`${className} relative z-10
+              w-[90%] max-w-3xl
               max-h-[90vh]
               bg-[#f8f6fb]
-              rounded-2xl
+              rounded-[32px]
               shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)]
-              flex flex-col overflow-hidden
-            "
+              flex flex-col overflow-hidden`}
             initial={{ y: 40, opacity: 0, scale: 0.97 }}
             animate={{ y: 0, opacity: 1, scale: 1 }}
             exit={{ y: 20, opacity: 0, scale: 0.97 }}
@@ -46,28 +45,12 @@ const Modal = ({ isOpen, onClose, children }: ModalProps) => {
           >
             <button
               onClick={onClose}
-              className="
-                  inline-flex items-center justify-center
-                  w-10 h-10
-                  rounded-full bg-white absolute top-2 right-2 cursor-pointer
-                  transition-colors
-                "
+              className={`${className} inline-flex items-center justify-center
+                  w-8 h-8 rounded-full bg-[#f3f4f6] absolute top-4 right-4 cursor-pointer transition-colors`}
               aria-label="Close"
             >
               {/* X icon */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-5 h-5 color-purple-1"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
-              </svg>
+              <X />
             </button>
             {children}
           </motion.div>

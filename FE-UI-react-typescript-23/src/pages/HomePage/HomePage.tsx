@@ -9,6 +9,7 @@ import DiscoverSection from "../../components/DiscoverSection/DiscoverSection";
 import Footer from "../../components/Footer/Footer";
 import FooterLink from "../../components/Footerlink/FooterLink";
 import { getVideo } from "../../utils/assets";
+import ModalHowDoesItWork from "../../components/ModalHowDoesItWork/ModalHowDoesItWork";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,6 +17,7 @@ function HomePage() {
   const [showHeader, setShowHeader] = useState(false);
   const [showFooter, setShowFooter] = useState(false);
   const [showFooterLinks, setShowFooterLinks] = useState(false);
+  const [isHowModalOpen, setIsHowModalOpen] = useState(false);
   const lastScrollY = useRef(0);
 
   useEffect(() => {
@@ -60,20 +62,26 @@ function HomePage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return (
-    <div className="relative h-dvh">
-      <div className="mainWrapper pb-[144px]">
-        {/* ✅ Sticky Header at top */}
-        <StickyHeader isVisible={showHeader} />
-        <Banner />
-        <VideoSection src={getVideo("view.mp4")} />
-        <DiscoverSection />
+  const openHowModal = () => setIsHowModalOpen(true);
+  const closeHowModal = () => setIsHowModalOpen(false);
 
-        {showFooterLinks && <FooterLink />}
+  return (
+    <>
+      <ModalHowDoesItWork isOpen={isHowModalOpen} onClose={closeHowModal} />
+      <div className="relative bg-[#fbf9fa] homePageSection">
+        <div className="mainWrapper pb-[144px] w-full ">
+          {/* ✅ Sticky Header at top */}
+          <StickyHeader isVisible={showHeader} />
+          <Banner onHowItWorksClick={openHowModal} />
+          <VideoSection src={getVideo("view.mp4")} />
+          <DiscoverSection />
+
+          {showFooterLinks && <FooterLink />}
+        </div>
+        {/* ✅ Sticky Footer at bottom */}
+        <Footer onHowItWorksClick={openHowModal} isVisible={showFooter} />
       </div>
-      {/* ✅ Sticky Footer at bottom */}
-      <Footer isVisible={showFooter} />
-    </div>
+    </>
   );
 }
 

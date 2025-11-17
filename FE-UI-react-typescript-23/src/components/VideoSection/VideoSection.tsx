@@ -17,8 +17,8 @@ const VideoSection: React.FC<VideoSectionProps> = ({ src, thumbnail }) => {
     if (!el) return;
 
     // adjust these to match your Tailwind max-w-5xl / max-w-8xl values
-    const MAX_W_LARGE = "75rem"; // approx 8xl / 7xl (1280px)
-    const MAX_W_SMALL = "90rem"; // 5xl (1024px)
+    const MAX_W_LARGE = "100%"; // approx 8xl / 7xl (1280px)
+    const MAX_W_SMALL = "95%"; // 5xl (1024px)
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -46,13 +46,11 @@ const VideoSection: React.FC<VideoSectionProps> = ({ src, thumbnail }) => {
     <section
       id="sectionVideo"
       className="
-        w-full
-        bg-[#e5e5ea]          
+        w-full      
         flex flex-col items-center justify-center
-        px-0 sm:px-4 py-6
+        px-0 sm:px-4 py-4 md:py-32
       "
     >
-      {/* main rounded card that scales */}
       <div
         ref={cardRef}
         className="
@@ -66,12 +64,11 @@ const VideoSection: React.FC<VideoSectionProps> = ({ src, thumbnail }) => {
             w-full
             bg-[#f7f5fb]   cursor-pointer            
             rounded-tl-[48px] rounded-tr-[48px]
-            shadow-[0_20px_80px_rgba(0,0,0,0.12)]
+             shadow-[0_-20px_80px_rgba(0,0,0,0.2)]
             pt-10 pb-16
             flex justify-center
           "
         >
-          {/* Video frame / thumbnail frame */}
           <div
             className="
               relative overflow-hidden cursor-pointer
@@ -92,7 +89,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ src, thumbnail }) => {
                 <img
                   src={thumbSrc}
                   alt="Video thumbnail"
-                  className="aspect-square scale-90 object-cover rounded-[32px]"
+                  className="aspect-9/12  md:aspect-square scale-90 object-cover rounded-[32px]"
                 />
 
                 {/* play button */}
@@ -128,7 +125,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ src, thumbnail }) => {
                 playsInline
                 preload="metadata"
                 className="
-                  w-full h-full aspect-square scale-90 object-cover
+                  w-full h-full aspect-9/12 md:aspect-square scale-90 object-cover
                   rounded-[32px]
                 "
               />

@@ -14,8 +14,15 @@ export interface StickyHeaderProps {
   showAfterY: number;
 }
 
+// export interface FooterProps {
+//   showBeforeY?: number;
+// }
 export interface FooterProps {
-  showBeforeY?: number;
+  isVisible: boolean;
+  onHowItWorksClick: () => void;
+}
+export interface BannerProps {
+  onHowItWorksClick: () => void;
 }
 export interface FooterLink {
   id: number;
@@ -141,6 +148,7 @@ export interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
+  className?: string;
 }
 
 export interface InspirationsProps {
@@ -169,4 +177,43 @@ export interface VideoPreviewProps {
   src: string; // video file path, e.g. "/video.mp4"
   poster?: string; // optional preview image
   className?: string; // optional extra classes for outer wrapper
+}
+
+export interface SelectOption {
+  value: string;
+  label: string;
+  icon?: string;
+}
+export interface FieldDropdownProps
+  extends Omit<
+    React.SelectHTMLAttributes<HTMLSelectElement>,
+    "onChange" | "value"
+  > {
+  name: string;
+  value: string;
+  options: SelectOption[];
+  placeholder?: string;
+  onChange: (
+    e: React.ChangeEvent<HTMLSelectElement | HTMLInputElement>
+  ) => void;
+}
+
+export type HowItWorksIcon = "mail" | "edit" | "play";
+
+export interface HowItWorksStep {
+  step: number;
+  title: string;
+  description: string;
+  icon: HowItWorksIcon;
+}
+
+export interface HowItWorksModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export interface ShareModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  videoUrl: string;
 }

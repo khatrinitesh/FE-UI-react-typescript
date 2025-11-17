@@ -59,7 +59,7 @@ const FixedFooter = ({ onOpenConsentModal }: FixedFooterProps) => {
   };
   return (
     <>
-      <div className="fixed left-0 right-0 bottom-0 bg-[#f7f3fc] shadow-[0_-8px_16px_rgba(0,0,0,0.08)]">
+      <div className="fixed left-0 right-0 bottom-0 bg-[#fefefe] shadow-[0_-8px_16px_rgba(0,0,0,0.08)]">
         <div className="w-full mx-auto p-4">
           {hasCta && (
             <button
@@ -72,7 +72,7 @@ const FixedFooter = ({ onOpenConsentModal }: FixedFooterProps) => {
               rounded-full
               cursor-pointer
               text-[#4a2b7b]
-              transition-all duration-300
+              transition-all duration-300 outline-none
             "
             >
               {config?.label}

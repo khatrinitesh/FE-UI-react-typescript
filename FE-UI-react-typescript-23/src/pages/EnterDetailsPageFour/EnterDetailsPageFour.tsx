@@ -3,6 +3,11 @@ import IntroMessage from "../../components/IntroMessage/IntroMessage";
 import FieldInput from "../../components/UI/FieldInput/FieldInput";
 import { getImage } from "../../utils/assets";
 import MomentFormCard from "../../components/MomentFormCard/MomentFormCard";
+import FieldDropdown from "../../components/UI/FieldDropdown/FieldDropdown";
+import {
+  PRONOUN_OPTIONS,
+  RELATIONSHIP_OPTIONS,
+} from "../../constants/constants";
 
 interface FormData {
   firstName: string;
@@ -16,7 +21,9 @@ const EnterDetailsPageFour = () => {
     pronouns: "",
     relationship: "",
   });
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
 
     setFormData((prev) => ({
@@ -56,22 +63,24 @@ const EnterDetailsPageFour = () => {
             <label className="block mb-2 color-purple-3 text-[0.938rem] congenial-medium">
               Their pronouns
             </label>
-            <FieldInput
+            <FieldDropdown
               name="pronouns"
-              placeholder="Enter pronouns..."
               value={formData.pronouns}
               onChange={handleChange}
+              options={[...PRONOUN_OPTIONS]}
+              placeholder="Select..."
             />
           </div>
           <div className="formGrp">
             <label className="block mb-2 color-purple-3 text-[0.938rem] congenial-medium">
               Your relationship
             </label>
-            <FieldInput
+            <FieldDropdown
               name="relationship"
-              placeholder="Enter relationship..."
               value={formData.relationship}
               onChange={handleChange}
+              options={[...RELATIONSHIP_OPTIONS]}
+              placeholder="Select..."
             />
           </div>
         </div>

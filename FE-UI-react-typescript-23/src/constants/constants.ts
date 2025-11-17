@@ -4,6 +4,8 @@ import type {
   Discover,
   Feature,
   FooterLink,
+  HowItWorksStep,
+  SelectOption,
 } from "../interface";
 import { getVideo } from "../utils/assets";
 
@@ -39,17 +41,17 @@ export const FOOTER_LINKS: FooterLink[] = [
 export const examples: Discover[] = [
   {
     id: 1,
-    videoSrc: getVideo("BigBuckBunny.mp4"),
+    videoSrc: getVideo("view.mp4"),
     caption: "“Pour mon ami qui a pensé à mon anniversaire”",
   },
   {
     id: 2,
-    videoSrc: getVideo("BigBuckBunny.mp4"),
+    videoSrc: getVideo("view.mp4"),
     caption: "“Pour ma sœur qui adore danser…”",
   },
   {
     id: 3,
-    videoSrc: getVideo("BigBuckBunny.mp4"),
+    videoSrc: getVideo("view.mp4"),
     caption: "“Pour ma meilleure amie, la plus drôle ❤️”",
   },
 ];
@@ -118,3 +120,44 @@ export const ALL_INSPIRATIONS: string[] = [
   "A time you couldn’t stop laughing together.",
   "The moment you knew they were special.",
 ];
+
+export const PRONOUN_OPTIONS = [
+  { value: "he/him", label: "he/him" },
+  { value: "she/her", label: "she/her" },
+  { value: "they/them", label: "they/them" },
+] as const;
+
+export type PronounValue = (typeof PRONOUN_OPTIONS)[number]["value"];
+
+export const RELATIONSHIP_OPTIONS: SelectOption[] = [
+  { value: "love", label: "My love", icon: "💕" },
+  { value: "friend", label: "My friend", icon: "🤝" },
+  { value: "family", label: "My family", icon: "👨‍👩‍👧‍👦" },
+  { value: "other", label: "Other relationship", icon: "💜" },
+] as const;
+
+export type RelationshipValue = (typeof RELATIONSHIP_OPTIONS)[number]["value"];
+
+export const HOW_IT_WORKS_STEPS: HowItWorksStep[] = [
+  {
+    step: 1,
+    title: "Enter my information",
+    description: "",
+    icon: "mail",
+  },
+  {
+    step: 2,
+    title: "Describe the special moment for me and my loved one",
+    description: "",
+    icon: "edit",
+  },
+  {
+    step: 3,
+    title:
+      "Choose from 3 proposed lyrics and receive my personalized song sung by M. Pokora",
+    description: "",
+    icon: "play",
+  },
+];
+
+export const iconBg = "bg-[#6d498c]";

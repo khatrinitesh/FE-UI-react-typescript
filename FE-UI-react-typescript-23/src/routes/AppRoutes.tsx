@@ -1,30 +1,71 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LayoutOne from "../layout/LayoutOne";
-import LayoutTwo from "../layout/LayoutTwo";
-import HomePage from "../pages/HomePage/HomePage";
-import EnterDetailsPageOne from "../pages/EnterDetailsPageOne/EnterDetailsPageOne";
-import EnterDetailsPageTwo from "../pages/EnterDetailsPageTwo/EnterDetailsPageTwo";
-import EnterDetailsPageThree from "../pages/EnterDetailsPageThree/EnterDetailsPageThree";
-import EnterDetailsPageFour from "../pages/EnterDetailsPageFour/EnterDetailsPageFour";
-import EnterDetailsPageFive from "../pages/EnterDetailsPageFive/EnterDetailsPageFive";
-import EnterDetailsPageSix from "../pages/EnterDetailsPageSix/EnterDetailsPageSix";
-import EnterDetailsPageSeven from "../pages/EnterDetailsPageSeven/EnterDetailsPageSeven";
-import EnterDetailsPageEight from "../pages/EnterDetailsPageEight/EnterDetailsPageEight";
-import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
+import { Suspense, lazy, useEffect } from "react";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
+import PreloaderSpinner from "../components/PreloaderSpinner/PreloaderSpinner";
 
-const AppRoutes = () => {
+const LayoutOne = lazy(() => import("../layout/LayoutOne"));
+const LayoutTwo = lazy(() => import("../layout/LayoutTwo"));
+
+const HomePage = lazy(() => import("../pages/HomePage/HomePage"));
+const EnterDetailsPageOne = lazy(
+  () => import("../pages/EnterDetailsPageOne/EnterDetailsPageOne")
+);
+const EnterDetailsPageTwo = lazy(
+  () => import("../pages/EnterDetailsPageTwo/EnterDetailsPageTwo")
+);
+const EnterDetailsPageThree = lazy(
+  () => import("../pages/EnterDetailsPageThree/EnterDetailsPageThree")
+);
+const EnterDetailsPageFour = lazy(
+  () => import("../pages/EnterDetailsPageFour/EnterDetailsPageFour")
+);
+const EnterDetailsPageFive = lazy(
+  () => import("../pages/EnterDetailsPageFive/EnterDetailsPageFive")
+);
+const EnterDetailsPageSix = lazy(
+  () => import("../pages/EnterDetailsPageSix/EnterDetailsPageSix")
+);
+const EnterDetailsPageSeven = lazy(
+  () => import("../pages/EnterDetailsPageSeven/EnterDetailsPageSeven")
+);
+const EnterDetailsPageEight = lazy(
+  () => import("../pages/EnterDetailsPageEight/EnterDetailsPageEight")
+);
+const NotFoundPage = lazy(() => import("../pages/NotFoundPage/NotFoundPage"));
+import LandscapeScreen from "../pages/NotFoundPage/LandscapeScreen";
+
+// const RouteChangeOverlay = () => (
+//   <>
+//     <PreloaderSpinner />
+//   </>
+// );
+
+const AppRoutesInner = () => {
+  // const location = useLocation();
+  // const [isRouteLoading, setIsRouteLoading] = useState(false);
+
+  // Show overlay briefly on every path change
+  // useEffect(() => {
+  //   setIsRouteLoading(true);
+
+  //   const timeout = setTimeout(() => {
+  //     setIsRouteLoading(false);
+  //   }, 2000); // adjust duration if you want
+
+  //   return () => clearTimeout(timeout);
+  // }, [location.pathname]);
+
   return (
     <>
-      <BrowserRouter>
-        <ScrollToTop />
+      <ScrollToTop />
+      <LandscapeScreen />
+      {/* {isRouteLoading && <RouteChangeOverlay />} */}
+
+      <Suspense>
         <Routes>
-          {/* Layout 1 routes */}
           <Route element={<LayoutOne />}>
             <Route path="/" element={<HomePage />} />
           </Route>
-
-          {/* Layout 2 routes */}
           <Route element={<LayoutTwo />}>
             <Route path="/enter-details-1" element={<EnterDetailsPageOne />} />
             <Route path="/enter-details-2" element={<EnterDetailsPageTwo />} />
@@ -45,11 +86,18 @@ const AppRoutes = () => {
             />
           </Route>
 
-          {/* 404 – must come last */}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
-      </BrowserRouter>
+      </Suspense>
     </>
+  );
+};
+
+const AppRoutes = () => {
+  return (
+    <BrowserRouter>
+      <AppRoutesInner />
+    </BrowserRouter>
   );
 };
 

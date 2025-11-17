@@ -51,16 +51,11 @@
   font-style: normal;
   font-display: swap;
 }
-
-/* ui style brand guide typgraohy */
 :root {
   --ff-congenial-light: "congenial-light";
   --ff-congenial-regular: "congenial-regular";
   --ff-congenial-medium: "congenial-medium";
   --ff-congenial-bold: "congenial-bold";
-  /* =========================
-   * Typography – Font Sizes
-   * ========================= */
   --fs-headtitle-1: clamp(28px, 5.5vw, 52px); /*UI brand style guide*/
   --fs-headtitle-2: clamp(28px, 4vw, 48px); /*UI brand style guide*/
   --fs-headtitle-3: clamp(28px, 4vw, 40px); /*UI brand style guide*/
@@ -73,26 +68,9 @@
   --fs-font-sm-md: 15px;
   --fs-description: 14px;
   --fs-description-xs: 13px; */
-  /* =========================
-   * Colors
-   * ========================= */
-  /* --color-purple-1: #6c4b97; */ /*UI brand style guide*/
-  /* --color-purple-2: #6e4ca5; /*UI brand style guide*/
-  /* --color-purple-8: #4a2b7b; */ /*UI brand style guide*/
-  /* --color-purple-3: #6e4a8e;
-  --color-purple-4: #54458e;
-  --color-purple-5: #744fa1;
-  --color-purple-7: #3a2b70; */
 
-  /* --color-lightpurple-1: #f3f2f4;
-  --color-lightpurple-2: #e5d9f2;
-  --color-lightblue: #8cd2f0; */
   --color-gray-1: #e8e7eb;
-  /* --color-gray-2: #9ca3af;
-  --color-gray-3: #e5e7eb;
-  --color-gray-4: #5f6977; */
 }
-/* font family */
 .congenial-light {
   font-family: var(--ff-congenial-light);
 }
@@ -137,9 +115,22 @@
 .color-gray-2 {
   color: #3b3b3b;
 }
+.color-gray-3 {
+  color: #e5e7eb;
+}
 .summary-text {
   font-size: var(--fs-summary);
 }
+html,
+body {
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+}
+.scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 .bodyWrapper {
   font-family: var(--ff-congenial-regular);
   overflow-x: hidden;
@@ -148,7 +139,6 @@
   height: 100dvh;
 }
 
-/* three dots loading animation */
 @keyframes dot-bounce {
   0%,
   80%,
@@ -166,7 +156,6 @@
   animation: dot-bounce 1s ease-in-out infinite;
 }
 
-/* circular progress rotate  */
 @keyframes spin-smooth {
   0% {
     transform: rotate(0deg);
@@ -178,10 +167,6 @@
 
 .animate-spin-smooth {
   animation: spin-smooth 1s linear infinite;
-}
-
-.scrollbar::-webkit-scrollbar {
-  display: none;
 }
 
 .intro-message-bubble {
@@ -202,4 +187,44 @@
 }
 .my-gradient-bg {
   background-image: linear-gradient(to bottom, #f5f0fa, #fdfbff);
+}
+
+/* .loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid #94d0ec;
+  border-right-color: #4c2b87;
+  animation: l2 1s infinite linear;
+}
+@keyframes l2 {
+  to {
+    transform: rotate(1turn);
+  }
+} */
+
+/* ------------------Best View in LANDSCAPE Mobile Mode ------------------- */
+@media (orientation: landscape) and (min-width: 768px) {
+  .landscapeWrapper {
+    display: none;
+  }
+}
+@media (orientation: landscape) and (max-height: 550px) {
+  .landscapeWrapper {
+    display: block;
+  }
+  .homePageSection,
+  .formDetailsSection {
+    display: none;
+  }
+}
+@media (orientation: portrait) and (min-aspect-ratio: 9/16) {
+  .landscapeWrapper {
+    display: none;
+  }
+}
+@media (orientation: portrait) and (max-width: 767px) {
+  .landscapeWrapper {
+    display: none;
+  }
 }

@@ -4,10 +4,11 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { getImage } from "../../utils/assets";
 import { useNavigate } from "react-router-dom";
+import type { BannerProps } from "../../interface";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Banner = () => {
+const Banner = ({ onHowItWorksClick }: BannerProps) => {
   const bannerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -116,7 +117,6 @@ const Banner = () => {
         flex flex-col items-center justify-between text-center text-white
         min-h-[100vh]
         bg-[linear-gradient(135deg,_#6C4BA4_0%,_#6E4A8E_100%)]
-        shadow-[0_4px_20px_rgba(110,74,142,0.3)]
         mx-auto transition-all duration-700 ease-out
       "
     >
@@ -177,8 +177,8 @@ const Banner = () => {
             rounded-full 
             text-lg congenial-medium
             bg-[#93d7ff] text-[#6e4a8e]
-            border-0 cursor-pointer
-            transition-transform duration-300
+            border-0 cursor-pointer hover:shadow-[0_20px_60px_var(--tw-shadow-color,_#8cd2f080)] hover:scale-[1.03]
+            transition-transform duration-300 transition-all
             hover:-translate-y-1
           "
           initial={{ opacity: 0, y: 20 }}
@@ -188,10 +188,10 @@ const Banner = () => {
           Create my song now
         </motion.button>
 
-        <motion.a
-          href="#how"
+        <motion.button
+          onClick={onHowItWorksClick}
           className="
-            banner-link
+            banner-link cursor-pointer
             block mt-4
             text-sm  congenial-medium
             underline decoration-2 underline-offset-4 text-white
@@ -201,7 +201,7 @@ const Banner = () => {
           transition={{ delay: 2, duration: 0.8 }}
         >
           How does it work?
-        </motion.a>
+        </motion.button>
       </motion.div>
 
       {/* Scroll Indicator */}
@@ -216,19 +216,17 @@ const Banner = () => {
   "
         onClick={() => {
           const target = document.getElementById("sectionVideo");
-          // instant jump, no auto-smooth
           target?.scrollIntoView();
-          // or: target?.scrollIntoView({ behavior: "auto" });
         }}
         initial={{ opacity: 1, y: 1 }}
         animate={{ opacity: 1, y: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
         <motion.span
-          className="
+          className=" cursor-pointer
       scroll-text
       text-sm
-      font-semibold uppercase tracking-[0.35em]
+      congenial-medium uppercase tracking-[0.35em]
       text-white/70 mb-2
     "
           animate={{ opacity: [1, 0.6, 1] }}
@@ -237,11 +235,11 @@ const Banner = () => {
           SCROLL
         </motion.span>
 
-        <div className="relative h-[35px] w-[35px] flex items-center justify-center">
+        <div className="relative h-[35px] w-[35px] flex items-center justify-center cursor-pointer">
           {/* Pulsing outer ring */}
           <motion.span
             className="absolute rounded-full border border-white/40"
-            style={{ width: 40, height: 40 }}
+            style={{ width: 28, height: 28 }}
             animate={{
               scale: [1, 1.6, 1],
               opacity: [0.7, 0, 0.7],
@@ -258,13 +256,14 @@ const Banner = () => {
             className="
         scroll-circle cursor-pointer
         relative z-10
-        w-[35px] h-[35px] rounded-full
+        w-8 h-8 rounded-full
         bg-[rgba(255,255,255,0.15)]
         flex items-center justify-center
         backdrop-blur-[4px]
       "
             animate={{
               scale: [1, 1.1, 1],
+              y: [0, 6, 0], // little bob
               boxShadow: [
                 "0 0 0px rgba(255,255,255,0.15)",
                 "0 0 20px rgba(255,255,255,0.4)",
@@ -280,16 +279,16 @@ const Banner = () => {
             {/* Arrow with smooth slow bounce */}
             <motion.span
               className="cursor-pointer scroll-arrow flex items-center justify-center"
-              // animate={{ y: [0, 6, 0] }}
-              // transition={{
-              //   duration: 2.4, // slower
-              //   ease: "easeInOut", // smooth
-              //   repeat: Infinity,
-              // }}
+              animate={{ y: [0, 6, 0] }}
+              transition={{
+                duration: 2.4, // slower
+                ease: "easeInOut", // smooth
+                repeat: Infinity,
+              }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-[18px] h-[18px]"
+                className="w-5 h-5"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="white"
