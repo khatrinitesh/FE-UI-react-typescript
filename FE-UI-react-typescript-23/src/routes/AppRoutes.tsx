@@ -32,7 +32,7 @@ const EnterDetailsPageEight = lazy(
   () => import("../pages/EnterDetailsPageEight/EnterDetailsPageEight")
 );
 const NotFoundPage = lazy(() => import("../pages/NotFoundPage/NotFoundPage"));
-import LandscapeScreen from "../pages/NotFoundPage/LandscapeScreen";
+import LandscapeScreen from "../pages/LandscapeScreen/LandscapeScreen";
 
 // const RouteChangeOverlay = () => (
 //   <>
