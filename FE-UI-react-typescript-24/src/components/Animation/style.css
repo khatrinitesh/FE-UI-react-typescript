@@ -1,0 +1,9 @@
+div {
+  animation: bounce calc(var(--i) * 0.3s) infinite alternate ease-in-out;
+}
+
+@keyframes bounce {
+  to {
+    transform: translateY(-12px);
+  }
+}
