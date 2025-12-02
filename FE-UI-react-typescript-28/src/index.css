@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+.bodyWrapper,
+.rootWrapper {
+  min-height: 100dvh;
+  height: 100dvh;
+}
