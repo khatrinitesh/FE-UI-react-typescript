@@ -8,6 +8,14 @@ import { ACCORDION_ITEM } from "../constants/constants";
 import Alerts from "../components/ui/Alerts";
 import { useAlertStore } from "../store/useAlertStore";
 import { DemoIcons } from "../components/ui/AnimateIcons";
+import SearchResults from "../components/ui/AnimatedSearch/SearchResults";
+import AnimatedSearchBar from "../components/ui/AnimatedSearch/AnimateSearch";
+import Arrows from "../components/ui/Arrows";
+import AvatarGroup from "../components/ui/Avatars/AvatarGroup";
+import BackgroundBeams from "../components/ui/BackgroundBeams";
+import Banner from "../components/ui/Banner/Banner";
+import BentoGrid from "../components/ui/BentoGrid/BentoGrid";
+import BWImage from "../components/ui/BlackWhiteImg/BWImage";
 
 const Home = () => {
   const showAlert = useAlertStore((state) => state.showAlert);
@@ -22,6 +30,39 @@ const Home = () => {
       <Link to={PATHS.PRODUCTS} className="text-blue-500 underline">
         View Products
       </Link>
+
+      <BWImage
+        id={1}
+        url="https://picsum.photos/id/1/400/300?grayscale"
+        author="John Doe"
+      />
+      <hr />
+
+      <BentoGrid />
+
+      <hr />
+      <Banner />
+      <hr />
+
+      <BackgroundBeams />
+      <hr />
+
+      <AvatarGroup />
+
+      <hr />
+
+      <Arrows direction="up" />
+
+      <div className="flex gap-10">
+        <Arrows direction="left" />
+        <Arrows direction="right" />
+      </div>
+
+      <Arrows direction="down" />
+      <hr />
+      <AnimatedSearchBar />
+      <SearchResults />
+      <hr />
 
       <DemoIcons />
       <hr />

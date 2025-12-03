@@ -60,3 +60,9 @@ export interface AnimatedIconProps {
   size?: number;
   color?: string;
 }
+
+export interface AvatarProps {
+  id: number;
+  src: string;
+  name: string;
+}
