@@ -16,6 +16,25 @@ import BackgroundBeams from "../components/ui/BackgroundBeams";
 import Banner from "../components/ui/Banner/Banner";
 import BentoGrid from "../components/ui/BentoGrid/BentoGrid";
 import BWImage from "../components/ui/BlackWhiteImg/BWImage";
+// import BlurToggleButton from "../components/ui/BlurBackgroundImage/BlurToggleButton";
+// import BlurBackgroundImage from "../components/ui/BlurBackgroundImage/BlurBackgroundImage";
+import NewArray2 from "../components/ui/Array/newArray/NewArray2";
+import At3 from "../components/ui/Array/at/At3";
+import Concat3 from "../components/ui/Array/concat/Concat3";
+import CopyWithin3 from "../components/ui/Array/copyWithin/CopyWithin3";
+import Entries3 from "../components/ui/Array/entries/Entries3";
+import Every3 from "../components/ui/Array/every/Every3";
+import Filter3 from "../components/ui/Array/Filter/Filter3";
+import Find3 from "../components/ui/Array/Find/Find3";
+import Flat1 from "../components/ui/Array/Flat/Flat1";
+import Flat2 from "../components/ui/Array/Flat/Flat2";
+import Flat3 from "../components/ui/Array/Flat/Flat3";
+import ForEach2 from "../components/ui/Array/forEach/ForEach2";
+import ForEach3 from "../components/ui/Array/forEach/ForEach3";
+import ForEach1 from "../components/ui/Array/forEach/ForEach1";
+import From3 from "../components/ui/Array/from/From3";
+import Includes2 from "../components/ui/Array/Includes/Includes2";
+import IndexOf1 from "../components/ui/Array/indexOf/IndexOf1";
 
 const Home = () => {
   const showAlert = useAlertStore((state) => state.showAlert);
@@ -30,6 +49,44 @@ const Home = () => {
       <Link to={PATHS.PRODUCTS} className="text-blue-500 underline">
         View Products
       </Link>
+      <IndexOf1 />
+      <hr />
+      <Includes2 />
+      <hr />
+      <From3 />
+      <hr />
+      <ForEach3 />
+      <hr />
+      <ForEach2 />
+      <hr />
+      <ForEach1 />
+      <hr />
+      <Flat3 />
+      <hr />
+      <Flat2 />
+      <hr />
+      <Flat1 />
+      <hr />
+      <Find3 />
+      <hr />
+      <Filter3 />
+      <hr />
+      <Every3 />
+      <hr />
+      <Entries3 />
+      <hr />
+      <CopyWithin3 />
+      <hr />
+      <Concat3 />
+
+      <hr />
+      <At3 />
+      <hr />
+      <NewArray2 />
+      {/* <hr />
+      <BlurBackgroundImage />
+      <BlurToggleButton /> */}
+      <hr />
 
       <BWImage
         id={1}
