@@ -35,6 +35,37 @@ import ForEach1 from "../components/ui/Array/forEach/ForEach1";
 import From3 from "../components/ui/Array/from/From3";
 import Includes2 from "../components/ui/Array/Includes/Includes2";
 import IndexOf1 from "../components/ui/Array/indexOf/IndexOf1";
+import IsArray1 from "../components/ui/Array/isArray/IsArray1";
+import Join1 from "../components/ui/Array/join/Join1";
+import Key1 from "../components/ui/Array/key/Key1";
+import LastIndexOf1 from "../components/ui/Array/lastIndexOf/LastIndexOf1";
+import Length1 from "../components/ui/Array/length/Length1";
+import Of from "../components/ui/Array/of/Of";
+import Pop1 from "../components/ui/Array/pop/Pop1";
+import Reduce1 from "../components/ui/Array/reduce/Reduce1";
+import ReduceRight1 from "../components/ui/Array/reduceRight/ReduceRight1";
+import Reverse1 from "../components/ui/Array/reverse/Reverse1";
+import Shift1 from "../components/ui/Array/shift/Shift1";
+import Slice1 from "../components/ui/Array/slice/Slice1";
+import Some1 from "../components/ui/Array/some/Some1";
+import Sort1 from "../components/ui/Array/sort/Sort1";
+import Splice1 from "../components/ui/Array/splice/Splice1";
+import ToReversed1 from "../components/ui/Array/toReversed/ToReversed1";
+import ToSort from "../components/ui/Array/toSort/ToSort";
+import Unshift1 from "../components/ui/Array/unshift/Unshift1";
+import ValueOf1 from "../components/ui/Array/valueOf/ValueOf1";
+import With1 from "../components/ui/Array/with/With1";
+import Boolean1 from "../components/ui/Boolean/Boolean1";
+import NewDate1 from "../components/ui/Date/newDate/NewDate1";
+import Drop1 from "../components/ui/Iterator/Drop/Drop1";
+import Every1 from "../components/ui/Array/every/Every1";
+import Filter1 from "../components/ui/Array/Filter/Filter1";
+import Find1 from "../components/ui/Array/Find/Find1";
+import FlatMap1 from "../components/ui/Iterator/FlatMap/FlatMap1";
+import Map1 from "./../components/ui/Iterator/Map/Map1";
+import Take from "../components/ui/Iterator/Take/Take";
+import Stringify1 from "../components/ui/JSON/stringify/Stringify1";
+import Clear1 from "../components/ui/Map/clear/Clear1";
 
 const Home = () => {
   const showAlert = useAlertStore((state) => state.showAlert);
@@ -49,6 +80,75 @@ const Home = () => {
       <Link to={PATHS.PRODUCTS} className="text-blue-500 underline">
         View Products
       </Link>
+      <hr />
+      <Clear1 />
+      <hr />
+      <Stringify1 />
+      <hr />
+      <Take />
+      <hr />
+      <Reduce1 />
+      <hr />
+      <Map1 />
+      <hr />
+      <ForEach1 />
+      <hr />
+      <FlatMap1 />
+      <hr />
+      <Find1 />
+      <hr />
+      <Filter1 />
+      <hr />
+      <Every1 />
+      <hr />
+      <Drop1 />
+      <hr />
+      <NewDate1 />
+      <hr />
+      <Boolean1 />
+      <hr />
+      <With1 />
+      <hr />
+      <ValueOf1 />
+      <hr />
+      <Unshift1 />
+      <hr />
+      <ToSort />
+      <hr />
+      <ToReversed1 />
+      <hr />
+      <Splice1 />
+      <hr />
+      <Sort1 />
+      <hr />
+      <Some1 />
+      <hr />
+      <Slice1 />
+      <hr />
+      <Shift1 />
+      <hr />
+      <Reverse1 />
+      <hr />
+      <ReduceRight1 />
+      <hr />
+      <Reduce1 />
+      <hr />
+      <Pop1 />
+      <hr />
+      <Of />
+      <hr />
+      <Map1 />
+      <hr />
+      <Length1 />
+      <hr />
+      <LastIndexOf1 />
+      <hr />
+      <Key1 />
+      <hr />
+      <Join1 />
+      <hr />
+      <IsArray1 />
+      <hr />
       <IndexOf1 />
       <hr />
       <Includes2 />
