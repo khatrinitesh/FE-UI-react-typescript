@@ -66,6 +66,13 @@ import Map1 from "./../components/ui/Iterator/Map/Map1";
 import Take from "../components/ui/Iterator/Take/Take";
 import Stringify1 from "../components/ui/JSON/stringify/Stringify1";
 import Clear1 from "../components/ui/Map/clear/Clear1";
+import Delete1 from "../components/ui/Map/delete/Delete1";
+import MapForEach1 from "../components/ui/Map/mapforeach/MapForEach1";
+import MapGet1 from "../components/ui/Map/mapget/MapGet1";
+import MapGroupBy1 from "../components/ui/Map/mapgroupby/MapGroupBy1";
+import MapKeys1 from "../components/ui/Map/mapkeys/MapKeys1";
+import MapSet1 from "../components/ui/Map/mapset/MapSet1";
+import MapSize1 from "../components/ui/Map/mapsize/MapSize1";
 
 const Home = () => {
   const showAlert = useAlertStore((state) => state.showAlert);
@@ -80,6 +87,20 @@ const Home = () => {
       <Link to={PATHS.PRODUCTS} className="text-blue-500 underline">
         View Products
       </Link>
+      <hr />
+      <MapSize1 />
+      <hr />
+      <MapSet1 />
+      <hr />
+      <MapKeys1 />
+      <hr />
+      <MapGroupBy1 />
+      <hr />
+      <MapGet1 />
+      <hr />
+      <MapForEach1 />
+      <hr />
+      <Delete1 />
       <hr />
       <Clear1 />
       <hr />
