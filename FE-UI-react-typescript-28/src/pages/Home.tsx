@@ -73,6 +73,7 @@ import MapGroupBy1 from "../components/ui/Map/mapgroupby/MapGroupBy1";
 import MapKeys1 from "../components/ui/Map/mapkeys/MapKeys1";
 import MapSet1 from "../components/ui/Map/mapset/MapSet1";
 import MapSize1 from "../components/ui/Map/mapsize/MapSize1";
+import Example1 from "../components/ui/Example/Example1";
 
 const Home = () => {
   const showAlert = useAlertStore((state) => state.showAlert);
@@ -87,6 +88,8 @@ const Home = () => {
       <Link to={PATHS.PRODUCTS} className="text-blue-500 underline">
         View Products
       </Link>
+      <hr />
+      <Example1 />
       <hr />
       <MapSize1 />
       <hr />
