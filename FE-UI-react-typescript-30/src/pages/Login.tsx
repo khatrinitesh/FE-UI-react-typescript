@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { motion } from "framer-motion";
-import { ROUTES } from "../constants";
+import { ROUTES } from "../constants/constants";
 import { login } from "../api/authService";
 
 const Login = () => {

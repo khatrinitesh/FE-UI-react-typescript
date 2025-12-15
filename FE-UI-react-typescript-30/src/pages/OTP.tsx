@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router";
-import { ROUTES } from "../constants";
+import { ROUTES } from "../constants/constants";
 import { motion } from "framer-motion";
 import { verifyOTP } from "../api/authService";
 

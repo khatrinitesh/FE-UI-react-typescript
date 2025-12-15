@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router";
-import { ROUTES } from "../constants";
+import { ROUTES } from "../constants/constants";
 import { register } from "../api/authService";
 import { motion } from "framer-motion";
 
