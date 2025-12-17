@@ -14,6 +14,7 @@ import type {
   Item,
   NavLink,
   SearchItem,
+  ZebraStripeTableRow,
 } from "../interface/auth";
 
 export const ROUTES = {
@@ -191,3 +192,45 @@ export const CARS: Car[] = [
   { id: 1, color: "bg-red-500", width: 40, height: 20 },
   { id: 2, color: "bg-blue-500", width: 50, height: 25 },
 ];
+
+export const ZOOM_SCALE = 1.15;
+export const ZOOM_DURATION = 300;
+
+export const ZIG_ZAG_GAP = "gap-8";
+export const IMAGE_HEIGHT = "h-64";
+
+export const ROW_ODD_BG = "bg-gray-50";
+export const ROW_EVEN_BG = "bg-white";
+export const HOVER_BG = "hover:bg-indigo-50";
+export const ROW_ANIM_DURATION = 0.25;
+
+export const ZEBRA_STRIPE_TABLE_ROW_DATA: ZebraStripeTableRow[] = [
+  {
+    id: "1",
+    name: "Alice",
+    email: "alice@mail.com",
+    role: "Admin",
+    age: 30,
+    department: "HR",
+    location: "NY",
+    phone: "123-456-7890",
+    status: "Active",
+    startDate: "2023-01-01",
+  },
+  {
+    id: "2",
+    name: "Bob",
+    email: "bob@mail.com",
+    role: "User",
+    age: 25,
+    department: "Marketing",
+    location: "LA",
+    phone: "987-654-3210",
+    status: "Inactive",
+    startDate: "2023-02-15",
+  },
+];
+
+export const VORTEX_RADIUS = 150; // px
+export const VORTEX_SIZE = 50; // px
+export const VORTEX_ROTATE_DURATION = 5; // sec

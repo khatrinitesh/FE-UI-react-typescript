@@ -1,4 +1,3 @@
-import type { JSX, ReactNode } from "react";
 import type { IconType } from "react-icons";
 
 export interface ILogin {
@@ -149,4 +148,36 @@ export interface Car {
   color: string;
   width: number;
   height: number;
+}
+
+export interface ZoomHoverProps {
+  id: string;
+  title: string;
+  image: string;
+}
+
+export interface ZigZagItem {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+}
+
+export interface ZebraStripeTableRow {
+  id: string; //1
+  name: string; //2
+  email: string; //3
+  role: string; //4
+  age?: number; //5
+  department?: string; //6
+  location?: string; //7
+  phone?: string; //
+  status?: string;
+  startDate?: string;
+}
+
+export interface VortexItem {
+  id: string;
+  label: string;
+  color?: string;
 }
