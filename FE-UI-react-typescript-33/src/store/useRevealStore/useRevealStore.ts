@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import type { RevealState } from "../../interface";
 
 export const useRevealStore = create<RevealState>((set) => ({
   x: 0,

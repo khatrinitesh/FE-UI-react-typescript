@@ -1,9 +1,9 @@
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import { CalloutComp } from "./AppComponent/CalloutComp";
+import CanvasRevealComp from "./AppComponent/CanvasRevealComp";
 
 createRoot(document.getElementById("root")!).render(
   <>
-    <CalloutComp />
+    <CanvasRevealComp />
   </>,
 );
