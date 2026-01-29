@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Nitesh",
+      "email": "nitesh@mail.com"
+    },
+    {
+      "id": "2",
+      "name": "Amit",
+      "email": "amit@mail.com"
+    },
+    {
+      "id": "15c7",
+      "name": "nitesh khatri",
+      "email": "nitesh.k@adsmn.in"
+    }
+  ]
+}
