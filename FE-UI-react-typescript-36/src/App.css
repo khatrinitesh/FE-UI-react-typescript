@@ -1,0 +1,191 @@
+.app {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+  background:
+    radial-gradient(circle at top left, #ffffff 0%, rgba(255, 255, 255, 0) 45%),
+    linear-gradient(145deg, #f6f8ff 0%, #e8edf7 100%);
+}
+
+.card-perspective {
+  width: min(100%, 720px);
+  perspective: var(--card-perspective, 1300px);
+}
+
+.accordion-card {
+  width: 100%;
+  position: relative;
+  border-radius: 1.25rem;
+  border: 1px solid #dbe1f2;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(20, 33, 70, 0.1);
+  padding: 1.5rem;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: box-shadow 0.3s ease;
+}
+
+.card-glare {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-image: radial-gradient(
+    circle at 50% 18%,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(255, 255, 255, 0) 56%
+  );
+  z-index: 0;
+}
+
+.card-layer {
+  position: relative;
+  z-index: 1;
+}
+
+.card-layer-soft {
+  transform: translateZ(18px);
+}
+
+.card-layer-medium {
+  transform: translateZ(28px);
+}
+
+.card-layer-strong {
+  transform: translateZ(36px);
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #5d6a93;
+  font-weight: 700;
+}
+
+.title {
+  margin: 0.4rem 0 1.2rem;
+  font-size: clamp(1.35rem, 2.5vw, 1.9rem);
+  line-height: 1.2;
+  color: #1f2744;
+}
+
+.accordion {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.accordion-item {
+  border: 1px solid #d9e0f3;
+  border-radius: 0.875rem;
+  background: #f9fbff;
+  overflow: hidden;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.accordion-item.open {
+  border-color: #7d8cf1;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(68, 82, 155, 0.14);
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border: none;
+  background: transparent;
+  padding: 1rem 1.1rem;
+  text-align: left;
+  cursor: pointer;
+  color: #1f2744;
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.accordion-trigger:focus-visible {
+  outline: 2px solid #4c60db;
+  outline-offset: -2px;
+}
+
+.accordion-panel {
+  overflow: hidden;
+  padding: 0 1.1rem 1rem;
+}
+
+.accordion-panel p {
+  margin: 0;
+  color: #4a557a;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.icon {
+  position: relative;
+  flex: 0 0 1.35rem;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 999px;
+  background: #e8edff;
+  color: #3a4bb7;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-line {
+  position: absolute;
+  width: 0.72rem;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.icon-line-vertical {
+  transform-origin: center;
+  transform: rotate(90deg);
+}
+
+@media (max-width: 640px) {
+  .card-perspective {
+    width: 100%;
+    perspective: none;
+  }
+
+  .card-layer-soft,
+  .card-layer-medium,
+  .card-layer-strong {
+    transform: none;
+  }
+
+  .accordion-card {
+    padding: 1.2rem;
+  }
+
+  .accordion-trigger {
+    padding: 0.95rem 0.95rem;
+  }
+
+  .accordion-panel {
+    padding: 0 0.95rem 0.95rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accordion-card {
+    transition: none;
+  }
+
+  .card-layer-soft,
+  .card-layer-medium,
+  .card-layer-strong {
+    transform: none;
+  }
+}
