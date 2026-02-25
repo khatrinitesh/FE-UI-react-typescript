@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import { fetchPostById } from "../../services/api";
 import type { Post } from "../../interface";
 
@@ -27,6 +27,7 @@ const ProductDetail = () => {
 
   if (loading) return <p>Loading product details...</p>;
   if (error) return <p>Error.</p>;
+  if (!post) return <p>Product not found.</p>;
   return (
     <div style={{ padding: "2rem", maxWidth: "600px", margin: "0 auto" }}>
       <h1>{post.title}</h1>
