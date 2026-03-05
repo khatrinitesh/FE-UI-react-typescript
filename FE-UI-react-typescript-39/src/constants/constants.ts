@@ -1,6 +1,18 @@
 import type { Variants } from "framer-motion";
 import { PATH } from "../router/path";
-import type { CardItem, NavItem } from "../interface";
+import type {
+  ArrowSlide,
+  AspectRatioCard,
+  AutoCompleteItem,
+  Avatar,
+  BackgroundImage,
+  BannerMessage,
+  BentoGridItem,
+  CardItem,
+  GalleryImage,
+  NavItem,
+  Skill,
+} from "../interface";
 
 export const fadeUp: Variants = {
   hidden: { opacity: 0, y: 60 },
@@ -85,3 +97,127 @@ export const iconVariants2: Variants = {
 };
 
 export type IconAnimationState = "idle" | "hover" | "tap";
+
+export const skills: Skill[] = [
+  { id: 1, name: "React", level: 90 },
+  { id: 2, name: "TypeScript", level: 80 },
+  { id: 3, name: "Framer Motion", level: 70 },
+  { id: 4, name: "CSS/HTML", level: 95 },
+  { id: 5, name: "Node.js", level: 75 },
+];
+
+export const slides: ArrowSlide[] = [
+  { id: 1, title: "Slide 1", description: "First Slide", color: "bg-red-500" },
+  {
+    id: 2,
+    title: "Slide 2",
+    description: "Second Slide",
+    color: "bg-green-500",
+  },
+  { id: 3, title: "Slide 3", description: "Third Slide", color: "bg-blue-500" },
+];
+
+export const cards: AspectRatioCard[] = [
+  {
+    id: 1,
+    title: "Card 1",
+    description: "This is card 1",
+    color: "bg-red-500",
+  },
+  {
+    id: 2,
+    title: "Card 2",
+    description: "This is card 2",
+    color: "bg-green-500",
+  },
+  {
+    id: 3,
+    title: "Card 3",
+    description: "This is card 3",
+    color: "bg-blue-500",
+  },
+];
+
+export const autoCompleteItems: AutoCompleteItem[] = [
+  { id: 1, name: "React" },
+  { id: 2, name: "TypeScript" },
+  { id: 3, name: "Zustand" },
+  { id: 4, name: "Framer Motion" },
+  { id: 5, name: "TailwindCSS" },
+  { id: 6, name: "Node.js" },
+  { id: 7, name: "GraphQL" },
+  { id: 8, name: "Next.js" },
+];
+
+export const avatars: Avatar[] = [
+  { id: 1, name: "Alice", image: "https://i.pravatar.cc/150?img=1" },
+  { id: 2, name: "Bob", image: "https://i.pravatar.cc/150?img=2" },
+  { id: 3, name: "Charlie", image: "https://i.pravatar.cc/150?img=3" },
+  { id: 4, name: "Diana", image: "https://i.pravatar.cc/150?img=4" },
+  { id: 5, name: "Eve", image: "https://i.pravatar.cc/150?img=5" },
+];
+
+export const BEAM_COUNT = 10;
+export const COLORS = [
+  "bg-red-400",
+  "bg-blue-400",
+  "bg-green-400",
+  "bg-yellow-400",
+];
+
+export const BANNER_MESSAGES: BannerMessage[] = [
+  {
+    id: 1,
+    title: "Welcome to Our App",
+    subtitle: "Enjoy your stay!",
+    color: "bg-blue-500",
+  },
+  {
+    id: 2,
+    title: "New Features",
+    subtitle: "Check out the latest updates!",
+    color: "bg-green-500",
+  },
+  {
+    id: 3,
+    title: "Limited Offer",
+    subtitle: "Get 50% off today!",
+    color: "bg-red-500",
+  },
+];
+
+export const BENTO_GRID_ITEMS: BentoGridItem[] = [
+  { id: 1, title: "Item 1", size: "large", color: "bg-red-400" },
+  { id: 2, title: "Item 2", size: "medium", color: "bg-green-400" },
+  { id: 3, title: "Item 3", size: "small", color: "bg-blue-400" },
+  { id: 4, title: "Item 4", size: "medium", color: "bg-yellow-400" },
+  { id: 5, title: "Item 5", size: "small", color: "bg-purple-400" },
+  { id: 6, title: "Item 6", size: "large", color: "bg-pink-400" },
+];
+
+export const GALLERY_IMAGES: GalleryImage[] = [
+  { id: 1, title: "Mountains", src: "https://picsum.photos/id/1015/300/200" },
+  { id: 2, title: "City", src: "https://picsum.photos/id/1011/300/200" },
+  { id: 3, title: "Forest", src: "https://picsum.photos/id/1018/300/200" },
+  { id: 4, title: "Beach", src: "https://picsum.photos/id/1020/300/200" },
+  { id: 5, title: "Desert", src: "https://picsum.photos/id/1003/300/200" },
+  { id: 6, title: "Snow", src: "https://picsum.photos/id/1024/300/200" },
+];
+
+export const BACKGROUND_IMAGES: BackgroundImage[] = [
+  {
+    id: 1,
+    title: "Mountains",
+    url: "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
+  },
+  {
+    id: 2,
+    title: "Forest",
+    url: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+  },
+  {
+    id: 3,
+    title: "Beach",
+    url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+  },
+];

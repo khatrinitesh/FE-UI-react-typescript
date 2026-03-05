@@ -1,15 +1,50 @@
 import { useState } from "react";
 import Accordion from "../components/Accordion";
 import Card3D from "../components/Card3D";
-import { CARD_DATA } from "../constants/constants";
+import { avatars, CARD_DATA, skills } from "../constants/constants";
 import Alert from "../components/Alert";
 import Button from "../components/ui/Button";
 import AnimatedIcon from "../components/AnimatedIcon";
+import UserContainer from "../components/containers/UserContainer";
+import AnimatedInput from "../components/animatedInput/AnimatedInput";
+import SkillSection from "../components/skillCard/SkillSection";
+import LoginForm from "../components/loginForm/LoginForm";
+import AnimatedSearch from "../components/animatedSearch/AnimatedSearch";
+import ArrowSection from "../components/arrowSection/ArrowSection";
+import AspectRatio from "../components/aspectRatio/AspectRatio";
+import AutocompleteSection from "../components/autocompleteSection/AutocompleteSection";
+import AvatarCard from "../components/avatarCard/AvatarCard";
+import BannerSection from "../components/bannerSection/BannerSection";
+import BentoGrid from "../components/bentoGrid/BentoGrid";
+import ImageCardSection from "../components/imageCardSection/ImageCardSection";
+import BlurBackground from "../components/blurBackground/blurBackground";
+import HeroCard from "../components/blurBackground/HeroCard";
+import ImageSelector from "../components/blurBackground/ImageSelector";
 
 const Home = () => {
   const [open, setOpen] = useState(true);
   return (
     <div className="homePage">
+      <BlurBackground />
+      <HeroCard />
+      <ImageSelector />
+      <ImageCardSection />
+      <BentoGrid />
+      <BannerSection />
+      {/* <BgBeamsCollision /> */}
+      <div className="flex flex-wrap gap-4 justify-center mt-10">
+        {avatars.map((avatar) => (
+          <AvatarCard key={avatar.id} avatar={avatar} />
+        ))}
+      </div>
+      <AutocompleteSection />
+      <AspectRatio />
+      <ArrowSection />
+      <AnimatedSearch />
+      <LoginForm />
+      <SkillSection skills={skills} />
+      <AnimatedInput label="Enter your name" />
+      <UserContainer />
       <Button
         onClick={() => setOpen(!open)}
         className="flex items-center justify-center p-4 border rounded-lg"
