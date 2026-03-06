@@ -167,3 +167,79 @@ export interface BackgroundImage {
   title: string;
   url: string;
 }
+// props Image Border 2 > src/alt
+export interface BorderImageProps {
+  src: string;
+  alt: string;
+}
+
+// props navitem 2 > id/label
+export interface NavLinkItem {
+  id: number;
+  label: string;
+}
+
+// props bullet item 2 > id/label
+export interface BulletItem {
+  id: number;
+  label: string;
+}
+
+// props button block 2 > id/label
+export interface ButtonBlockItem {
+  id: number;
+  label: string;
+}
+
+// props image button card 3 > image/title/buttontext
+export interface ImageButtonCardProps {
+  image: string;
+  title: string;
+  buttonText: string;
+}
+
+// props calculator 2 > id/value
+export interface CalcButton {
+  id: number;
+  value: string;
+}
+
+// props calendar 1 > day
+export interface CalendarDay {
+  day: number;
+}
+
+// props callout 2 > message/type
+export interface CalloutProps {
+  message: string;
+  type?: "success" | "warning" | "info";
+}
+
+// props reveal 3 > image/title/description
+export interface RevealProps {
+  image: string;
+  title: string;
+  description: string;
+}
+
+export interface CardHoverEffectProps {
+  image: string;
+  title: string;
+  description: string;
+}
+
+export interface CardSpotlightProps {
+  image: string;
+  title: string;
+  description: string;
+}
+
+export interface CardStackItem {
+  id: number;
+  image: string;
+  title: string;
+}
+
+export interface CardStackProps {
+  cards: CardStackItem[];
+}

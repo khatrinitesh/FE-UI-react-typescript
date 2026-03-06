@@ -1,4 +1,4 @@
-import type { Variants } from "framer-motion";
+import type { Transition, Variants } from "framer-motion";
 import { PATH } from "../router/path";
 import type {
   ArrowSlide,
@@ -8,9 +8,15 @@ import type {
   BackgroundImage,
   BannerMessage,
   BentoGridItem,
+  BulletItem,
+  ButtonBlockItem,
+  CalcButton,
   CardItem,
+  CardStackItem,
+  CardStackProps,
   GalleryImage,
   NavItem,
+  NavLinkItem,
   Skill,
 } from "../interface";
 
@@ -219,5 +225,168 @@ export const BACKGROUND_IMAGES: BackgroundImage[] = [
     id: 3,
     title: "Beach",
     url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+  },
+];
+
+export const IMAGE_BORDER_RADIUS = "16px";
+
+export const BORDER_ANIMATION = {
+  duration: 0.4,
+  ease: "easeInOut",
+} as const;
+
+export const NAV_LINKS: NavLinkItem[] = [
+  { id: 0, label: "Home" },
+  { id: 1, label: "About" },
+  { id: 2, label: "Services" },
+  { id: 3, label: "Contact" },
+];
+
+export const BORDER_TRANSITION: Transition = {
+  duration: 0.35,
+  ease: "easeInOut",
+};
+
+export const BULLET_ITEMS: BulletItem[] = [
+  { id: 1, label: "React TypeScript Development" },
+  { id: 2, label: "State Management with Zustand" },
+  { id: 3, label: "Smooth UI Animation using Framer Motion" },
+  { id: 4, label: "Responsive UI with TailwindCSS" },
+];
+
+export const BULLET_ANIMATION: Transition = {
+  duration: 0.3,
+  ease: "easeInOut",
+};
+
+export const BUTTON_ITEMS: ButtonBlockItem[] = [
+  { id: 1, label: "All" },
+  { id: 2, label: "Active" },
+  { id: 3, label: "Completed" },
+];
+
+export const BUTTON_ANIMATION: Transition = {
+  duration: 0.3,
+  ease: "easeInOut",
+};
+
+export const IMAGE_BUTTON_TRANSITION: Transition = {
+  duration: 0.35,
+  ease: "easeInOut",
+};
+
+export const CALC_BUTTONS: CalcButton[] = [
+  { id: 1, value: "7" },
+  { id: 2, value: "8" },
+  { id: 3, value: "9" },
+  { id: 4, value: "/" },
+  { id: 5, value: "4" },
+  { id: 6, value: "5" },
+  { id: 7, value: "6" },
+  { id: 8, value: "*" },
+  { id: 9, value: "1" },
+  { id: 10, value: "2" },
+  { id: 11, value: "3" },
+  { id: 12, value: "-" },
+  { id: 13, value: "0" },
+  { id: 14, value: "C" },
+  { id: 15, value: "=" },
+  { id: 16, value: "+" },
+];
+
+export const BUTTON_TRANSITION: Transition = {
+  duration: 0.2,
+  ease: "easeInOut",
+};
+
+export const DAYS_IN_MONTH = 31;
+
+export const CALENDAR_TRANSITION: Transition = {
+  duration: 0.25,
+  ease: "easeInOut",
+};
+
+export const CALLOUT_TRANSITION: Transition = {
+  duration: 0.35,
+  ease: "easeInOut",
+};
+
+export const CALLOUT_STYLES = {
+  success: "bg-green-100 border-green-500 text-green-800",
+  warning: "bg-yellow-100 border-yellow-500 text-yellow-800",
+  info: "bg-blue-100 border-blue-500 text-blue-800",
+};
+
+export const REVEAL_TRANSITION: Transition = {
+  duration: 0.45,
+  ease: "easeInOut",
+};
+
+export const CARD_ANIMATION = {
+  duration: 0.35,
+  ease: "easeOut" as const,
+};
+
+export const CARD_VARIANTS = {
+  rest: {
+    scale: 1,
+    y: 0,
+  },
+  hover: {
+    scale: 1.04,
+    y: -8,
+  },
+};
+
+export const IMAGE_VARIANTS = {
+  rest: { scale: 1 },
+  hover: { scale: 1.1 },
+};
+
+export const SPOTLIGHT_TRANSITION = {
+  duration: 0.3,
+  ease: "easeOut" as const,
+};
+
+export const CARD_HOVER_VARIANT = {
+  rest: { scale: 1 },
+  hover: { scale: 1.03 },
+};
+
+export const STACK_TRANSITION = {
+  duration: 0.45,
+  ease: "easeOut" as const,
+};
+
+export const CARD_ROTATIONS = [-6, -2, 2, 6];
+
+export const STACK_VARIANTS = {
+  rest: (index: number) => ({
+    rotate: CARD_ROTATIONS[index] || 0,
+    y: index * 4,
+    scale: 1,
+  }),
+  hover: (index: number) => ({
+    rotate: 0,
+    y: index * -40,
+    scale: 1.05,
+  }),
+};
+
+export const CARD_STACK: CardStackItem[] = [
+  {
+    id: 1,
+    image: "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d",
+    title: "Creative Design",
+  },
+  {
+    id: 2,
+    image: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f",
+    title: "Modern UI",
+  },
+  {
+    id: 3,
+    image: "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf",
+    title: "Web Development",
   },
 ];

@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+.bodyWrapper,
+.rootWrapper {
+  min-height: 100dvh;
+  height: 100dvh;
+  padding-bottom: 100px;
+  overflow-x: hidden;
+  background-color: orange;
+}

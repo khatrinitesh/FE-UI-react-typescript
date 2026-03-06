@@ -1,7 +1,13 @@
 import { useState } from "react";
 import Accordion from "../components/Accordion";
 import Card3D from "../components/Card3D";
-import { avatars, CARD_DATA, skills } from "../constants/constants";
+import {
+  avatars,
+  CARD_DATA,
+  CARD_STACK,
+  cards,
+  skills,
+} from "../constants/constants";
 import Alert from "../components/Alert";
 import Button from "../components/ui/Button";
 import AnimatedIcon from "../components/AnimatedIcon";
@@ -17,14 +23,57 @@ import AvatarCard from "../components/avatarCard/AvatarCard";
 import BannerSection from "../components/bannerSection/BannerSection";
 import BentoGrid from "../components/bentoGrid/BentoGrid";
 import ImageCardSection from "../components/imageCardSection/ImageCardSection";
-import BlurBackground from "../components/blurBackground/blurBackground";
 import HeroCard from "../components/blurBackground/HeroCard";
 import ImageSelector from "../components/blurBackground/ImageSelector";
+import BlurBackground from "../components/blurBackground/BlurBackground";
+import BorderAroundImg from "../components/borderAroundImg/BorderAroundImg";
+import BorderBottomNavLinks from "../components/borderBottomNavLinks/BorderBottomNavLinks";
+import BulletList from "../components/bulletList/BulletList";
+import ButtonGroup from "../components/buttonGroup/ButtonGroup";
+import ImageButtonCard from "../components/imageButtonCard/ImageButtonCard";
+import CalculatorSection from "../components/calculatorSection/CalculatorSection";
+import CalendarSection from "../components/calendarSection/CalendarSection";
+import CalloutSection from "../components/calloutSection/CalloutSection";
+import CanvasReveal from "../components/canvasReveal/CanvasReveal";
+import CardHoverEffect from "../components/cardHoverEffect/CardHoverEffect";
+import CardSpotlight from "../components/cardSpotLight/CardSpotlight";
+import CardStack from "../components/cardStack/CardStack";
 
 const Home = () => {
   const [open, setOpen] = useState(true);
   return (
     <div className="homePage">
+      <CardStack cards={CARD_STACK} />
+      <CardSpotlight
+        image="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d"
+        title="Creative Design"
+        description="Move your mouse to see the spotlight effect"
+      />
+      <CardHoverEffect
+        image="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d"
+        title="Creative Design"
+        description="Hover to explore the project details"
+      />
+      <CanvasReveal
+        image="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d"
+        title="Creative Design"
+        description="Hover to reveal project details"
+      />
+      <CalloutSection type="info" message="Profile updated successfully!" />
+      <CalendarSection />
+      <CalculatorSection />
+      <ImageButtonCard
+        image="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d"
+        title="Nature"
+        buttonText="Explore"
+      />
+      <ButtonGroup />
+      <BulletList />
+      <BorderBottomNavLinks />
+      <BorderAroundImg
+        src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d"
+        alt="Sample"
+      />
       <BlurBackground />
       <HeroCard />
       <ImageSelector />
@@ -82,7 +131,6 @@ const Home = () => {
       <Accordion title="What is your refund policy?">
         We offer a 30-day refund policy with no questions asked.
       </Accordion>
-
       <Accordion title="Do you offer technical support?">
         Yes! Our support team is available 24/7.
       </Accordion>
