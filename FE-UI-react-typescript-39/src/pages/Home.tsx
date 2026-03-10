@@ -44,11 +44,71 @@ import LoginForm1 from "../components/loginForm/LoginForm1";
 import ChangingNavbarStyleBasedOnScroll from "../components/changingNavbarStyleBasedOnScroll/ChangingNavbarStyleBasedOnScroll";
 import CharacterCounter from "../components/characterCounter/CharacterCounter";
 import ChatSection from "../components/chatMessage/ChatSection";
+import CheckoutForm from "../components/checkoutForm/CheckoutForm";
+import CircleMenuMobile from "../components/circleMenuMobile/CircleMenuMobile";
+import CircleDots from "../components/circleDots/CircleDots";
+import ClearInputField from "../components/clearInputField/ClearInputField";
+import ClickDropdowns from "../components/clickDropdowns/ClickDropdowns";
+import ClosableListItems from "../components/closableListItems/ClosableListItems";
+import CollapsedSidebar from "../components/collapsedSidebar/CollapsedSidebar";
+import CollapsedSidepanel from "../components/collapsedSidepanel/CollapsedSidepanel";
+import Collapsible from "../components/collapsible/Collapsible";
+import ColorPicker from "../components/colorPicker/ColorPicker";
+import ColorfulText from "../components/colorfulText/ColorfulText";
+import ContactChips from "../components/contactChips/ContactChips";
+import ContactForm from "../components/contactForm/ContactForm";
+import ContactSection from "../components/contactSection/ContactSection";
+import ContainerCover from "../components/containerCover/ContainerCover";
+import ContainerScrollAnimation from "../components/containerScrollAnimation/ContainerScrollAnimation";
+import CopyClipboard from "../components/copyClipboard/CopyClipboard";
+import CountdownTimer from "../components/countDownTimer/CountdownTimer";
+import NewArray1 from "../components/arrayReference/newArray/NewArray1";
+import At1 from "../components/arrayReference/at/At1";
+import Concat1 from "../components/arrayReference/concat/Concat1";
+import CouponSection from "../components/couponSection/CouponSection";
 
 const Home = () => {
   const [open, setOpen] = useState(true);
+  // const [color, setColor] = useState("orange");
+  // const handleColorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   setColor(e.target.value);
+  // };
   return (
     <div className="homePage">
+      <CouponSection />
+      <Concat1 />
+      <At1 />
+      <NewArray1 />
+      <CountdownTimer />
+      <CopyClipboard />
+      <ContainerScrollAnimation />
+      <ContainerCover />
+      <ContactSection />
+      <ContactForm />
+      <ContactChips />
+      <ColorfulText />
+      <ColorPicker />
+      {/* <input type="color" value={color} onChange={handleColorChange} />
+
+      <p>Selected Color: {color}</p>
+
+      <div
+        style={{
+          width: "100px",
+          height: "100px",
+          backgroundColor: color,
+          border: "1px solid black",
+        }}
+      /> */}
+      <Collapsible />
+      <CollapsedSidepanel />
+      <CollapsedSidebar />
+      <ClosableListItems />
+      <ClickDropdowns />
+      <ClearInputField />
+      <CircleDots />
+      <CircleMenuMobile />
+      <CheckoutForm />
       <ChatSection />
       <CharacterCounter />
       <ChangingNavbarStyleBasedOnScroll />

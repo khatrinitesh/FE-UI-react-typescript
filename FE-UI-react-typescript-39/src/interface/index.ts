@@ -258,3 +258,207 @@ export interface ChatState {
   messages: Message[];
   addMessage: (message: Message) => void;
 }
+
+export interface CheckoutFormData {
+  name: string;
+  email: string;
+  address: string;
+  city: string;
+  zip: string;
+}
+
+export interface CheckoutState {
+  form: CheckoutFormData;
+  updateField: (field: keyof CheckoutFormData, value: string) => void;
+  resetForm: () => void;
+}
+
+export interface MenuItem {
+  id: number;
+  icon: string;
+  label: string;
+}
+
+export interface MenuState {
+  open: boolean;
+  toggleMenu: () => void;
+}
+
+export interface DotItem {
+  id: number;
+}
+
+export interface DotState {
+  active: number;
+  setActive: (index: number) => void;
+}
+
+export interface InputState {
+  value: string;
+  setValue: (value: string) => void;
+  clearValue: () => void;
+}
+
+export interface DropdownItem {
+  id: number;
+  label: string;
+}
+
+export interface DropdownState {
+  open: boolean;
+  toggleDropdown: () => void;
+  closeDropdown: () => void;
+}
+export interface ListItem {
+  id: number;
+  label: string;
+}
+
+export interface ListState {
+  items: ListItem[];
+  removeItem: (id: number) => void;
+}
+
+export interface SidebarItem {
+  id: number;
+  icon: string;
+  label: string;
+}
+
+export interface SidebarState {
+  collapsed: boolean;
+  toggleSidebar: () => void;
+}
+
+export interface PanelItem {
+  id: number;
+  title: string;
+}
+
+export interface SidePanelState {
+  open: boolean;
+  togglePanel: () => void;
+  closePanel: () => void;
+}
+
+export interface CollapseItem {
+  id: number;
+  title: string;
+  content: string;
+}
+
+export interface CollapseState {
+  activeId: number | null;
+  toggleItem: (id: number) => void;
+}
+
+export interface ColorItem {
+  id: number;
+  hex: string;
+}
+
+export interface ColorState {
+  selected: string;
+  setColor: (color: string) => void;
+}
+
+export interface CollorfulTextState {
+  text: string;
+  setText: (value: string) => void;
+}
+
+export interface Contact {
+  id: number;
+  name: string;
+}
+
+export interface ContactsState {
+  contacts: Contact[];
+  addContact: (name: string) => void;
+  removeContact: (id: number) => void;
+}
+
+export interface ContactFormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+export interface ContactState {
+  form: ContactFormData;
+  updateField: (field: keyof ContactFormData, value: string) => void;
+  resetForm: () => void;
+}
+
+export interface ContactFormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+export interface ContactState {
+  form: ContactFormData;
+  updateField: (field: keyof ContactFormData, value: string) => void;
+  resetForm: () => void;
+}
+
+export interface ContactInfo {
+  id: number;
+  label: string;
+  value: string;
+}
+
+export interface CoverState {
+  open: boolean;
+  toggleCover: () => void;
+}
+
+export interface CoverContent {
+  title: string;
+  description: string;
+}
+
+export interface ScrollItem {
+  id: number;
+  title: string;
+  description: string;
+}
+
+export interface ScrollState {
+  active: number | null;
+  setActive: (id: number) => void;
+}
+
+export interface ClipboardState {
+  copied: boolean;
+  setCopied: (value: boolean) => void;
+}
+
+export interface ClipboardContent {
+  text: string;
+}
+
+export interface TimeLeft {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
+
+export interface TimerState {
+  time: TimeLeft;
+  setTime: (time: TimeLeft) => void;
+}
+
+export interface CouponState {
+  code: string;
+  applied: boolean;
+  discount: number;
+  setCode: (code: string) => void;
+  applyCoupon: () => void;
+}
+
+export interface CouponData {
+  code: string;
+  discount: number;
+}

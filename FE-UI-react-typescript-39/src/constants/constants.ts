@@ -14,9 +14,23 @@ import type {
   CardItem,
   CardStackItem,
   CardStackProps,
+  ClipboardContent,
+  CollapseItem,
+  ColorItem,
+  Contact,
+  ContactInfo,
+  CouponData,
+  CoverContent,
+  DotItem,
+  DropdownItem,
   GalleryImage,
+  ListItem,
+  MenuItem,
   NavItem,
   NavLinkItem,
+  PanelItem,
+  ScrollItem,
+  SidebarItem,
   Skill,
 } from "../interface";
 
@@ -400,3 +414,144 @@ export const WARNING_THRESHOLD = 160;
 
 export const MAX_MESSAGE_LENGTH = 500;
 export const ANIMATION_DURATION2 = 0.25;
+
+export const INITIAL_FORM = {
+  name: "",
+  email: "",
+  address: "",
+  city: "",
+  zip: "",
+};
+
+export const MENU_ITEMS: MenuItem[] = [
+  { id: 1, icon: "🏠", label: "Home" },
+  { id: 2, icon: "🔍", label: "Search" },
+  { id: 3, icon: "❤️", label: "Likes" },
+  { id: 4, icon: "🛒", label: "Cart" },
+  { id: 5, icon: "👤", label: "Profile" },
+];
+
+export const DOTS: DotItem[] = [
+  { id: 0 },
+  { id: 1 },
+  { id: 2 },
+  { id: 3 },
+  { id: 4 },
+];
+
+export const INPUT_PLACEHOLDER = "Search something...";
+
+export const DROPDOWN_ITEMS: DropdownItem[] = [
+  { id: 1, label: "Profile" },
+  { id: 2, label: "Settings" },
+  { id: 3, label: "Notifications" },
+  { id: 4, label: "Logout" },
+];
+
+export const INITIAL_ITEMS: ListItem[] = [
+  { id: 1, label: "Notification message" },
+  { id: 2, label: "Task completed" },
+  { id: 3, label: "New email received" },
+  { id: 4, label: "Profile updated" },
+];
+
+export const SIDEBAR_ITEMS: SidebarItem[] = [
+  { id: 1, icon: "🏠", label: "Dashboard" },
+  { id: 2, icon: "📦", label: "Orders" },
+  { id: 3, icon: "👥", label: "Customers" },
+  { id: 4, icon: "⚙️", label: "Settings" },
+];
+
+export const PANEL_ITEMS: PanelItem[] = [
+  { id: 1, title: "Notifications" },
+  { id: 2, title: "Messages" },
+  { id: 3, title: "Activity" },
+  { id: 4, title: "Settings" },
+];
+
+export const COLLAPSE_ITEMS: CollapseItem[] = [
+  {
+    id: 1,
+    title: "What is React?",
+    content: "React is a JavaScript library for building UI.",
+  },
+  {
+    id: 2,
+    title: "What is Zustand?",
+    content: "Zustand is a small fast state management library.",
+  },
+  {
+    id: 3,
+    title: "What is Framer Motion?",
+    content: "Framer Motion is used for animations in React.",
+  },
+];
+
+export const COLORS2: ColorItem[] = [
+  { id: 1, hex: "#3B82F6" },
+  { id: 2, hex: "#EF4444" },
+  { id: 3, hex: "#10B981" },
+  { id: 4, hex: "#F59E0B" },
+  { id: 5, hex: "#8B5CF6" },
+];
+
+export const DEFAULT_TEXT = "Colorful Animated Text";
+
+export const INITIAL_CONTACTS: Contact[] = [
+  { id: 1, name: "John Doe" },
+  { id: 2, name: "Jane Smith" },
+];
+export const INITIAL_CONTACT_FORM = {
+  name: "",
+  email: "",
+  message: "",
+};
+
+export const INITIAL_FORM2 = {
+  name: "",
+  email: "",
+  message: "",
+};
+
+export const CONTACT_INFO: ContactInfo[] = [
+  { id: 1, label: "Email", value: "hello@example.com" },
+  { id: 2, label: "Phone", value: "+91 98765 43210" },
+  { id: 3, label: "Location", value: "Mumbai, India" },
+];
+
+export const COVER_CONTENT: CoverContent = {
+  title: "Interactive Container",
+  description: "Click the container to reveal smooth animated cover content.",
+};
+
+export const SCROLL_ITEMS: ScrollItem[] = [
+  {
+    id: 1,
+    title: "Fast Performance",
+    description: "Optimized animations and smooth UI transitions.",
+  },
+  {
+    id: 2,
+    title: "Modern UI",
+    description: "Built using TailwindCSS and Framer Motion.",
+  },
+  {
+    id: 3,
+    title: "Scalable Architecture",
+    description: "Uses TypeScript and Zustand for state management.",
+  },
+];
+
+export const COPY_CONTENT: ClipboardContent = {
+  text: "https://www.youtube.com/watch?v=i9tbGrgzRGU",
+};
+
+export const TARGET_DATE = new Date("2026-12-31T23:59:59");
+
+export const COUPONS: CouponData[] = [
+  { code: "SAVE10", discount: 10 },
+  { code: "SAVE20", discount: 20 },
+  { code: "SAVE30", discount: 30 },
+  { code: "SAVE40", discount: 40 },
+  { code: "SAVE50", discount: 50 },
+];
