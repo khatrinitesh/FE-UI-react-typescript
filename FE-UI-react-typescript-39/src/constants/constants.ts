@@ -13,7 +13,6 @@ import type {
   CalcButton,
   CardItem,
   CardStackItem,
-  CardStackProps,
   ClipboardContent,
   CollapseItem,
   ColorItem,
