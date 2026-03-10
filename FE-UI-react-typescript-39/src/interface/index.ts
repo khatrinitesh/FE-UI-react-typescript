@@ -243,3 +243,18 @@ export interface CardStackItem {
 export interface CardStackProps {
   cards: CardStackItem[];
 }
+
+export interface CharacterState {
+  messages: any;
+  text: string;
+  setText: (value: string) => void;
+}
+
+export interface Message {
+  id: string;
+  text: string;
+}
+export interface ChatState {
+  messages: Message[];
+  addMessage: (message: Message) => void;
+}

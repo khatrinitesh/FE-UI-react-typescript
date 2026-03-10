@@ -1,4 +1,4 @@
-const ASSETS_PATH = import.meta.env.VITE_IMG_ASSETS;
+const ASSETS_PATH = import.meta.env.VITE_ASSETS;
 
 export const getImage = (fileName: string) =>
   `${ASSETS_PATH}/images/${fileName}`;

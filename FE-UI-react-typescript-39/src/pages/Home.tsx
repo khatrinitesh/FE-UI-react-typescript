@@ -38,11 +38,23 @@ import CanvasReveal from "../components/canvasReveal/CanvasReveal";
 import CardHoverEffect from "../components/cardHoverEffect/CardHoverEffect";
 import CardSpotlight from "../components/cardSpotLight/CardSpotlight";
 import CardStack from "../components/cardStack/CardStack";
+import ControlledComponent1 from "../components/exampleAssignment/controlledComponent/ControlledComponent1";
+import UnControlledComponent from "../components/exampleAssignment/uncontrolledComponent/UnControlledComponent";
+import LoginForm1 from "../components/loginForm/LoginForm1";
+import ChangingNavbarStyleBasedOnScroll from "../components/changingNavbarStyleBasedOnScroll/ChangingNavbarStyleBasedOnScroll";
+import CharacterCounter from "../components/characterCounter/CharacterCounter";
+import ChatSection from "../components/chatMessage/ChatSection";
 
 const Home = () => {
   const [open, setOpen] = useState(true);
   return (
     <div className="homePage">
+      <ChatSection />
+      <CharacterCounter />
+      <ChangingNavbarStyleBasedOnScroll />
+      <LoginForm1 />
+      <UnControlledComponent />
+      <ControlledComponent1 />
       <CardStack cards={CARD_STACK} />
       <CardSpotlight
         image="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d"

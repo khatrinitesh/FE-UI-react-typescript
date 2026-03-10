@@ -390,3 +390,13 @@ export const CARD_STACK: CardStackItem[] = [
     title: "Web Development",
   },
 ];
+
+export const NAVBAR_SCROLL_THRESHOLD = 80;
+
+export const NAVBAR_HEIGHT = "h-16";
+
+export const MAX_CHARACTERS = 200;
+export const WARNING_THRESHOLD = 160;
+
+export const MAX_MESSAGE_LENGTH = 500;
+export const ANIMATION_DURATION2 = 0.25;
