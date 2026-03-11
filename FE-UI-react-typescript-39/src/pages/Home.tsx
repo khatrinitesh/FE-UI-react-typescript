@@ -1,13 +1,7 @@
 import { useState } from "react";
 import Accordion from "../components/Accordion";
 import Card3D from "../components/Card3D";
-import {
-  avatars,
-  CARD_DATA,
-  CARD_STACK,
-  cards,
-  skills,
-} from "../constants/constants";
+import { avatars, CARD_DATA, CARD_STACK, skills } from "../constants/constants";
 import Alert from "../components/Alert";
 import Button from "../components/ui/Button";
 import AnimatedIcon from "../components/AnimatedIcon";
@@ -25,7 +19,7 @@ import BentoGrid from "../components/bentoGrid/BentoGrid";
 import ImageCardSection from "../components/imageCardSection/ImageCardSection";
 import HeroCard from "../components/blurBackground/HeroCard";
 import ImageSelector from "../components/blurBackground/ImageSelector";
-import BlurBackground from "../components/blurBackground/BlurBackground";
+// import BlurBackground from "../components/blurBackground/BlurBackground";
 import BorderAroundImg from "../components/borderAroundImg/BorderAroundImg";
 import BorderBottomNavLinks from "../components/borderBottomNavLinks/BorderBottomNavLinks";
 import BulletList from "../components/bulletList/BulletList";
@@ -66,6 +60,25 @@ import NewArray1 from "../components/arrayReference/newArray/NewArray1";
 import At1 from "../components/arrayReference/at/At1";
 import Concat1 from "../components/arrayReference/concat/Concat1";
 import CouponSection from "../components/couponSection/CouponSection";
+import CopyWithin1 from "../components/arrayReference/copyWithin/CopyWithin1";
+import Entries1 from "../components/entries/Entries1";
+import EveryArray1 from "../components/arrayReference/everyArray/EveryArray1";
+import FillArray1 from "../components/arrayReference/fillArray/FillArray1";
+import FilterArray1 from "../components/arrayReference/filterArray/FilterArray1";
+import FindArray1 from "../components/arrayReference/findArray/FindArray1";
+import ImageZoom1 from "../components/imageZoom/ImageZoom1";
+import CustomCursor from "../components/customCursor/CustomCursor";
+import CurtainMenu from "../components/curtainMenu/CurtainMenu";
+import CustomCheckbox from "../components/customCheckbox/CustomCheckbox";
+import CustomFileUpload from "../components/customFileUpload/CustomFileUpload";
+import CustomRadio from "../components/customRadio/CustomRadio";
+import CustomScrollbar from "../components/customScrollbar/CustomScrollbar";
+import CustomSelect from "../components/customSelect/CustomSelect";
+import CutoutText from "../components/cutoutText/CutoutText";
+import DataTable from "../components/dataTable/DataTable";
+import DatePickerSection from "../components/datePickerSection/DatePickerSection";
+import CapsLockDetector from "../components/capsLockDetector/CapsLockDetector";
+import DirectionAwareHover from "../components/directionAwareHover/DirectionAwareHover";
 
 const Home = () => {
   const [open, setOpen] = useState(true);
@@ -75,6 +88,25 @@ const Home = () => {
   // };
   return (
     <div className="homePage">
+      <DirectionAwareHover />
+      <CapsLockDetector />
+      <DatePickerSection />
+      <DataTable />
+      <CutoutText />
+      <CustomSelect />
+      <CustomScrollbar />
+      <CustomRadio />
+      <CustomFileUpload />
+      <CustomCheckbox />
+      <CurtainMenu />
+      <CustomCursor />
+      <ImageZoom1 />
+      <FindArray1 />
+      <FilterArray1 />
+      <FillArray1 />
+      <EveryArray1 />
+      <Entries1 />
+      <CopyWithin1 />
       <CouponSection />
       <Concat1 />
       <At1 />
@@ -146,7 +178,7 @@ const Home = () => {
         src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d"
         alt="Sample"
       />
-      <BlurBackground />
+      {/* <BlurBackground /> */}
       <HeroCard />
       <ImageSelector />
       <ImageCardSection />

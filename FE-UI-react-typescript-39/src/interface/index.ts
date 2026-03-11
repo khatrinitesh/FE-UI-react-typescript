@@ -462,3 +462,13 @@ export interface CouponData {
   code: string;
   discount: number;
 }
+
+export interface User {
+  name: string;
+  active: boolean;
+}
+
+export interface User2 {
+  id: number;
+  name: string;
+}

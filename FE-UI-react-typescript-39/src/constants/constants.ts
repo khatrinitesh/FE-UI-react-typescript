@@ -31,6 +31,8 @@ import type {
   ScrollItem,
   SidebarItem,
   Skill,
+  User,
+  User2,
 } from "../interface";
 
 export const fadeUp: Variants = {
@@ -554,3 +556,82 @@ export const COUPONS: CouponData[] = [
   { code: "SAVE40", discount: 40 },
   { code: "SAVE50", discount: 50 },
 ];
+
+export const USERSEVERY: User[] = [
+  { name: "Nitesh", active: true },
+  { name: "Pawan", active: true },
+  { name: "Rahul", active: true },
+];
+
+export const USERSFIND: User2[] = [
+  { id: 1, name: "Nitesh" },
+  { id: 2, name: "Pawan" },
+  { id: 3, name: "Rahul" },
+];
+
+export const ZOOM_STEP = 0.2;
+export const MAX_ZOOM = 2;
+export const MIN_ZOOM = 1;
+
+export const CURSOR_SIZE = 20;
+export const CURSOR_SMOOTH = 0.2;
+
+export const CURTAIN_MENU_ITEMS = [
+  "Home",
+  "About",
+  "Services",
+  "Portfolio",
+  "Contact",
+];
+
+export const CHECKBOX_SIZE = 28;
+export const CHECKBOX_COLOR = "bg-blue-500";
+
+export const ACCEPTED_FILE_TYPES = "image/*";
+export const MAX_FILE_SIZE_MB = 5;
+
+export const RADIO_OPTIONS = ["Male", "Female", "Other"];
+export const RADIO_SIZE = 26;
+
+export const SCROLL_CONTAINER_HEIGHT = 400;
+export const SCROLLBAR_WIDTH = 8;
+
+export const SELECT_OPTIONS = ["React", "Angular", "Vue", "Svelte"];
+
+export const SELECT_PLACEHOLDER = "Select Framework";
+
+export const CUTOUT_TEXT = "CREATIVE";
+export const BACKGROUND_IMAGE =
+  "https://images.unsplash.com/photo-1506744038136-46273834b3fb";
+
+export const TABLE_HEADERS = ["ID", "Name", "Role"];
+
+export const TABLE_DATA = [
+  { id: 1, name: "Nitesh", role: "Frontend Developer" },
+  { id: 2, name: "Pawan", role: "Backend Developer" },
+  { id: 3, name: "Rahul", role: "UI Designer" },
+];
+
+export const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+export const MONTHS = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+export const CAPS_WARNING_TEXT = "Caps Lock is ON";
+
+export type Direction = "top" | "bottom" | "left" | "right";
+
+export const CARD_TEXT = "Hover Me";
+export const CARD_OVERLAY_TEXT = "Direction Aware Hover";
