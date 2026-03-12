@@ -477,3 +477,25 @@ export interface RightClickState {
   disabled: boolean;
   toggleDisable: () => void;
 }
+
+export interface DividerProps {
+  text?: string;
+  color?: string;
+}
+
+export interface DownloadItem {
+  id: number;
+  label: string;
+  url: string;
+}
+
+export interface DownloadState {
+  downloadingId: number | null;
+  setDownloading: (id: number | null) => void;
+}
+
+export interface MenuItem2 {
+  id: number;
+  title: string;
+  children?: string[];
+}

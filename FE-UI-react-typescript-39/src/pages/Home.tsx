@@ -79,6 +79,11 @@ import DataTable from "../components/dataTable/DataTable";
 import DatePickerSection from "../components/datePickerSection/DatePickerSection";
 import CapsLockDetector from "../components/capsLockDetector/CapsLockDetector";
 import DirectionAwareHover from "../components/directionAwareHover/DirectionAwareHover";
+import DisableRightClick from "../components/disableRightClick/DisableRightClick";
+import DividerSection from "../components/dividerSection/DividerSection";
+import DownloadButtons from "../components/downloadButton/DownloadButtons";
+import DraggableBoxSection from "../components/draggableBoxSection/DraggableBoxSection";
+import SideNavSection from "../components/sideNavSection/SideNavSection";
 
 const Home = () => {
   const [open, setOpen] = useState(true);
@@ -88,6 +93,11 @@ const Home = () => {
   // };
   return (
     <div className="homePage">
+      <SideNavSection />
+      <DraggableBoxSection />
+      <DownloadButtons />
+      <DividerSection />
+      <DisableRightClick />
       <DirectionAwareHover />
       <CapsLockDetector />
       <DatePickerSection />

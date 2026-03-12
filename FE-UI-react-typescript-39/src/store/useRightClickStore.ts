@@ -1,7 +1,11 @@
 import { create } from "zustand";
-import type { RightClickState } from "../interface";
+
+interface RightClickState {
+  showMessage: boolean;
+  setShowMessage: (value: boolean) => void;
+}
 
 export const useRightClickStore = create<RightClickState>((set) => ({
-  disabled: true,
-  toggleDisable: () => set((state) => ({ disabled: !state.disabled })),
+  showMessage: false,
+  setShowMessage: (value) => set({ showMessage: value }),
 }));

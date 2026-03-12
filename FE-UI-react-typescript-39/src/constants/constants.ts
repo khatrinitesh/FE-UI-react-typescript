@@ -641,3 +641,45 @@ export const UI_TEXT = {
   ENABLE: "Enable Right Click",
   DISABLE: "Disable Right Click",
 };
+
+export const RIGHT_CLICK_MESSAGE = "Right click is disabled on this page.";
+
+export const DIVIDER_TEXT = "Section Divider";
+export const DEFAULT_COLOR = "bg-gray-300";
+
+export const DOWNLOAD_FILES = [
+  {
+    id: 1,
+    label: "Download PDF",
+    url: "/files/sample.pdf",
+  },
+  {
+    id: 2,
+    label: "Download Image",
+    url: "/files/image.jpg",
+  },
+  {
+    id: 3,
+    label: "Download Zip",
+    url: "/files/archive.zip",
+  },
+];
+
+export const DRAG_TEXT = "Drag Me";
+
+export const SIDENAV_MENU = [
+  {
+    id: 1,
+    title: "Dashboard",
+  },
+  {
+    id: 2,
+    title: "Users",
+    children: ["All Users", "Add User", "User Roles"],
+  },
+  {
+    id: 3,
+    title: "Settings",
+    children: ["Profile", "Security"],
+  },
+];
