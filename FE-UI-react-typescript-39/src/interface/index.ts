@@ -472,3 +472,8 @@ export interface User2 {
   id: number;
   name: string;
 }
+
+export interface RightClickState {
+  disabled: boolean;
+  toggleDisable: () => void;
+}

@@ -635,3 +635,9 @@ export type Direction = "top" | "bottom" | "left" | "right";
 
 export const CARD_TEXT = "Hover Me";
 export const CARD_OVERLAY_TEXT = "Direction Aware Hover";
+
+export const UI_TEXT = {
+  TITLE: "Right Click Protection",
+  ENABLE: "Enable Right Click",
+  DISABLE: "Disable Right Click",
+};
