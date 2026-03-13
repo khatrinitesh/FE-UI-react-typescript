@@ -1,6 +1,7 @@
 import { BORDER_TRANSITION, NAV_LINKS } from "../../constants/constants";
-import { useNavStore } from "../../store/useNavStore";
+
 import { motion } from "framer-motion";
+import { useNavStore } from "../../store/useNavStore";
 
 const BorderBottomNavLinks = () => {
   const { activeIndex, setActive } = useNavStore();

@@ -1,14 +1,9 @@
 import { useState } from "react";
 import Accordion from "../components/Accordion";
-import Card3D from "../components/Card3D";
-import { avatars, CARD_DATA, CARD_STACK, skills } from "../constants/constants";
 import Alert from "../components/Alert";
-import Button from "../components/ui/Button";
 import AnimatedIcon from "../components/AnimatedIcon";
-import UserContainer from "../components/containers/UserContainer";
+import Card3D from "../components/Card3D";
 import AnimatedInput from "../components/animatedInput/AnimatedInput";
-import SkillSection from "../components/skillCard/SkillSection";
-import LoginForm from "../components/loginForm/LoginForm";
 import AnimatedSearch from "../components/animatedSearch/AnimatedSearch";
 import ArrowSection from "../components/arrowSection/ArrowSection";
 import AspectRatio from "../components/aspectRatio/AspectRatio";
@@ -16,31 +11,41 @@ import AutocompleteSection from "../components/autocompleteSection/AutocompleteS
 import AvatarCard from "../components/avatarCard/AvatarCard";
 import BannerSection from "../components/bannerSection/BannerSection";
 import BentoGrid from "../components/bentoGrid/BentoGrid";
-import ImageCardSection from "../components/imageCardSection/ImageCardSection";
 import HeroCard from "../components/blurBackground/HeroCard";
 import ImageSelector from "../components/blurBackground/ImageSelector";
+import UserContainer from "../components/containers/UserContainer";
+import ImageCardSection from "../components/imageCardSection/ImageCardSection";
+import LoginForm from "../components/loginForm/LoginForm";
+import SkillSection from "../components/skillCard/SkillSection";
+import Button from "../components/ui/Button";
+import { avatars, CARD_DATA, CARD_STACK, skills } from "../constants/constants";
 // import BlurBackground from "../components/blurBackground/BlurBackground";
+import At1 from "../components/arrayReference/at/At1";
+import Concat1 from "../components/arrayReference/concat/Concat1";
+import CopyWithin1 from "../components/arrayReference/copyWithin/CopyWithin1";
+import EveryArray1 from "../components/arrayReference/everyArray/EveryArray1";
+import FillArray1 from "../components/arrayReference/fillArray/FillArray1";
+import FilterArray1 from "../components/arrayReference/filterArray/FilterArray1";
+import FindArray1 from "../components/arrayReference/findArray/FindArray1";
+import NewArray1 from "../components/arrayReference/newArray/NewArray1";
 import BorderAroundImg from "../components/borderAroundImg/BorderAroundImg";
 import BorderBottomNavLinks from "../components/borderBottomNavLinks/BorderBottomNavLinks";
 import BulletList from "../components/bulletList/BulletList";
 import ButtonGroup from "../components/buttonGroup/ButtonGroup";
-import ImageButtonCard from "../components/imageButtonCard/ImageButtonCard";
 import CalculatorSection from "../components/calculatorSection/CalculatorSection";
 import CalendarSection from "../components/calendarSection/CalendarSection";
 import CalloutSection from "../components/calloutSection/CalloutSection";
 import CanvasReveal from "../components/canvasReveal/CanvasReveal";
+import CapsLockDetector from "../components/capsLockDetector/CapsLockDetector";
 import CardHoverEffect from "../components/cardHoverEffect/CardHoverEffect";
 import CardSpotlight from "../components/cardSpotLight/CardSpotlight";
 import CardStack from "../components/cardStack/CardStack";
-import ControlledComponent1 from "../components/exampleAssignment/controlledComponent/ControlledComponent1";
-import UnControlledComponent from "../components/exampleAssignment/uncontrolledComponent/UnControlledComponent";
-import LoginForm1 from "../components/loginForm/LoginForm1";
 import ChangingNavbarStyleBasedOnScroll from "../components/changingNavbarStyleBasedOnScroll/ChangingNavbarStyleBasedOnScroll";
 import CharacterCounter from "../components/characterCounter/CharacterCounter";
 import ChatSection from "../components/chatMessage/ChatSection";
 import CheckoutForm from "../components/checkoutForm/CheckoutForm";
-import CircleMenuMobile from "../components/circleMenuMobile/CircleMenuMobile";
 import CircleDots from "../components/circleDots/CircleDots";
+import CircleMenuMobile from "../components/circleMenuMobile/CircleMenuMobile";
 import ClearInputField from "../components/clearInputField/ClearInputField";
 import ClickDropdowns from "../components/clickDropdowns/ClickDropdowns";
 import ClosableListItems from "../components/closableListItems/ClosableListItems";
@@ -56,20 +61,10 @@ import ContainerCover from "../components/containerCover/ContainerCover";
 import ContainerScrollAnimation from "../components/containerScrollAnimation/ContainerScrollAnimation";
 import CopyClipboard from "../components/copyClipboard/CopyClipboard";
 import CountdownTimer from "../components/countDownTimer/CountdownTimer";
-import NewArray1 from "../components/arrayReference/newArray/NewArray1";
-import At1 from "../components/arrayReference/at/At1";
-import Concat1 from "../components/arrayReference/concat/Concat1";
 import CouponSection from "../components/couponSection/CouponSection";
-import CopyWithin1 from "../components/arrayReference/copyWithin/CopyWithin1";
-import Entries1 from "../components/entries/Entries1";
-import EveryArray1 from "../components/arrayReference/everyArray/EveryArray1";
-import FillArray1 from "../components/arrayReference/fillArray/FillArray1";
-import FilterArray1 from "../components/arrayReference/filterArray/FilterArray1";
-import FindArray1 from "../components/arrayReference/findArray/FindArray1";
-import ImageZoom1 from "../components/imageZoom/ImageZoom1";
-import CustomCursor from "../components/customCursor/CustomCursor";
 import CurtainMenu from "../components/curtainMenu/CurtainMenu";
 import CustomCheckbox from "../components/customCheckbox/CustomCheckbox";
+import CustomCursor from "../components/customCursor/CustomCursor";
 import CustomFileUpload from "../components/customFileUpload/CustomFileUpload";
 import CustomRadio from "../components/customRadio/CustomRadio";
 import CustomScrollbar from "../components/customScrollbar/CustomScrollbar";
@@ -77,13 +72,26 @@ import CustomSelect from "../components/customSelect/CustomSelect";
 import CutoutText from "../components/cutoutText/CutoutText";
 import DataTable from "../components/dataTable/DataTable";
 import DatePickerSection from "../components/datePickerSection/DatePickerSection";
-import CapsLockDetector from "../components/capsLockDetector/CapsLockDetector";
 import DirectionAwareHover from "../components/directionAwareHover/DirectionAwareHover";
-import DisableRightClick from "../components/disableRightClick/DisableRightClick";
 import DividerSection from "../components/dividerSection/DividerSection";
 import DownloadButtons from "../components/downloadButton/DownloadButtons";
 import DraggableBoxSection from "../components/draggableBoxSection/DraggableBoxSection";
+import Dropdown4Section from "../components/dropdown4Section/Dropdown4Section";
+import DropmorphismSection from "../components/dropmorphismSection/DropmorphismSection";
+import EmptyInputValidation from "../components/emptyInputValidation/EmptyInputValidation";
+import Entries1 from "../components/entries/Entries1";
+import EverVaultCard from "../components/everVaultCard/EverVaultCard";
+import ControlledComponent1 from "../components/exampleAssignment/controlledComponent/ControlledComponent1";
+import UnControlledComponent from "../components/exampleAssignment/uncontrolledComponent/UnControlledComponent";
+import ExpandableCards from "../components/expandableCards/ExpandableCards";
+import FadingButton from "../components/fadingButton/FadingButton";
+import FatNavSection from "../components/fatNavSection/FatNavSection";
+import HiddenElement from "../components/hiddenElement/HiddenElement";
+import ImageButtonCard from "../components/imageButtonCard/ImageButtonCard";
+import ImageZoom1 from "../components/imageZoom/ImageZoom1";
+import LoginForm1 from "../components/loginForm/LoginForm1";
 import SideNavSection from "../components/sideNavSection/SideNavSection";
+import TopNav from "../components/topNavMenu/TopNav";
 
 const Home = () => {
   const [open, setOpen] = useState(true);
@@ -93,11 +101,20 @@ const Home = () => {
   // };
   return (
     <div className="homePage">
+      <HiddenElement />
+      <FatNavSection />
+      <FadingButton />
+      <ExpandableCards />
+      <EverVaultCard />
+      <Dropdown4Section />
+      <EmptyInputValidation />
+      <DropmorphismSection />
+      <TopNav />
       <SideNavSection />
       <DraggableBoxSection />
       <DownloadButtons />
       <DividerSection />
-      <DisableRightClick />
+      {/* <DisableRightClick /> */}
       <DirectionAwareHover />
       <CapsLockDetector />
       <DatePickerSection />

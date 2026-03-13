@@ -1,5 +1,4 @@
 import type { Transition, Variants } from "framer-motion";
-import { PATH } from "../router/path";
 import type {
   ArrowSlide,
   AspectRatioCard,
@@ -12,6 +11,7 @@ import type {
   ButtonBlockItem,
   CalcButton,
   CardItem,
+  CardItem2,
   CardStackItem,
   ClipboardContent,
   CollapseItem,
@@ -22,7 +22,13 @@ import type {
   CoverContent,
   DotItem,
   DropdownItem,
+  DropdownItem4,
+  ExpandableCardsItem,
+  FadingButtonItem,
+  FatNavItem,
+  FooterLink,
   GalleryImage,
+  HiddenElement,
   ListItem,
   MenuItem,
   NavItem,
@@ -33,7 +39,8 @@ import type {
   Skill,
   User,
   User2,
-} from "../interface";
+} from "../interface/index";
+import { PATH } from "../router/path";
 
 export const fadeUp: Variants = {
   hidden: { opacity: 0, y: 60 },
@@ -682,4 +689,111 @@ export const SIDENAV_MENU = [
     title: "Settings",
     children: ["Profile", "Security"],
   },
+];
+
+export const NAV_ITEMS = [
+  { id: 1, label: "Home", link: "/" },
+  { id: 2, label: "Services", link: "/services" },
+  { id: 3, label: "Products", link: "/products" },
+];
+
+export const DROPDOWN_ITEMS2 = [
+  { id: 1, label: "Profile", link: "/profile" },
+  { id: 2, label: "Settings", link: "/settings" },
+  { id: 3, label: "Logout", link: "/logout" },
+];
+
+export const DROPDOWN_ITEMS3 = [
+  { id: 1, label: "Profile" },
+  { id: 2, label: "Settings" },
+  { id: 3, label: "Dashboard" },
+  { id: 4, label: "Logout" },
+];
+export const DROPDOWN_OPTIONS = [
+  "React",
+  "TypeScript",
+  "Zustand",
+  "Framer Motion",
+];
+
+export const ERROR_MESSAGE = "Input cannot be empty";
+
+export const DROPDOWN_ITEMS4: DropdownItem4[] = [
+  { id: 1, label: "Profile", value: "profile" },
+  { id: 2, label: "Settings", value: "settings" },
+  { id: 3, label: "Dashboard", value: "dashboard" },
+  { id: 4, label: "Logout", value: "logout" },
+];
+
+export const CARD_DATA2: CardItem2[] = [
+  {
+    id: 1,
+    title: "Secure Payments",
+    description: "Encrypted financial transactions",
+  },
+  {
+    id: 2,
+    title: "Data Protection",
+    description: "End-to-end encryption layer",
+  },
+  {
+    id: 3,
+    title: "Cloud Security",
+    description: "Zero-trust infrastructure",
+  },
+];
+
+export const EXPANDABLE_CARDS_DATA: ExpandableCardsItem[] = [
+  {
+    id: 1,
+    title: "AI Security",
+    description: "Protect modern applications",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995",
+    content:
+      "AI driven security systems monitor activity and prevent threats automatically.",
+  },
+  {
+    id: 2,
+    title: "Cloud Infrastructure",
+    description: "Scalable architecture",
+    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
+    content:
+      "Deploy applications globally with resilient cloud infrastructure.",
+  },
+  {
+    id: 3,
+    title: "Modern Development",
+    description: "Faster product delivery",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+    content:
+      "Modern frameworks accelerate product development and scalability.",
+  },
+];
+
+export const FADING_BUTTONS: FadingButtonItem[] = [
+  { id: 1, label: "Home" },
+  { id: 2, label: "Products" },
+  { id: 3, label: "Pricing" },
+  { id: 4, label: "Contact" },
+];
+
+export const FAT_NAV_LINKS: FatNavItem[] = [
+  { id: 1, label: "Home", href: "#" },
+  { id: 2, label: "About", href: "#" },
+  { id: 3, label: "Services", href: "#" },
+  { id: 4, label: "Projects", href: "#" },
+  { id: 5, label: "Contact", href: "#" },
+];
+
+export const ELEMENTS: HiddenElement[] = [
+  { id: 1, title: "Secret Panel", hidden: true },
+  { id: 2, title: "Hidden Message", hidden: true },
+  { id: 3, title: "Private Section", hidden: true },
+];
+
+export const FOOTER_LINKS: FooterLink[] = [
+  { id: 1, label: "Home", href: "#" },
+  { id: 2, label: "About", href: "#" },
+  { id: 3, label: "Services", href: "#" },
+  { id: 4, label: "Contact", href: "#" },
 ];

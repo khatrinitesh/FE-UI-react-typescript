@@ -499,3 +499,58 @@ export interface MenuItem2 {
   title: string;
   children?: string[];
 }
+
+// export interface DropdownItem {
+//   id: number;
+//   label: string;
+//   link: string;
+// }
+
+export interface NavState {
+  isOpen: boolean;
+  toggleDropdown: () => void;
+  closeDropdown: () => void;
+}
+
+export interface DropdownItem4 {
+  id: number;
+  label: string;
+  value: string;
+}
+
+export interface CardItem2 {
+  id: number;
+  title: string;
+  description: string;
+}
+
+export interface ExpandableCardsItem {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  content: string;
+}
+
+export interface FadingButtonItem {
+  id: number;
+  label: string;
+}
+
+export interface FatNavItem {
+  id: number;
+  label: string;
+  href: string;
+}
+
+export interface HiddenElement {
+  id: number;
+  title: string;
+  hidden: boolean;
+}
+
+export interface FooterLink {
+  id: number;
+  label: string;
+  href: string;
+}

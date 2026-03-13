@@ -5,7 +5,7 @@ interface CardStore {
   setActiveCard: (id: number | null) => void;
 }
 
-export const useARCardStore = create<CardStore>((set) => ({
+export const everVaultCardStore = create<CardStore>((set) => ({
   activeCard: null,
   setActiveCard: (id) => set({ activeCard: id }),
 }));

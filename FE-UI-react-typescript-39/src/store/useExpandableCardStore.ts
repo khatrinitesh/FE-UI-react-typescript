@@ -1,11 +1,11 @@
 import { create } from "zustand";
 
-interface CardStore {
+interface ExpandCardStore {
   activeCard: number | null;
   setActiveCard: (id: number | null) => void;
 }
 
-export const useARCardStore = create<CardStore>((set) => ({
+export const useExpandableCardStore = create<ExpandCardStore>((set) => ({
   activeCard: null,
   setActiveCard: (id) => set({ activeCard: id }),
 }));
