@@ -18,15 +18,21 @@ import type {
   ColorItem,
   Contact,
   ContactInfo,
+  ContentBlock,
   CouponData,
   CoverContent,
+  DockItem,
   DotItem,
   DropdownItem,
   DropdownItem4,
   ExpandableCardsItem,
   FadingButtonItem,
   FatNavItem,
+  FloatNavItem,
+  FocusCardItem,
+  FoldCard,
   FooterLink,
+  FormDataValidation,
   GalleryImage,
   HiddenElement,
   ListItem,
@@ -797,3 +803,69 @@ export const FOOTER_LINKS: FooterLink[] = [
   { id: 3, label: "Services", href: "#" },
   { id: 4, label: "Contact", href: "#" },
 ];
+
+export const DOCK_ITEMS: DockItem[] = [
+  { id: 1, label: "Home", icon: "🏠" },
+  { id: 2, label: "Search", icon: "🔍" },
+  { id: 3, label: "Files", icon: "📁" },
+  { id: 4, label: "Settings", icon: "⚙️" },
+];
+
+export const CONTENT_BLOCK: ContentBlock[] = [
+  {
+    id: 1,
+    text: "This is a floating image on the left. Text wraps nicely around it with smooth UI.",
+    image: "https://picsum.photos/200",
+    align: "left",
+  },
+  {
+    id: 2,
+    text: "This is a floating image on the right. Perfect for blog layouts and storytelling UI.",
+    image: "https://picsum.photos/201",
+    align: "right",
+  },
+];
+export const FLOATING_NAV_ITEMS: FloatNavItem[] = [
+  { id: 1, label: "Home", href: "/" },
+  { id: 2, label: "About", href: "/about" },
+  { id: 3, label: "Projects", href: "/projects" },
+  { id: 4, label: "Contact", href: "/contact" },
+];
+
+export const FOCUS_CARDS: FocusCardItem[] = [
+  {
+    id: 1,
+    title: "Design",
+    description: "Modern UI/UX inspiration",
+    image: "https://picsum.photos/400/300?1",
+  },
+  {
+    id: 2,
+    title: "Development",
+    description: "Clean scalable code",
+    image: "https://picsum.photos/400/300?2",
+  },
+  {
+    id: 3,
+    title: "Animation",
+    description: "Smooth interactions",
+    image: "https://picsum.photos/400/300?3",
+  },
+];
+export const FOLD_CARDS: FoldCard[] = [
+  {
+    id: 1,
+    title: "UI Design",
+    description: "Creative modern interface ideas.",
+  },
+  {
+    id: 2,
+    title: "Development",
+    description: "Scalable and clean code structure.",
+  },
+];
+
+export const FORM_INITIAL: FormDataValidation = {
+  email: "",
+  password: "",
+};

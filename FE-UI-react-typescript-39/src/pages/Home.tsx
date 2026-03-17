@@ -86,12 +86,20 @@ import UnControlledComponent from "../components/exampleAssignment/uncontrolledC
 import ExpandableCards from "../components/expandableCards/ExpandableCards";
 import FadingButton from "../components/fadingButton/FadingButton";
 import FatNavSection from "../components/fatNavSection/FatNavSection";
+import FloatingDock from "../components/floatingDock/FloatingDock";
+import FocusCard from "../components/focusCard/FocusCard";
+import FoldedCard from "../components/foldedCard/FoldedCard";
+import FormOnImage from "../components/formOnImage/FormOnImage";
+import FormValidation from "../components/formValidation/FormValidation";
 import HiddenElement from "../components/hiddenElement/HiddenElement";
 import ImageButtonCard from "../components/imageButtonCard/ImageButtonCard";
 import ImageZoom1 from "../components/imageZoom/ImageZoom1";
 import LoginForm1 from "../components/loginForm/LoginForm1";
+import PointerFollower from "../components/pointerFollower/PointerFollower";
 import SideNavSection from "../components/sideNavSection/SideNavSection";
 import TopNav from "../components/topNavMenu/TopNav";
+import FloatingContent from "./../components/floatingContent/FloatingContent";
+import FloatingNavbar from "./../components/floatingNavbar/FloatingNavbar";
 
 const Home = () => {
   const [open, setOpen] = useState(true);
@@ -101,6 +109,14 @@ const Home = () => {
   // };
   return (
     <div className="homePage">
+      <FormValidation />
+      <FormOnImage />
+      <PointerFollower />
+      <FoldedCard />
+      <FocusCard />
+      <FloatingNavbar />
+      <FloatingContent />
+      <FloatingDock />
       <HiddenElement />
       <FatNavSection />
       <FadingButton />

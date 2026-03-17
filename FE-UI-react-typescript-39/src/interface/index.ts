@@ -554,3 +554,51 @@ export interface FooterLink {
   label: string;
   href: string;
 }
+
+export interface DockItem {
+  id: number;
+  label: string;
+  icon: string;
+}
+
+export interface ContentBlock {
+  id: number;
+  text: string;
+  image: string;
+  align: "left" | "right";
+}
+export interface FloatNavItem {
+  id: number;
+  label: string;
+  href: string;
+}
+
+export interface FocusCardItem {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+}
+export interface FoldCard {
+  id: number;
+  title: string;
+  description: string;
+}
+export interface Pointer {
+  x: number;
+  y: number;
+}
+export interface FormDataImage {
+  email: string;
+  password: string;
+}
+
+export interface FormDataValidation {
+  email: string;
+  password: string;
+}
+
+export interface FormErrors {
+  email?: string;
+  password?: string;
+}
