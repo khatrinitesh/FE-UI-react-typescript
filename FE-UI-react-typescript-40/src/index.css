@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "poppins-medium";
+  src: url("../assets/fonts/poppinsmedium.eot");
+  src:
+    url("../assets/fonts/poppinsmedium.eot") format("embedded-opentype"),
+    url("../assets/fonts/poppinsmedium.woff2") format("woff2"),
+    url("../assets/fonts/poppinsmedium.woff") format("woff"),
+    url("../assets/fonts/poppinsmedium.ttf") format("truetype"),
+    url("../assets/fonts/poppinsmedium.svg#poppinsmedium") format("svg");
+}
+
+:root {
+  --ff-poppins-medium: "poppins-medium";
+}
+
+html,
+body {
+  min-height: 100dvh;
+  height: 100dvh;
+}
+
+.bodyWrapper {
+  overflow-x: hidden;
+  font-family: var(--ff-poppins-medium);
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: absolute;
+  animation: rotate 1s linear infinite;
+  -webkit-animation: rotate 1s linear infinite;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  animation: prixClipFix 2s linear infinite;
+  -webkit-animation: prixClipFix 2s linear infinite;
+}
+.loader::after {
+  border-color: #ff3d00;
+  animation:
+    prixClipFix 2s linear infinite,
+    rotate 0.5s linear infinite reverse;
+  inset: 6px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes prixClipFix {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
