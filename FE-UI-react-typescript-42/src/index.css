@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "poppins-medium";
+  src: url("../assets/fonts/poppinsmedium.eot");
+  src:
+    url("../assets/fonts/poppinsmedium.eot") format("embedded-opentype"),
+    url("../assets/fonts/poppinsmedium.woff2") format("woff2"),
+    url("../assets/fonts/poppinsmedium.woff") format("woff"),
+    url("../assets/fonts/poppinsmedium.ttf") format("truetype"),
+    url("../assets/fonts/poppinsmedium.svg#poppinsmedium") format("svg");
+}
+
+:root {
+  --ff-poppins-medium: "poppins-medium";
+}
+
+html,
+body {
+  height: 100dvh;
+  min-height: 100dvh;
+}
+
+.bodyWrapper {
+  overflow-x: hidden;
+  font-family: var(--ff-poppins-medium);
+}
+
+.container {
+  padding-inline: 1rem;
+}
