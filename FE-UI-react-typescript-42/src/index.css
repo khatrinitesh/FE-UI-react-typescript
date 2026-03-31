@@ -1,0 +1,14 @@
+@import "tailwindcss";
+:root {}
+
+html,
+.bodyWrapper {
+    height: 100dvh;
+    min-height: 100dvh;
+}
+
+.bodyWrapper {}
+
+.container {
+    padding-inline: 1rem;
+}
