@@ -1,1 +1,0 @@
-export const CHECK_ANIMATION_DURATION = 0.3;
