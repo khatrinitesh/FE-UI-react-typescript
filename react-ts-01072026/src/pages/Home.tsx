@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query"
+import HtmlDomCollection1 from "../components/HtmlDomCollection/HtmlDomCollection1"
 
 const fetchWelcomeMessage = async () => {
   return "Welcome to the Home Page"
@@ -14,6 +15,7 @@ export default function Home() {
     <div className="homePage">
       <div className="container mx-auto px-4">
       <h1 className="mb-4 text-4xl font-bold">Home Page</h1>
+      <HtmlDomCollection1/>
 
       {isLoading ? (
         <p>Loading...</p>
