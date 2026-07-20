@@ -1,8 +1,0 @@
-@import "tailwindcss";
-
-/* .container-page{
-    padding-inline: 1rem;
-    margin:0 auto;
-} */
-
-.container-page { width: min(1120px, calc(100% - 2rem)); margin-inline: auto; }
