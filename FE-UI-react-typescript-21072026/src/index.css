@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "poppins-regular";
+  src:
+    url("../assets/fonts/poppins-regular.eot");
+  src:
+    url("../assets/fonts/poppins-regular.eot?#iefix") format("embedded-opentype"),
+    url("../assets/fonts/poppins-regular.woff2") format("woff2"),
+    url("../assets/fonts/poppins-regular.woff") format("woff"),
+    url("../assets/fonts/poppins-regular.ttf") format("truetype"),
+    url("../assets/fonts/poppins-regular.svg#PoppinsRegular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "poppins-medium";
+  src:
+    url("../assets/fonts/poppins-medium.eot");
+  src:
+    url("../assets/fonts/poppins-medium.eot?#iefix") format("embedded-opentype"),
+    url("../assets/fonts/poppins-medium.woff2") format("woff2"),
+    url("../assets/fonts/poppins-medium.woff") format("woff"),
+    url("../assets/fonts/poppins-medium.ttf") format("truetype"),
+    url("../assets/fonts/poppins-medium.svg#PoppinsMedium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "poppins-semibold";
+  src:
+    url("../assets/fonts/poppins-semibold.eot");
+  src:
+    url("../assets/fonts/poppins-semibold.eot?#iefix") format("embedded-opentype"),
+    url("../assets/fonts/poppins-semibold.woff2") format("woff2"),
+    url("../assets/fonts/poppins-semibold.woff") format("woff"),
+    url("../assets/fonts/poppins-semibold.ttf") format("truetype"),
+    url("../assets/fonts/poppins-semibold.svg#PoppinsSemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* Brand project variables */
+:root {
+  /* Brand fonts */
+  --font-brand-poppins-regular:  "poppins-regular";
+  --font-brand-poppins-medium:  "poppins-medium";
+  --font-brand-poppins-semibold:  "poppins-semibold";
+  /* Brand colours */
+  --color-brand-primary: #dc143c;
+  --color-brand-secondary: #ff2400;
+  --color-brand-dark: #8b0000;
+}
+
+/* Tailwind CSS v4 theme */
+@theme inline {
+  /* Fonts */
+  --font-poppins-regular: var(--font-brand-poppins-regular);
+  --font-poppins-medium: var(--font-brand-poppins-medium);
+  --font-poppins-semibold: var(--font-brand-poppins-semibold);
+
+  /* Brand colours */
+  --color-primary: var(--color-brand-primary);
+  --color-secondary: var(--color-brand-secondary);
+  --color-dark: var(--color-brand-dark);
+}
+
+html {
+  font-family: var(--font-poppins-regular);
+}
+
+html,.bodyWrapper{
+  min-height: 100dvh;
+  height: 100dvh;
+}
+
+.container{
+  padding-inline:1rem;
+  margin-inline: auto;
+}
+
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 18s linear infinite;
+}
+
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  gap: 24px;
+  padding-right: 24px;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
