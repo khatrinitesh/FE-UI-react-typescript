@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/poppins-medium.eot");
+  src:
+    url("../assets/fonts/poppins-medium.eot?#iefix") format("embedded-opentype"),
+    url("../assets/fonts/poppins-medium.woff2") format("woff2"),
+    url("../assets/fonts/poppins-medium.woff") format("woff"),
+    url("../assets/fonts/poppins-medium.ttf") format("truetype"),
+    url("../assets/fonts/poppins-medium.svg#PoppinsMedium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* BRAND PROJECT */
+:root {
+  /* Brand colors */
+  --brand-color-primary: #70d8b6;
+  --brand-color-secondary: #1c6956;
+  --brand-font-family: "Poppins", sans-serif;
+  --brand-text-12: clamp(0.625rem, 1.2vh, 0.75rem);
+  --brand-text-14: clamp(0.75rem, 1.4vh, 0.875rem);
+  --brand-text-16: clamp(0.875rem, 1.6vh, 1rem);
+  --brand-text-18: clamp(1rem, 1.8vh, 1.125rem);
+  --brand-text-20: clamp(1.125rem, 2vh, 1.25rem);
+  --brand-text-24: clamp(1.25rem, 2.4vh, 1.5rem);
+  --brand-text-28: clamp(1.5rem, 2.8vh, 1.75rem);
+  --brand-text-32: clamp(1.75rem, 3.2vh, 2rem);
+  --brand-text-36: clamp(2rem, 3.6vh, 2.25rem);
+  --brand-text-40: clamp(2.25rem, 4vh, 2.5rem);
+  --brand-text-48: clamp(2.5rem, 4.8vh, 3rem);
+  --brand-text-56: clamp(3rem, 5.6vh, 3.5rem);
+  --brand-text-64: clamp(3.5rem, 6.4vh, 4rem);
+  --brand-text-72: clamp(4rem, 7.2vh, 4.5rem);
+  --brand-text-80: clamp(4.5rem, 8vh, 5rem);
+}
+
+@theme inline {
+  --color-primary: var(--brand-color-primary);
+  --color-secondary: var(--brand-color-secondary);
+  --font-poppins: var(--brand-font-family);
+  --text-brand-12: var(--brand-text-12);
+  --text-brand-14: var(--brand-text-14);
+  --text-brand-16: var(--brand-text-16);
+  --text-brand-18: var(--brand-text-18);
+  --text-brand-20: var(--brand-text-20);
+  --text-brand-24: var(--brand-text-24);
+  --text-brand-28: var(--brand-text-28);
+  --text-brand-32: var(--brand-text-32);
+  --text-brand-36: var(--brand-text-36);
+  --text-brand-40: var(--brand-text-40);
+  --text-brand-48: var(--brand-text-48);
+  --text-brand-56: var(--brand-text-56);
+  --text-brand-64: var(--brand-text-64);
+  --text-brand-72: var(--brand-text-72);
+  --text-brand-80: var(--brand-text-80);
+  --breakpoint-desktop-sm: 64rem; /* 1024px */
+  --breakpoint-desktop-md: 85.375rem; /* 1366px */
+  --breakpoint-desktop-lg: 87.5rem; /* 1400px */
+  --breakpoint-desktop-xl: 93.75rem; /* 1500px */
+  --breakpoint-desktop-2xl: 100rem; /* 1600px */
+  --breakpoint-desktop-3xl: 106.25rem; /* 1700px */
+  --breakpoint-desktop-4xl: 112.5rem; /* 1800px */
+  --breakpoint-desktop-5xl: 118.75rem; /* 1900px */
+  --breakpoint-wide: 125rem; /* 2000px */
+  --breakpoint-ultrawide: 165.625rem; /* 2650px */
+  --breakpoint-cinema: 187.5rem; /* 3000px */
+}
+
+.container {
+  padding-inline: 1rem;
+}
+
+.bodyLayout,
+.rootWrapper {
+  min-height: 100dvh;
+  height: 100dvh;
+  overflow-x: hidden;
+}
