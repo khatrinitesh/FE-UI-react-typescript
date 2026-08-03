@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+/* ==========================================================
+   Fonts
+========================================================== */
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("/assets/fonts/montserrat-regular.eot");
+  src:
+    url("/assets/fonts/montserrat-regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/montserrat-regular.woff2") format("woff2"),
+    url("/assets/fonts/montserrat-regular.woff") format("woff"),
+    url("/assets/fonts/montserrat-regular.ttf") format("truetype"),
+    url("/assets/fonts/montserrat-regular.svg#Montserrat") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat-Semibold";
+  src: url("/assets/fonts/montserrat-semibold.eot");
+  src:
+    url("/assets/fonts/montserrat-semibold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/assets/fonts/montserrat-semibold.woff2") format("woff2"),
+    url("/assets/fonts/montserrat-semibold.woff") format("woff"),
+    url("/assets/fonts/montserrat-semibold.ttf") format("truetype"),
+    url("/assets/fonts/montserrat-semibold.svg#Montserrat") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+/* ==========================================
+   Brand Design Tokens
+========================================== */
+:root {
+  /* Colors */
+  --brand-primary: #ff66e6;
+  --brand-secondary: #eb17b8;
+  /* Font Family */
+  --brand-monsterrat-regular: "Montserrat-Regular";
+  --brand-monsterrat-semibold: "Montserrat-Semibold";
+}
+
+@theme inline {
+  /* ===============================
+   Colors
+================================ */
+  --color-primary: var(--brand-primary);
+  --color-secondary: var(--brand-secondary);
+  /* ===============================
+   Font Family
+================================ */
+  --font-monsterrat-regular: var(--brand-monsterrat-regular);
+  --font-monsterrat-semibold: var(--brand-monsterrat-semibold);
+  /* ======================================================
+     Font Sizes (12px → 80px)
+  ====================================================== */
+  --text-12: clamp(10px, 2.4vh, 12px);
+  --text-14: clamp(12px, 2.6vh, 14px);
+  --text-16: clamp(14px, 2.8vh, 16px);
+  --text-18: clamp(16px, 3vh, 18px);
+  --text-20: clamp(18px, 3.2vh, 20px);
+  --text-24: clamp(20px, 3.6vh, 24px);
+  --text-28: clamp(24px, 4vh, 28px);
+  --text-32: clamp(28px, 4.5vh, 32px);
+  --text-36: clamp(32px, 5vh, 36px);
+  --text-40: clamp(36px, 5.5vh, 40px);
+  --text-48: clamp(40px, 6vh, 48px);
+  --text-56: clamp(48px, 7vh, 56px);
+  --text-64: clamp(56px, 8vh, 64px);
+  --text-72: clamp(64px, 9vh, 72px);
+  --text-80: clamp(72px, 10vh, 80px);
+  /* ======================================================
+     Custom Breakpoints
+  ====================================================== */
+  --breakpoint-*: initial;
+  --breakpoint-tablet: 48rem; /* 768px */
+  --breakpoint-desktop-sm: 64rem; /* 1024px */
+  --breakpoint-desktop-md: 80rem; /* 1280px */
+  --breakpoint-desktop-lg: 85.375rem; /* 1366px */
+  --breakpoint-desktop-xl: 90rem; /* 1440px */
+  --breakpoint-desktop-3xl: 100rem; /* 1600px */
+  --breakpoint-desktop-4xl: 120rem; /* 1920px */
+  --breakpoint-desktop-5xl: 128rem; /* 2048px */
+  --breakpoint-desktop-6xl: 160rem; /* 2560px */
+}
+/* ==========================================================
+   Global Custom Scrollbar
+========================================================== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--brand-primary) #f5f5f5;
+}
+
+/* Chrome, Edge, Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--brand-primary);
+  border-radius: 999px;
+  border: 2px solid #f5f5f5;
+}
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* ==========================================================
+  Custom DatePicker Styles 
+========================================================== */
+.react-datepicker {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  font-family: inherit;
+}
+
+.react-datepicker__header {
+  background: #ff66e6;
+  border-bottom: none;
+}
+
+.react-datepicker__current-month,
+.react-datepicker-time__header,
+.react-datepicker-year-header {
+  color: #fff;
+}
+
+.react-datepicker__day-name {
+  color: white;
+}
+
+.react-datepicker__day--selected {
+  background: #eb17b8;
+  border-radius: 50%;
+}
+
+.react-datepicker__day:hover {
+  background: rgba(255, 102, 230, 0.15);
+  border-radius: 50%;
+}
+
+.react-datepicker__navigation-icon::before {
+  border-color: white;
+}
