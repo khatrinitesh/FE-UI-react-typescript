@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+/* =========================================================
+   BRAND FONTS
+   ========================================================= */
+@font-face {
+  font-family: "Montserrat-Regular";
+  src:
+    url("./assets/fonts/montserrat-regular.woff2") format("woff2"),
+    url("./assets/fonts/montserrat-regular.woff") format("woff"),
+    url("./assets/fonts/montserrat-regular.ttf") format("truetype");
+
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bebas-Regular";
+  src:
+    url("./assets/fonts/bebas-regular.woff2") format("woff2"),
+    url("./assets/fonts/bebas-regular.woff") format("woff"),
+    url("./assets/fonts/bebas-regular.ttf") format("truetype");
+
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================================================
+   BRAND PROJECT
+   ========================================================= */
+
+:root {
+  /* -------------------------------------------------------
+     Brand Colors
+     ------------------------------------------------------- */
+  --brand-primary: #ff66e6;
+  --brand-secondary: #eb17b8;
+  /* -------------------------------------------------------
+     Typography
+     ------------------------------------------------------- */
+  --font-brand-monsterrat-regular: "Montserrat-Regular";
+  --font-brand-bebas-regular: "Bebas-Regular";
+  /* =====================================================
+     RESPONSIVE FONT SIZES
+     clamp(min, preferred, max)
+     ===================================================== */
+  --font-size-12: clamp(12px, 1.5vh, 12px);
+  --font-size-14: clamp(14px, 1.7vh, 14px);
+  --font-size-16: clamp(14px, 2vh, 16px);
+  --font-size-18: clamp(16px, 2.2vh, 18px);
+  --font-size-20: clamp(18px, 2.4vh, 20px);
+  --font-size-24: clamp(20px, 2.8vh, 24px);
+  --font-size-28: clamp(22px, 3.2vh, 28px);
+  --font-size-32: clamp(24px, 3.6vh, 32px);
+  --font-size-36: clamp(28px, 4vh, 36px);
+  --font-size-40: clamp(30px, 4.5vh, 40px);
+  --font-size-48: clamp(32px, 5.2vh, 48px);
+  --font-size-56: clamp(36px, 6vh, 56px);
+  --font-size-64: clamp(40px, 6.8vh, 64px);
+  --font-size-72: clamp(44px, 7.6vh, 72px);
+  --font-size-80: clamp(48px, 8.4vh, 80px);
+}
+
+@theme inline {
+  /* Brand Colors */
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  /* Fonts */
+  --font-brand-monsterrat-regular: var(--font-brand-monsterrat-regular);
+  --font-brand-bebas-regular: var(--font-brand-bebas-regular);
+  /* Font Sizes */
+  --text-12: var(--font-size-12);
+  --text-14: var(--font-size-14);
+  --text-16: var(--font-size-16);
+  --text-18: var(--font-size-18);
+  --text-20: var(--font-size-20);
+  --text-24: var(--font-size-24);
+  --text-28: var(--font-size-28);
+  --text-32: var(--font-size-32);
+  --text-36: var(--font-size-36);
+  --text-40: var(--font-size-40);
+  --text-48: var(--font-size-48);
+  --text-56: var(--font-size-56);
+  --text-64: var(--font-size-64);
+  --text-72: var(--font-size-72);
+  --text-80: var(--font-size-80);
+  /* -------------------------------------------------------
+     Breakpoints
+     ------------------------------------------------------- */
+  --breakpoint-tablet: 48rem; /* 768px */
+  --breakpoint-desktop-sm: 64rem; /* 1024px */
+  --breakpoint-desktop-md: 80rem; /* 1280px */
+  --breakpoint-desktop-lg: 85.375rem; /* 1366px */
+  --breakpoint-desktop-xl: 90rem; /* 1440px */
+  --breakpoint-desktop-2xl: 100rem; /* 1600px */
+  --breakpoint-desktop-3xl: 120rem; /* 1920px */
+  --breakpoint-desktop-4xl: 160rem; /* 2560px */
+}
+
+html,
+.body {
+  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+.body {
+  font-family: var(--font-brand-monsterrat-regular);
+}
+
+@keyframes headline-word {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-headline-word {
+  opacity: 0;
+  animation: headline-word 0.7s ease-out forwards;
+}
