@@ -1,0 +1,75 @@
+@layer components {
+  .contact-page {
+    @apply mx-auto grid w-full max-w-7xl gap-24 px-8 py-24 lg:grid-cols-[0.8fr_1.2fr];
+  }
+  .contact-title {
+    @apply mt-4 font-display text-5xl font-bold leading-[0.98] tracking-[-0.055em] text-[#1e1b36] sm:text-6xl;
+  }
+  .contact-description {
+    @apply mt-6 max-w-md text-lg leading-8 text-[#68617b];
+  }
+  .contact-details {
+    @apply mt-10 grid gap-4;
+  }
+  .contact-detail-link,
+  .contact-detail {
+    @apply flex items-center gap-4 rounded-2xl border border-[#e6e2f0] bg-white p-4 no-underline transition hover:border-[#c9c1ef];
+  }
+  .email-icon,
+  .availability-icon {
+    @apply grid size-10 shrink-0 place-items-center rounded-xl;
+  }
+  .email-icon {
+    @apply bg-secondary text-primary;
+  }
+  .availability-icon {
+    @apply bg-[#eaf8f5] text-[#227d70];
+  }
+  .detail-content,
+  .detail-label,
+  .detail-value {
+    @apply block;
+  }
+  .detail-label {
+    @apply text-xs font-bold tracking-[0.12em] text-[#8b849e] uppercase;
+  }
+  .detail-value {
+    @apply mt-1 font-semibold text-[#302b4d];
+  }
+  .contact-detail-link:hover .detail-value {
+    @apply text-primary;
+  }
+  .contact-form-card {
+    @apply rounded-4xl border border-[#e6e2f0] bg-white p-8 shadow-[0_24px_60px_-40px_rgba(40,31,89,0.45)];
+  }
+  .contact-form {
+    @apply grid gap-5;
+  }
+  .form-grid {
+    @apply grid grid-cols-2 gap-5;
+  }
+  .form-submit {
+    @apply flex flex-wrap items-center justify-between gap-4 pt-1;
+  }
+  .form-note {
+    @apply m-0 max-w-xs text-xs leading-5 text-[#827b94];
+  }
+
+  @media (max-width: 900px) {
+    .contact-page {
+      @apply grid-cols-1 gap-12;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .contact-page {
+      @apply px-5 py-16;
+    }
+    .contact-form-card {
+      @apply p-5;
+    }
+    .form-grid {
+      @apply grid-cols-1;
+    }
+  }
+}

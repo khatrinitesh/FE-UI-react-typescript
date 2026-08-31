@@ -1,0 +1,204 @@
+@layer components {
+  .home-hero {
+    @apply overflow-hidden;
+  }
+  .home-hero-inner {
+    @apply mx-auto grid max-w-7xl items-center gap-20 px-8 pb-28 pt-24 lg:grid-cols-[1.05fr_0.95fr];
+  }
+  .hero-copy {
+    @apply min-w-0;
+  }
+  .eyebrow {
+    @apply mb-5 inline-flex items-center gap-2 rounded-full border border-[#ded9fb] bg-secondary px-3 py-1.5 text-xs font-bold tracking-[0.13em] text-primary uppercase;
+  }
+  .eyebrow-dot {
+    @apply size-1.5 rounded-full bg-primary;
+  }
+  .hero-title {
+    @apply m-0 max-w-xl font-display text-5xl font-bold leading-[0.98] tracking-[-0.055em] text-[#1e1b36] sm:text-6xl lg:text-7xl;
+  }
+  .hero-description {
+    @apply mt-6 max-w-lg text-lg leading-8 text-[#68617b];
+  }
+  .hero-actions {
+    @apply mt-9 flex flex-wrap gap-3;
+  }
+  .hero-visual {
+    @apply relative;
+  }
+  .visual-glow {
+    @apply absolute -inset-8 -z-10 rounded-full bg-[#ece9ff] blur-3xl;
+  }
+  .visual-card {
+    @apply rounded-4xl border border-[#e4e0f0] bg-white p-6 shadow-[0_30px_70px_-35px_rgba(40,31,89,0.42)];
+  }
+  .visual-feature {
+    @apply rounded-3xl bg-[#292143] p-8 text-white;
+  }
+  .visual-label {
+    @apply flex items-center justify-between text-xs font-bold tracking-[0.15em] text-[#cbc3ed] uppercase;
+  }
+  .visual-arrow {
+    @apply grid size-7 place-items-center rounded-full bg-[#403661] text-base text-[#f1edff];
+  }
+  .visual-title {
+    @apply mt-16 max-w-sm font-display text-4xl font-semibold leading-[1.04] tracking-[-0.04em] sm:text-5xl;
+  }
+  .visual-bottom {
+    @apply mt-12 flex items-end justify-between;
+  }
+  .avatar-stack {
+    @apply flex;
+  }
+  .avatar-s,
+  .avatar-m,
+  .avatar-j {
+    @apply -ml-2 grid size-8 place-items-center rounded-full border-2 border-[#292143] text-xs text-[#352d54];
+  }
+  .avatar-s {
+    @apply ml-0 bg-[#d8cbff];
+  }
+  .avatar-m {
+    @apply bg-[#ffd4b3];
+  }
+  .avatar-j {
+    @apply bg-[#b5e4dc];
+  }
+  .visual-service {
+    @apply text-sm font-medium text-[#cbc3ed];
+  }
+  .visual-steps {
+    @apply mt-4 grid grid-cols-3 gap-3;
+  }
+  .step-purple,
+  .step-orange,
+  .step-green {
+    @apply min-h-34 rounded-2xl p-4;
+  }
+  .step-purple {
+    @apply bg-[#f4f1ff];
+  }
+  .step-orange {
+    @apply bg-[#fff3e8];
+  }
+  .step-green {
+    @apply bg-[#eaf8f5];
+  }
+  .step-number {
+    @apply m-0 text-xs font-bold tracking-[0.12em];
+  }
+  .step-purple .step-number {
+    @apply text-primary;
+  }
+  .step-orange .step-number {
+    @apply text-[#d4681c];
+  }
+  .step-green .step-number {
+    @apply text-[#227d70];
+  }
+  .step-title {
+    @apply mt-7 text-sm font-semibold leading-[1.35] text-[#302b4d];
+  }
+  .home-alert-section {
+    @apply border-t border-[#ebe8f2] bg-white;
+  }
+  .home-alert-inner {
+    @apply mx-auto max-w-7xl px-8 py-6;
+  }
+  .approach-section {
+    @apply border-y border-[#ebe8f2] bg-white;
+  }
+  .approach-inner {
+    @apply mx-auto grid max-w-7xl gap-20 px-8 py-18 lg:grid-cols-[0.8fr_1.2fr];
+  }
+  .section-kicker {
+    @apply m-0 text-xs font-bold tracking-[0.14em] text-primary uppercase;
+  }
+  .section-title {
+    @apply mt-4 font-display text-4xl font-semibold leading-[1.12] tracking-[-0.045em] text-[#1e1b36] sm:text-5xl;
+  }
+  .approach-description {
+    @apply m-0 max-w-xl text-lg leading-8 text-[#68617b];
+  }
+  .point-list {
+    @apply mt-9 grid gap-4;
+  }
+  .point-row {
+    @apply flex items-center gap-4 border-b border-[#ebe8f2] pb-4;
+  }
+  .point-number {
+    @apply grid size-8 shrink-0 place-items-center rounded-full bg-secondary text-sm font-bold text-primary;
+  }
+  .point-text {
+    @apply m-0 font-semibold text-[#302b4d];
+  }
+  .faq-section {
+    @apply bg-white;
+  }
+  .faq-inner {
+    @apply mx-auto grid max-w-7xl gap-20 px-8 py-24 lg:grid-cols-[0.8fr_1.2fr];
+  }
+  .faq-heading {
+    @apply max-w-sm;
+  }
+  .cta-section {
+    @apply mx-auto max-w-7xl px-8 py-24;
+  }
+  .cta-card {
+    @apply rounded-4xl bg-primary px-12 py-16 text-center text-white;
+  }
+  .cta-kicker {
+    @apply m-0 text-xs font-bold tracking-[0.14em] text-[#dcd6ff] uppercase;
+  }
+  .cta-title {
+    @apply mx-auto mb-8 mt-4 max-w-2xl font-display text-4xl font-semibold leading-[1.12] tracking-[-0.045em] sm:text-5xl;
+  }
+
+  @media (max-width: 900px) {
+    .home-hero-inner,
+    .approach-inner,
+    .faq-inner {
+      @apply grid-cols-1 gap-12;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .home-hero-inner {
+      @apply gap-14 px-5 py-16;
+    }
+    .home-alert-inner {
+      @apply px-5;
+    }
+    .visual-card {
+      @apply p-4;
+    }
+    .visual-feature {
+      @apply p-6;
+    }
+    .visual-title {
+      @apply mt-12;
+    }
+    .visual-bottom {
+      @apply mt-8;
+    }
+    .visual-service {
+      @apply hidden;
+    }
+    .step-purple,
+    .step-orange,
+    .step-green {
+      @apply min-h-29 p-3;
+    }
+    .step-title {
+      @apply mt-5 text-xs;
+    }
+    .approach-inner,
+    .faq-inner,
+    .cta-section {
+      @apply px-5 py-16;
+    }
+    .cta-card {
+      @apply px-6 py-12;
+    }
+  }
+}

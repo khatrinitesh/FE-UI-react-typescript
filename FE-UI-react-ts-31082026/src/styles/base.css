@@ -1,0 +1,43 @@
+@theme inline {
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+}
+
+@layer base {
+  :root {
+    --font-body: "DM Sans", Arial, sans-serif;
+    --font-heading: "Fraunces", Georgia, serif;
+    --font-size-base: 16px;
+    --primary: #6046e8;
+    --primary-dark: #4f38c7;
+    --secondary: #f5f3ff;
+    --text: #1e1b36;
+    --muted: #68617b;
+    --line: #ebe8f2;
+    --page: #fcfcfd;
+    --card: #ffffff;
+  }
+
+  * {
+    @apply box-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply m-0 min-w-80 bg-[#fcfcfd] font-sans text-base text-[#1e1b36];
+  }
+  button,
+  input,
+  textarea {
+    font: inherit;
+  }
+  button {
+    @apply border-0;
+  }
+  a {
+    @apply text-inherit;
+  }
+}

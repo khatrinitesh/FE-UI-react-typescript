@@ -1,0 +1,45 @@
+@layer components {
+  .alert-info,
+  .alert-success,
+  .alert-warning,
+  .alert-error {
+    @apply flex items-start gap-3 rounded-2xl border p-4;
+  }
+  .alert-info {
+    @apply border-[#c9c1ef] bg-secondary text-[#302b4d];
+  }
+  .alert-success {
+    @apply border-[#a7ded2] bg-[#eaf8f5] text-[#1d5b52];
+  }
+  .alert-warning {
+    @apply border-[#f1cf9e] bg-[#fff3e8] text-[#8b481b];
+  }
+  .alert-error {
+    @apply border-[#f0b5bc] bg-[#fff0f1] text-[#8c2935];
+  }
+  .alert-icon {
+    @apply grid size-6 shrink-0 place-items-center rounded-full bg-white text-sm font-bold;
+  }
+  .alert-copy {
+    @apply min-w-0 flex-1;
+  }
+  .alert-title {
+    @apply m-0 font-semibold;
+  }
+  .alert-message {
+    @apply mt-1 text-sm leading-6 opacity-85;
+  }
+  .alert-close {
+    @apply grid size-7 shrink-0 cursor-pointer place-items-center rounded-full bg-transparent text-lg leading-none opacity-60 transition hover:bg-white hover:opacity-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current;
+  }
+  .alert-button,
+  .alert-button-secondary {
+    @apply mt-3 inline-flex items-center rounded-full px-3 py-1.5 text-sm font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current;
+  }
+  .alert-button {
+    @apply bg-current text-white;
+  }
+  .alert-button-secondary {
+    @apply border border-current bg-transparent;
+  }
+}

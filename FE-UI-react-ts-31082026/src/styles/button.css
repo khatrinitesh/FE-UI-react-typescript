@@ -1,0 +1,19 @@
+@layer components {
+  .button,
+  .button-secondary,
+  .button-inverse {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold leading-tight no-underline transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-primary disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .button {
+    @apply bg-primary text-white shadow-[0_12px_25px_-12px_rgba(96,70,232,0.85)] hover:bg-[#4f38c7];
+  }
+  .button-secondary {
+    @apply border border-[#dfdbea] bg-white text-[#302b4d] hover:border-primary hover:text-primary;
+  }
+  .button-inverse {
+    @apply bg-white text-primary hover:bg-[#f0edff];
+  }
+  .main-nav .button {
+    @apply min-h-10 px-4 py-2;
+  }
+}

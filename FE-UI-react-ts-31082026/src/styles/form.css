@@ -1,0 +1,27 @@
+@layer components {
+  .field {
+    @apply grid gap-2 text-sm font-semibold text-[#302b4d];
+  }
+  .field-label {
+    @apply block;
+  }
+  .field-input,
+  .field-textarea {
+    @apply w-full rounded-xl border border-[#dfdbea] bg-white text-base font-normal text-[#1e1b36] outline-none transition placeholder:text-[#918aa7] focus:border-primary focus:ring-4 focus:ring-[#ece9ff];
+  }
+  .field-input {
+    @apply h-12 px-4;
+  }
+  .field-textarea {
+    @apply min-h-35 resize-y px-4 py-3;
+  }
+  .loader {
+    @apply inline-flex items-center gap-2;
+  }
+  .loader-icon {
+    @apply size-4 animate-spin;
+  }
+  .loader-track {
+    @apply opacity-30;
+  }
+}
