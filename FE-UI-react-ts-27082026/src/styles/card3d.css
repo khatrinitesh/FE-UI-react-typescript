@@ -1,0 +1,37 @@
+@layer components {
+  .card3d-wrapper {
+    @apply w-full;
+    perspective: 1200px;
+  }
+
+  .card3d {
+    @apply relative w-full overflow-hidden rounded-3xl border border-primary/20 bg-secondary transition-transform duration-200 ease-out;
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+
+  .card3d-image {
+    @apply h-70 w-full object-cover;
+  }
+
+  .card3d-content {
+    @apply relative p-6 md:p-8;
+    transform: translateZ(35px);
+    transform-style: preserve-3d;
+  }
+
+  .card3d-badge {
+    @apply mb-3 inline-flex rounded-full bg-primary px-3 py-2 font-poppins-medium text-font12 leading-none text-secondary;
+    transform: translateZ(50px);
+  }
+
+  .card3d-title {
+    @apply m-0 font-poppins-semibold text-font24 leading-[1.3] text-primary;
+    transform: translateZ(55px);
+  }
+
+  .card3d-description {
+    @apply mt-3 font-poppins-regular text-font16 leading-[1.6] text-primary/70;
+    transform: translateZ(45px);
+  }
+}

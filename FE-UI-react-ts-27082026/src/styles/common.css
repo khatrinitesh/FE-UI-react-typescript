@@ -1,0 +1,64 @@
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--white);
+    color: var(--primary);
+    font-family: var(--poppins-regular);
+    font-size: var(--font16);
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font-family: inherit;
+  }
+
+  button {
+    border: 0;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+@layer components {
+  .main-page {
+    @apply min-h-screen w-full;
+  }
+
+  .main-container {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
+  }
+
+  .component-list {
+    @apply flex w-full flex-col gap-12 py-10 md:gap-16 md:py-16;
+  }
+
+  .section {
+    @apply relative w-full;
+  }
+
+  .section-header {
+    @apply mb-8;
+  }
+
+  .section-title {
+    @apply m-0 font-poppins-semibold text-font32 leading-[1.2] text-primary;
+  }
+
+  .section-description {
+    @apply mt-3 font-poppins-regular text-font16 leading-[1.6] text-primary/70;
+  }
+}

@@ -1,0 +1,21 @@
+@layer components {
+  .card {
+    @apply relative w-full overflow-hidden rounded-[22px] border border-primary/10 bg-secondary p-6 md:p-8;
+  }
+
+  .card-badge {
+    @apply mb-4 inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 font-poppins-medium text-font12 leading-none uppercase tracking-[0.08em] text-secondary;
+  }
+
+  .card-title {
+    @apply m-0 font-poppins-semibold text-font24 leading-[1.3] text-primary;
+  }
+
+  .card-description {
+    @apply mt-3 font-poppins-regular text-font16 leading-[1.6] text-primary/70;
+  }
+
+  .card-actions {
+    @apply mt-6 flex flex-wrap items-center gap-4;
+  }
+}

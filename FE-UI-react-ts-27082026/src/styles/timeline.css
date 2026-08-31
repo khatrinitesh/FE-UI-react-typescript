@@ -1,0 +1,41 @@
+@layer components {
+  .timeline {
+    @apply flex w-full flex-col;
+  }
+
+  .timeline-item {
+    @apply relative grid grid-cols-[48px_minmax(0,1fr)] gap-5;
+  }
+
+  .timeline-marker {
+    @apply relative flex flex-col items-center;
+  }
+
+  .timeline-dot {
+    @apply relative z-10 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary font-poppins-semibold text-font14 leading-none text-secondary;
+  }
+
+  .timeline-line {
+    @apply absolute bottom-0 top-11 w-px bg-primary/30;
+  }
+
+  .timeline-content {
+    @apply pb-10 pt-1;
+  }
+
+  .timeline-badge {
+    @apply mb-2 inline-flex rounded-full bg-secondary px-3 py-2 font-poppins-medium text-font12 leading-none text-primary;
+  }
+
+  .timeline-title {
+    @apply m-0 font-poppins-semibold text-font22 leading-[1.3] text-primary;
+  }
+
+  .timeline-description {
+    @apply mt-2 max-w-150 font-poppins-regular text-font16 leading-[1.6] text-primary/70;
+  }
+
+  .timeline-item:last-child .timeline-content {
+    @apply pb-0;
+  }
+}
