@@ -1,0 +1,257 @@
+@reference "../../index.css";
+
+/* ========================================
+   Page
+======================================== */
+
+.button-group-page {
+  @apply min-h-screen bg-slate-950 px-5 py-16 text-white;
+}
+
+.button-group-container {
+  @apply mx-auto max-w-5xl;
+}
+
+/* ========================================
+   Heading
+======================================== */
+
+.button-group-heading {
+  @apply mx-auto mb-12 max-w-2xl text-center;
+}
+
+.button-group-heading > span {
+  @apply text-font12 font-bold tracking-[3px] text-cyan-400;
+}
+
+.button-group-heading h1 {
+  @apply mt-3 text-font48 font-black tracking-tight;
+}
+
+.button-group-heading h1 strong {
+  @apply bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent;
+}
+
+.button-group-heading p {
+  @apply mt-5 text-font16 leading-7 text-slate-400;
+}
+
+/* ========================================
+   Card
+======================================== */
+
+.button-group-card {
+  @apply rounded-3xl border border-slate-800 bg-slate-900 p-8;
+}
+
+.button-group-card-heading > span {
+  @apply text-font12 font-bold tracking-[2px] text-slate-500;
+}
+
+.button-group-card-heading h2 {
+  @apply mt-2 text-font28 font-black;
+}
+
+/* ========================================
+   Button Group
+======================================== */
+
+.button-group {
+  @apply mt-8 flex flex-wrap items-center gap-2;
+}
+
+.group-button {
+  @apply relative flex cursor-pointer items-center justify-center gap-2 rounded-xl px-5 py-3 text-font14 font-semibold transition-all duration-300;
+}
+
+.group-button:focus-visible {
+  @apply outline-none ring-2 ring-cyan-400 ring-offset-2 ring-offset-slate-900;
+}
+
+.group-button:active {
+  transform: scale(0.96);
+}
+
+/* ========================================
+   Default Variant
+======================================== */
+
+.button-group-default {
+  @apply rounded-2xl border border-slate-800 bg-slate-950 p-2;
+}
+
+.button-group-default .group-button {
+  @apply text-slate-500;
+}
+
+.button-group-default .group-button:hover {
+  @apply bg-slate-800 text-white;
+}
+
+.button-group-default .group-button.active {
+  @apply bg-cyan-400 text-slate-950 shadow-lg shadow-cyan-400/20;
+}
+
+.group-button-check {
+  @apply ml-1;
+}
+
+/* ========================================
+   Outline Variant
+======================================== */
+
+.button-group-outline .group-button {
+  @apply border border-slate-700 bg-transparent text-slate-400;
+}
+
+.button-group-outline .group-button:hover {
+  @apply border-cyan-400/50 bg-cyan-400/10 text-cyan-400;
+}
+
+.button-group-outline .group-button.active {
+  @apply border-cyan-400 bg-cyan-400 text-slate-950;
+}
+
+/* ========================================
+   Segmented Variant
+======================================== */
+
+.button-group-segmented {
+  @apply overflow-hidden rounded-xl border border-slate-700 bg-slate-950;
+  gap: 0;
+}
+
+.button-group-segmented .group-button {
+  @apply rounded-none border-r border-slate-800 text-slate-500;
+}
+
+.button-group-segmented .group-button:last-child {
+  @apply border-r-0;
+}
+
+.button-group-segmented .group-button:hover {
+  @apply bg-slate-800 text-white;
+}
+
+.button-group-segmented .group-button.active {
+  @apply bg-purple-500 text-white;
+}
+
+/* ========================================
+   Pill Variant
+======================================== */
+
+.button-group-pill {
+  @apply gap-3;
+}
+
+.button-group-pill .group-button {
+  @apply rounded-full border border-slate-700 bg-slate-900 text-slate-400;
+}
+
+.button-group-pill .group-button:hover {
+  @apply border-pink-400/50 bg-pink-400/10 text-pink-400;
+}
+
+.button-group-pill .group-button.active {
+  @apply border-pink-400 bg-pink-400 text-slate-950;
+}
+
+/* ========================================
+   Selected Result
+======================================== */
+
+.button-group-result {
+  @apply mt-8 rounded-2xl border border-slate-800 bg-slate-950 p-6 text-center;
+}
+
+.button-group-result > span {
+  @apply text-font12 font-bold tracking-[2px] text-slate-500;
+}
+
+.button-group-result h3 {
+  @apply mt-2 text-font28 font-black text-cyan-400;
+}
+
+.button-group-result p {
+  @apply mt-2 text-font14 leading-6 text-slate-400;
+}
+
+.button-group-result strong {
+  @apply font-bold text-white;
+}
+
+/* ========================================
+   CTA
+======================================== */
+
+.button-group-cta {
+  @apply mt-6 flex items-center justify-between gap-6 rounded-3xl border border-slate-800 bg-slate-900 p-8;
+}
+
+.button-group-cta > div > span {
+  @apply text-font12 font-bold tracking-[2px] text-cyan-400;
+}
+
+.button-group-cta h2 {
+  @apply mt-2 text-font24 font-black;
+}
+
+.button-group-primary {
+  @apply flex shrink-0 cursor-pointer items-center gap-2 rounded-xl bg-white px-5 py-3 text-font14 font-bold text-slate-950 transition-all duration-300;
+}
+
+.button-group-primary:hover {
+  @apply bg-cyan-300;
+  transform: translateX(4px);
+}
+
+.button-group-primary:active {
+  transform: scale(0.96);
+}
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width: 767px) {
+  .button-group-page {
+    @apply px-4 py-10;
+  }
+
+  .button-group-heading h1 {
+    @apply text-font36;
+  }
+
+  .button-group-heading p {
+    @apply text-font14 leading-6;
+  }
+
+  .button-group-card {
+    @apply p-5;
+  }
+
+  .button-group-card-heading h2 {
+    @apply text-font24;
+  }
+
+  .button-group {
+    @apply items-stretch;
+  }
+
+  .group-button {
+    @apply flex-1 px-4 py-3 text-font14;
+  }
+
+  .button-group-cta {
+    @apply flex-col items-start p-6;
+  }
+
+  .button-group-cta h2 {
+    @apply text-font20;
+  }
+
+  .button-group-primary {
+    @apply w-full justify-center;
+  }
+}

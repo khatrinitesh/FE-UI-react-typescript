@@ -1,0 +1,368 @@
+@reference "../../index.css";
+
+/* ========================================
+   Page
+======================================== */
+
+.bento-page {
+  @apply min-h-screen bg-slate-950 px-5 py-16 text-white;
+}
+
+.bento-container {
+  @apply mx-auto max-w-6xl;
+}
+
+/* ========================================
+   Heading
+======================================== */
+
+.bento-heading {
+  @apply mx-auto mb-12 max-w-2xl text-center;
+}
+
+.bento-heading > span {
+  @apply text-font12 font-bold tracking-[3px] text-cyan-400;
+}
+
+.bento-heading h1 {
+  @apply mt-3 text-font48 font-black tracking-tight;
+}
+
+.bento-heading h1 strong {
+  @apply bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent;
+}
+
+.bento-heading p {
+  @apply mt-5 text-font16 leading-6 text-slate-400;
+}
+
+/* ========================================
+   Grid
+======================================== */
+
+.bento-grid {
+  @apply grid grid-cols-1 gap-4 md:grid-cols-4;
+}
+
+/* ========================================
+   Cards
+======================================== */
+
+.bento-card {
+  @apply relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-900 p-6 transition-all duration-500;
+  min-height: 220px;
+}
+
+.bento-card:hover {
+  @apply border-slate-600;
+
+  transform: translateY(-6px);
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+.bento-card h2 {
+  @apply text-font28 font-black;
+}
+
+.bento-card h3 {
+  @apply text-font20 font-bold;
+}
+
+.bento-card p {
+  @apply mt-2 max-w-sm text-font14 leading-6 text-slate-400;
+}
+
+/* ========================================
+   Featured Card
+======================================== */
+
+.bento-featured {
+  @apply md:col-span-2 md:row-span-2;
+
+  min-height: 464px;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(34, 211, 238, 0.2),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 20% 90%,
+      rgba(168, 85, 247, 0.2),
+      transparent 35%
+    ),
+    #0f172a;
+}
+
+.bento-glow {
+  @apply absolute -right-24 -top-24 h-64 w-64 rounded-full bg-cyan-400/20 blur-3xl;
+
+  animation: bentoGlow 5s ease-in-out infinite alternate;
+}
+
+.bento-card-content {
+  @apply relative z-10 flex h-full flex-col justify-end;
+}
+
+.bento-featured .bento-icon {
+  @apply mb-auto;
+}
+
+.bento-label {
+  @apply mb-3 text-font12 font-bold tracking-[2px] text-cyan-400;
+}
+
+.bento-featured h2 {
+  @apply max-w-lg text-font32;
+}
+
+.bento-link {
+  @apply mt-6 flex w-fit items-center gap-2 rounded-xl bg-white px-5 py-3 text-font14 font-bold text-slate-950 transition-all duration-300;
+}
+
+.bento-link:hover {
+  @apply bg-cyan-300;
+
+  transform: translateX(5px);
+}
+
+/* ========================================
+   Icon
+======================================== */
+
+.bento-icon {
+  @apply flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/10 text-cyan-400 backdrop-blur-md;
+}
+
+.bento-top {
+  @apply flex items-start justify-between;
+}
+
+.bento-arrow {
+  @apply text-slate-600 transition-all duration-300;
+}
+
+.bento-card:hover .bento-arrow {
+  @apply text-white;
+
+  transform: translate(4px, -4px);
+}
+
+/* ========================================
+   React Card
+======================================== */
+
+.bento-react {
+  @apply md:col-span-2;
+}
+
+.react-icon {
+  @apply text-cyan-400;
+}
+
+.bento-react-circle {
+  @apply absolute -bottom-12 -right-8 flex h-36 w-36 items-center justify-center rounded-full border border-cyan-400/20 text-font56 font-black text-cyan-400/10 transition-all duration-500;
+}
+
+.bento-react:hover .bento-react-circle {
+  transform: rotate(20deg) scale(1.15);
+}
+
+/* ========================================
+   Design Card
+======================================== */
+
+.bento-design {
+  @apply md:col-span-1;
+}
+
+.design-shapes {
+  @apply absolute bottom-6 right-6 flex items-end gap-2;
+}
+
+.design-shapes span {
+  @apply block w-4 rounded-full bg-purple-400/40;
+}
+
+.design-shapes span:nth-child(1) {
+  height: 35px;
+}
+
+.design-shapes span:nth-child(2) {
+  height: 55px;
+}
+
+.design-shapes span:nth-child(3) {
+  height: 75px;
+}
+
+.bento-design:hover .design-shapes span {
+  animation: shapeBounce 0.8s ease-in-out infinite alternate;
+}
+
+/* ========================================
+   Performance Card
+======================================== */
+
+.bento-performance {
+  @apply md:col-span-1;
+}
+
+.speed-value {
+  @apply text-font24 font-black text-emerald-400;
+}
+
+.performance-bars {
+  @apply absolute bottom-6 left-6 right-6 flex h-14 items-end gap-2;
+}
+
+.performance-bars span {
+  @apply flex-1 rounded-t-md bg-emerald-400/30 transition-all duration-500;
+}
+
+.performance-bars span:nth-child(1) {
+  height: 30%;
+}
+
+.performance-bars span:nth-child(2) {
+  height: 45%;
+}
+
+.performance-bars span:nth-child(3) {
+  height: 60%;
+}
+
+.performance-bars span:nth-child(4) {
+  height: 50%;
+}
+
+.performance-bars span:nth-child(5) {
+  height: 80%;
+}
+
+.performance-bars span:nth-child(6) {
+  height: 100%;
+}
+
+.bento-performance:hover .performance-bars span {
+  @apply bg-emerald-400/60;
+}
+
+/* ========================================
+   Global Card
+======================================== */
+
+.bento-global {
+  @apply md:col-span-2;
+}
+
+.global-globe {
+  @apply absolute -bottom-10 -right-5 text-cyan-400/10 transition-all duration-700;
+}
+
+.bento-global:hover .global-globe {
+  transform: rotate(20deg) scale(1.2);
+}
+
+/* ========================================
+   Creative Card
+======================================== */
+
+.bento-creative {
+  @apply md:col-span-2;
+}
+
+.creative-orbit {
+  @apply absolute bottom-5 right-8 h-24 w-24 rounded-full border border-purple-400/20;
+}
+
+.creative-orbit::before {
+  content: "";
+
+  @apply absolute inset-3 rounded-full border border-pink-400/20;
+}
+
+.creative-orbit span {
+  @apply absolute h-3 w-3 rounded-full bg-purple-400;
+}
+
+.creative-orbit span:nth-child(1) {
+  top: -5px;
+  left: 50%;
+}
+
+.creative-orbit span:nth-child(2) {
+  right: -5px;
+  top: 50%;
+}
+
+.creative-orbit span:nth-child(3) {
+  bottom: -5px;
+  left: 50%;
+}
+
+.bento-creative:hover .creative-orbit {
+  animation: orbitRotate 4s linear infinite;
+}
+
+/* ========================================
+   Animations
+======================================== */
+
+@keyframes bentoGlow {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+
+  to {
+    transform: translate(-50px, 40px) scale(1.3);
+  }
+}
+
+@keyframes shapeBounce {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes orbitRotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width: 767px) {
+  .bento-page {
+    @apply px-4 py-10;
+  }
+
+  .bento-heading h1 {
+    @apply text-font36;
+  }
+
+  .bento-heading p {
+    @apply text-font14;
+  }
+
+  .bento-featured {
+    min-height: 380px;
+  }
+
+  .bento-card {
+    min-height: 220px;
+  }
+
+  .bento-featured h2 {
+    @apply text-font28;
+  }
+}

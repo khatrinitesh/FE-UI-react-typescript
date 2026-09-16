@@ -1,0 +1,227 @@
+@reference "../../index.css";
+
+/* Page */
+
+.calendar-page {
+  @apply min-h-screen bg-slate-950 px-5 py-16 text-white;
+}
+
+.calendar-container {
+  @apply mx-auto max-w-5xl;
+}
+
+/* Heading */
+
+.calendar-heading {
+  @apply mx-auto mb-10 max-w-2xl text-center;
+}
+
+.calendar-heading > span {
+  @apply text-font12 font-bold tracking-[3px] text-cyan-400;
+}
+
+.calendar-heading h1 {
+  @apply mt-3 text-font48 font-black tracking-tight;
+}
+
+.calendar-heading h1 strong {
+  @apply bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent;
+}
+
+.calendar-heading p {
+  @apply mt-5 text-font16 leading-7 text-slate-400;
+}
+
+/* Calendar */
+
+.calendar-card {
+  @apply mx-auto max-w-2xl overflow-hidden rounded-3xl border border-slate-800 bg-slate-900 p-6 shadow-2xl;
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.4),
+    0 0 80px rgba(34, 211, 238, 0.04);
+}
+
+/* Header */
+
+.calendar-header {
+  @apply mb-7 flex items-center justify-between gap-4;
+}
+
+.calendar-title {
+  @apply flex items-center gap-3;
+}
+
+.calendar-title-icon {
+  @apply flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-cyan-400/20 bg-cyan-400/10 text-cyan-400;
+}
+
+.calendar-title span {
+  @apply text-font12 font-bold tracking-[2px] text-slate-500;
+}
+
+.calendar-title h2 {
+  @apply mt-1 text-font24 font-black;
+}
+
+/* Navigation */
+
+.calendar-navigation {
+  @apply flex items-center gap-2;
+}
+
+.calendar-nav-button {
+  @apply flex h-10 w-10 cursor-pointer items-center justify-center rounded-xl border border-slate-800 bg-slate-950 text-slate-400 transition-all duration-200;
+}
+
+.calendar-nav-button:hover {
+  @apply border-cyan-400/30 bg-cyan-400/10 text-cyan-400;
+  transform: translateY(-2px);
+}
+
+.calendar-today-button {
+  @apply h-10 cursor-pointer rounded-xl border border-cyan-400/20 bg-cyan-400/10 px-4 text-font14 font-bold text-cyan-400 transition-all duration-200;
+}
+
+.calendar-today-button:hover {
+  @apply border-cyan-400/40 bg-cyan-400/20 text-cyan-300;
+}
+
+/* Week Days */
+
+.calendar-weekdays {
+  @apply mb-2 grid grid-cols-7;
+}
+
+.calendar-weekday {
+  @apply flex h-10 items-center justify-center text-font12 font-bold uppercase tracking-wide text-slate-600;
+}
+
+/* Calendar Grid */
+
+.calendar-grid {
+  @apply grid grid-cols-7 gap-1;
+}
+
+/* Day */
+
+.calendar-day {
+  @apply relative flex h-14 cursor-pointer items-center justify-center rounded-xl border border-transparent text-font14 font-semibold text-slate-300 transition-all duration-200;
+}
+
+.calendar-day:hover {
+  @apply border-slate-700 bg-slate-800 text-white;
+  transform: translateY(-2px);
+}
+
+.calendar-day:focus-visible {
+  @apply outline-none ring-2 ring-cyan-400 ring-offset-2 ring-offset-slate-900;
+}
+
+/* Muted Days */
+
+.calendar-day-muted {
+  @apply text-slate-700;
+}
+
+.calendar-day-muted:hover {
+  @apply text-slate-500;
+}
+
+/* Today */
+
+.calendar-day-today {
+  @apply border-cyan-400/30 bg-cyan-400/5 text-cyan-400;
+}
+
+/* Selected */
+
+.calendar-day-selected {
+  @apply border-cyan-400 bg-cyan-400 text-font14 font-black text-slate-950;
+  box-shadow: 0 8px 25px rgba(34, 211, 238, 0.18);
+}
+
+.calendar-day-selected:hover {
+  @apply border-cyan-300 bg-cyan-300 text-slate-950;
+}
+
+.calendar-check {
+  @apply absolute right-1 top-1;
+}
+
+/* Selected Information */
+
+.calendar-selected {
+  @apply mt-6 flex items-center justify-between rounded-2xl border border-slate-800 bg-slate-950 p-4;
+}
+
+.calendar-selected span {
+  @apply block text-font12 font-bold tracking-[2px] text-slate-600;
+}
+
+.calendar-selected strong {
+  @apply mt-1 block text-font16 font-bold text-white;
+}
+
+.calendar-selected > svg {
+  @apply text-cyan-400;
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .calendar-page {
+    @apply px-4 py-10;
+  }
+
+  .calendar-heading {
+    @apply mb-8;
+  }
+
+  .calendar-heading h1 {
+    @apply text-font36;
+  }
+
+  .calendar-heading p {
+    @apply text-font14 leading-6;
+  }
+
+  .calendar-card {
+    @apply p-4;
+  }
+
+  .calendar-header {
+    @apply items-start;
+  }
+
+  .calendar-title h2 {
+    @apply text-font20;
+  }
+
+  .calendar-title-icon {
+    @apply h-10 w-10;
+  }
+
+  .calendar-navigation {
+    @apply gap-1;
+  }
+
+  .calendar-nav-button {
+    @apply h-9 w-9;
+  }
+
+  .calendar-today-button {
+    @apply px-3 text-font12;
+  }
+
+  .calendar-day {
+    @apply h-11 rounded-lg text-font12;
+  }
+
+  .calendar-weekday {
+    @apply text-font10;
+  }
+
+  .calendar-selected strong {
+    @apply text-font14;
+  }
+}

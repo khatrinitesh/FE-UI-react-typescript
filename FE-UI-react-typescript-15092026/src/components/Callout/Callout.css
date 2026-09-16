@@ -1,0 +1,290 @@
+@reference "../../index.css";
+
+/* Page */
+
+.callout-page {
+  @apply min-h-screen bg-slate-950 px-5 py-16 text-white;
+}
+
+.callout-container {
+  @apply mx-auto max-w-5xl;
+}
+
+/* Heading */
+
+.callout-heading {
+  @apply mx-auto mb-10 max-w-2xl text-center;
+}
+
+.callout-heading > span {
+  @apply text-font12 font-bold tracking-[3px] text-cyan-400;
+}
+
+.callout-heading h1 {
+  @apply mt-3 text-font48 font-black tracking-tight;
+}
+
+.callout-heading h1 strong {
+  @apply bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent;
+}
+
+.callout-heading p {
+  @apply mt-5 text-font16 leading-7 text-slate-400;
+}
+
+/* Main Callout */
+
+.callout {
+  @apply relative flex gap-4 overflow-hidden rounded-2xl border p-5 transition-all duration-300;
+}
+
+.callout:hover {
+  transform: translateY(-3px);
+}
+
+/* Left Accent */
+
+.callout::before {
+  content: "";
+  @apply absolute bottom-0 left-0 top-0 w-1;
+}
+
+/* Icon */
+
+.callout-icon {
+  @apply flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border;
+}
+
+/* Content */
+
+.callout-content {
+  @apply min-w-0 flex-1;
+}
+
+.callout-label {
+  @apply text-font12 font-bold uppercase tracking-[2px];
+}
+
+.callout-content h2 {
+  @apply mt-1 text-font20 font-black;
+}
+
+.callout-description,
+.callout-content p {
+  @apply mt-2 text-font14 leading-6;
+}
+
+/* Info */
+
+.callout-info {
+  @apply border-blue-400/20 bg-blue-400/5;
+}
+
+.callout-info::before {
+  @apply bg-blue-400;
+}
+
+.callout-info .callout-icon {
+  @apply border-blue-400/20 bg-blue-400/10 text-blue-400;
+}
+
+.callout-info .callout-label {
+  @apply text-blue-400;
+}
+
+.callout-info .callout-description,
+.callout-info p {
+  @apply text-blue-100/60;
+}
+
+/* Success */
+
+.callout-success {
+  @apply border-emerald-400/20 bg-emerald-400/5;
+}
+
+.callout-success::before {
+  @apply bg-emerald-400;
+}
+
+.callout-success .callout-icon {
+  @apply border-emerald-400/20 bg-emerald-400/10 text-emerald-400;
+}
+
+.callout-success .callout-label {
+  @apply text-emerald-400;
+}
+
+.callout-success .callout-description,
+.callout-success p {
+  @apply text-emerald-100/60;
+}
+
+/* Warning */
+
+.callout-warning {
+  @apply border-yellow-400/20 bg-yellow-400/5;
+}
+
+.callout-warning::before {
+  @apply bg-yellow-400;
+}
+
+.callout-warning .callout-icon {
+  @apply border-yellow-400/20 bg-yellow-400/10 text-yellow-400;
+}
+
+.callout-warning .callout-label {
+  @apply text-yellow-400;
+}
+
+.callout-warning .callout-description,
+.callout-warning p {
+  @apply text-yellow-100/60;
+}
+
+/* Error */
+
+.callout-error {
+  @apply border-red-400/20 bg-red-400/5;
+}
+
+.callout-error::before {
+  @apply bg-red-400;
+}
+
+.callout-error .callout-icon {
+  @apply border-red-400/20 bg-red-400/10 text-red-400;
+}
+
+.callout-error .callout-label {
+  @apply text-red-400;
+}
+
+.callout-error .callout-description,
+.callout-error p {
+  @apply text-red-100/60;
+}
+
+/* Tip */
+
+.callout-tip {
+  @apply border-purple-400/20 bg-purple-400/5;
+}
+
+.callout-tip::before {
+  @apply bg-purple-400;
+}
+
+.callout-tip .callout-icon {
+  @apply border-purple-400/20 bg-purple-400/10 text-purple-400;
+}
+
+.callout-tip .callout-label {
+  @apply text-purple-400;
+}
+
+.callout-tip .callout-description,
+.callout-tip p {
+  @apply text-purple-100/60;
+}
+
+/* Notice */
+
+.callout-notice {
+  @apply border-orange-400/20 bg-orange-400/5;
+}
+
+.callout-notice::before {
+  @apply bg-orange-400;
+}
+
+.callout-notice .callout-icon {
+  @apply border-orange-400/20 bg-orange-400/10 text-orange-400;
+}
+
+.callout-notice .callout-label {
+  @apply text-orange-400;
+}
+
+.callout-notice .callout-description,
+.callout-notice p {
+  @apply text-orange-100/60;
+}
+
+/* Examples */
+
+.callout-examples {
+  @apply mt-12;
+}
+
+.callout-examples-heading {
+  @apply mb-5;
+}
+
+.callout-examples-heading > span {
+  @apply text-font12 font-bold tracking-[2px] text-slate-600;
+}
+
+.callout-examples-heading h2 {
+  @apply mt-2 text-font28 font-black;
+}
+
+.callout-list {
+  @apply grid grid-cols-1 gap-4 md:grid-cols-2;
+}
+
+.callout-list .callout {
+  @apply h-full;
+}
+
+/* Hover */
+
+.callout:hover .callout-icon {
+  transform: scale(1.05);
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .callout-page {
+    @apply px-4 py-10;
+  }
+
+  .callout-heading {
+    @apply mb-8;
+  }
+
+  .callout-heading h1 {
+    @apply text-font36;
+  }
+
+  .callout-heading p {
+    @apply text-font14 leading-6;
+  }
+
+  .callout {
+    @apply gap-3 p-4;
+  }
+
+  .callout-icon {
+    @apply h-10 w-10;
+  }
+
+  .callout-content h2 {
+    @apply text-font18;
+  }
+
+  .callout-description,
+  .callout-content p {
+    @apply text-font14 leading-6;
+  }
+
+  .callout-examples {
+    @apply mt-10;
+  }
+
+  .callout-examples-heading h2 {
+    @apply text-font24;
+  }
+}

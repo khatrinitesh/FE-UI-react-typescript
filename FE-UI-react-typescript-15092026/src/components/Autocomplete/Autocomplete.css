@@ -1,0 +1,182 @@
+@reference '../../index.css';
+.autocomplete-page {
+  @apply min-h-screen bg-slate-950 px-5 py-20 text-white;
+}
+
+.autocomplete-container {
+  @apply mx-auto w-full max-w-xl;
+}
+
+.autocomplete-heading {
+  @apply mb-10 text-center;
+}
+
+.autocomplete-heading span {
+  @apply text-xs font-bold tracking-[3px] text-cyan-400;
+}
+
+.autocomplete-heading h1 {
+  @apply mt-3 text-4xl font-black sm:text-5xl;
+}
+
+.autocomplete-heading p {
+  @apply mt-4 text-sm leading-6 text-slate-400;
+}
+
+/* Wrapper */
+
+.autocomplete-wrapper {
+  @apply relative;
+}
+
+/* Input */
+
+.autocomplete-input-box {
+  @apply flex h-14 items-center rounded-xl border border-slate-700 bg-slate-900 px-4 transition-all duration-300;
+}
+
+.autocomplete-input-box.is-focused {
+  @apply border-cyan-400 ring-4 ring-cyan-400/10;
+}
+
+.autocomplete-search-icon {
+  @apply shrink-0 text-slate-400;
+}
+
+.autocomplete-input-box input {
+  @apply h-full min-w-0 flex-1 bg-transparent px-3 text-sm text-white outline-none placeholder:text-slate-500;
+}
+
+.autocomplete-clear {
+  @apply flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-slate-500 transition-all duration-200;
+}
+
+.autocomplete-clear:hover {
+  @apply bg-slate-800 text-white;
+}
+
+.autocomplete-chevron {
+  @apply ml-2 shrink-0 text-slate-500 transition-transform duration-300;
+}
+
+.autocomplete-chevron.rotate {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+
+.autocomplete-dropdown {
+  @apply absolute left-0 right-0 top-[calc(100%+8px)] z-50 max-h-80 overflow-y-auto rounded-xl border border-slate-700 bg-slate-900 p-2 shadow-2xl;
+  animation: dropdownEnter 0.2s ease-out;
+}
+
+/* Scrollbar */
+
+.autocomplete-dropdown::-webkit-scrollbar {
+  width: 5px;
+}
+
+.autocomplete-dropdown::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.autocomplete-dropdown::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-slate-700;
+}
+
+/* Option */
+
+.autocomplete-option {
+  @apply flex w-full items-center justify-between rounded-lg px-4 py-3 text-left text-slate-300 transition-all duration-200;
+}
+
+.autocomplete-option:hover,
+.autocomplete-option.active {
+  @apply bg-slate-800 text-white;
+}
+
+.autocomplete-option.active {
+  @apply border-l-2 border-cyan-400;
+}
+
+.option-content {
+  @apply flex flex-col gap-1;
+}
+
+.option-name {
+  @apply text-sm font-semibold;
+}
+
+.option-name strong {
+  @apply text-cyan-400;
+}
+
+.option-category {
+  @apply text-xs text-slate-500;
+}
+
+.autocomplete-option svg {
+  @apply text-cyan-400;
+}
+
+/* Empty */
+
+.autocomplete-empty {
+  @apply flex flex-col items-center justify-center gap-2 px-5 py-10 text-slate-500;
+}
+
+.autocomplete-empty svg {
+  @apply mb-2 text-slate-600;
+}
+
+.autocomplete-empty span {
+  @apply text-sm font-semibold text-slate-400;
+}
+
+.autocomplete-empty small {
+  @apply text-xs;
+}
+
+/* Selected */
+
+.selected-result {
+  @apply mt-5 flex items-center gap-2 rounded-xl border border-emerald-500/20 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-300;
+}
+
+.selected-result svg {
+  @apply shrink-0;
+}
+
+.selected-result strong {
+  @apply text-white;
+}
+
+/* Animation */
+
+@keyframes dropdownEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 640px) {
+  .autocomplete-page {
+    @apply px-4 py-12;
+  }
+
+  .autocomplete-heading h1 {
+    @apply text-3xl;
+  }
+
+  .autocomplete-dropdown {
+    @apply max-h-64;
+  }
+}

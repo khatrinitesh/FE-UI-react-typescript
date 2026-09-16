@@ -1,0 +1,226 @@
+@reference "../../index.css";
+
+.avatar-page {
+  @apply min-h-screen bg-slate-950 px-5 py-16 text-white text-fontBase;
+}
+
+.avatar-container {
+  @apply mx-auto max-w-5xl;
+}
+
+/* Heading */
+
+.avatar-heading {
+  @apply mx-auto mb-14 max-w-2xl text-center;
+}
+
+.avatar-heading span {
+  @apply text-font12 font-bold tracking-[3px] text-cyan-400;
+}
+
+.avatar-heading h1 {
+  @apply mt-3 text-font48 font-black;
+}
+
+.avatar-heading p {
+  @apply mt-4 text-font14 leading-[1.5] text-slate-400;
+}
+
+/* Section */
+
+.avatar-section {
+  @apply mb-12;
+}
+
+.avatar-section h2 {
+  @apply mb-5 text-font18 font-bold text-slate-200;
+}
+
+/* Avatar */
+
+.avatar-wrapper {
+  @apply relative inline-flex shrink-0;
+}
+
+.avatar-image {
+  @apply flex items-center justify-center overflow-hidden rounded-full border-2 border-slate-800 bg-slate-800 text-font14 text-slate-400 transition-all duration-300;
+}
+
+.avatar-image img {
+  @apply h-full w-full object-cover;
+}
+
+.avatar-wrapper:hover .avatar-image {
+  @apply border-cyan-400;
+  transform: scale(1.06);
+  box-shadow: 0 10px 30px rgba(34, 211, 238, 0.2);
+}
+
+/* Sizes */
+
+.avatar-sm .avatar-image {
+  @apply h-8 w-8;
+}
+
+.avatar-md .avatar-image {
+  @apply h-12 w-12;
+}
+
+.avatar-lg .avatar-image {
+  @apply h-16 w-16;
+}
+
+.avatar-xl .avatar-image {
+  @apply h-24 w-24;
+}
+
+/* Status */
+
+.avatar-status {
+  @apply absolute bottom-0 right-0 rounded-full border-2 border-slate-950;
+  width: 12px;
+  height: 12px;
+}
+
+.avatar-status.online {
+  @apply bg-emerald-400;
+}
+
+.avatar-status.offline {
+  @apply bg-slate-500;
+}
+
+.avatar-sm .avatar-status {
+  width: 9px;
+  height: 9px;
+}
+
+.avatar-lg .avatar-status {
+  width: 14px;
+  height: 14px;
+}
+
+.avatar-xl .avatar-status {
+  width: 17px;
+  height: 17px;
+}
+
+/* Sizes demo */
+
+.avatar-sizes {
+  @apply flex items-center gap-6 rounded-2xl border border-slate-800 bg-slate-900 p-8;
+}
+
+/* Team grid */
+
+.avatar-grid {
+  @apply grid gap-4 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+.avatar-card {
+  @apply flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-900 p-5 transition-all duration-300;
+}
+
+.avatar-card:hover {
+  @apply border-slate-700 bg-slate-800;
+  transform: translateY(-4px);
+}
+
+.avatar-info {
+  @apply min-w-0 flex-1;
+}
+
+.avatar-info h3 {
+  @apply truncate text-font14 font-bold text-white;
+}
+
+.avatar-info p {
+  @apply mt-1 truncate text-font12 text-slate-500;
+}
+
+.status-text {
+  @apply mt-2 inline-block text-font12 font-semibold;
+}
+
+.online-text {
+  @apply text-emerald-400;
+}
+
+.offline-text {
+  @apply text-slate-500;
+}
+
+/* Action */
+
+.avatar-action {
+  @apply flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-slate-700 text-font14 text-slate-500 transition-all duration-300;
+}
+
+.avatar-action:hover {
+  @apply border-cyan-400 bg-cyan-400 text-slate-950;
+}
+
+/* Avatar group */
+
+.avatar-group {
+  @apply flex items-center;
+}
+
+.avatar-group-item {
+  @apply relative -mr-3 rounded-full border-2 border-slate-950;
+}
+
+.avatar-more {
+  @apply ml-4 flex h-12 w-12 items-center justify-center rounded-full border-2 border-slate-700 bg-slate-800 text-font14 font-bold text-slate-300;
+}
+
+/* Profile */
+
+.profile-avatar {
+  @apply flex items-center gap-5 rounded-2xl border border-slate-800 bg-slate-900 p-6;
+}
+
+.profile-avatar-image {
+  @apply relative;
+}
+
+.profile-avatar-image img {
+  @apply h-24 w-24 rounded-full border-2 border-slate-700 object-cover;
+}
+
+.camera-button {
+  @apply absolute bottom-0 right-0 flex h-8 w-8 items-center justify-center rounded-full border-2 border-slate-950 bg-cyan-400 text-slate-950 transition-all duration-300;
+}
+
+.camera-button:hover {
+  @apply bg-white;
+  transform: scale(1.1);
+}
+
+.profile-avatar h3 {
+  @apply text-font14 font-bold;
+}
+
+.profile-avatar p {
+  @apply mt-1 text-font12 text-slate-500;
+}
+
+/* Mobile */
+
+@media (max-width: 640px) {
+  .avatar-page {
+    @apply px-4 py-10;
+  }
+
+  .avatar-heading h1 {
+    @apply text-font30;
+  }
+
+  .avatar-sizes {
+    @apply gap-4 p-5;
+  }
+
+  .profile-avatar {
+    @apply flex-col items-start;
+  }
+}

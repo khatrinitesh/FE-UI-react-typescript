@@ -1,0 +1,398 @@
+@reference "../../index.css";
+
+/* =================================
+   PAGE
+================================= */
+
+.animation-page {
+  @apply min-h-screen bg-slate-950 px-5 py-16 text-white;
+}
+
+/* =================================
+   HEADING
+================================= */
+
+.animation-heading {
+  @apply mx-auto mb-16 max-w-3xl text-center;
+}
+
+.animation-label {
+  @apply inline-block text-xs font-bold
+    tracking-[3px] text-indigo-400;
+}
+
+.animation-heading h1 {
+  @apply mt-3 text-4xl font-extrabold
+    md:text-5xl;
+}
+
+.animation-heading p {
+  @apply mx-auto mt-4 max-w-xl
+    text-sm leading-7 text-slate-400 md:text-base;
+}
+
+/* =================================
+   SECTION
+================================= */
+
+.animation-section {
+  @apply mx-auto mb-16 max-w-5xl;
+}
+
+.section-title {
+  @apply mb-8 text-2xl font-bold text-white;
+}
+
+/* =================================
+   BUTTON CONTAINER
+================================= */
+
+.button-container {
+  @apply flex flex-wrap items-center gap-5;
+}
+
+/* =================================
+   COMMON BUTTON
+================================= */
+
+.animated-button {
+  @apply relative flex items-center
+    justify-center gap-2 overflow-hidden
+    rounded-xl border px-6 py-3
+    text-sm font-semibold
+    transition-all duration-300
+    active:scale-95;
+}
+
+/* =================================
+   PRIMARY BUTTON
+================================= */
+
+.primary-button {
+  @apply border-indigo-500 bg-indigo-600
+    text-white shadow-lg
+    shadow-indigo-500/20
+    hover:bg-indigo-500
+    hover:shadow-indigo-500/40;
+}
+
+.primary-button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -100%;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+
+  transition: left 0.5s ease;
+}
+
+.primary-button:hover::before {
+  left: 100%;
+}
+
+.primary-button span,
+.primary-button svg {
+  position: relative;
+  z-index: 1;
+}
+
+.button-arrow {
+  transition: transform 0.3s ease;
+}
+
+.primary-button:hover .button-arrow {
+  transform: translateX(5px);
+}
+
+/* =================================
+   GRADIENT BUTTON
+================================= */
+
+.gradient-button {
+  @apply border-transparent
+    bg-gradient-to-r from-purple-600
+    via-pink-500 to-orange-500
+    text-white;
+}
+
+.gradient-button:hover {
+  transform: translateY(-4px) scale(1.03);
+
+  box-shadow: 0 12px 30px rgba(236, 72, 153, 0.35);
+}
+
+.gradient-button svg {
+  transition: transform 0.4s ease;
+}
+
+.gradient-button:hover svg {
+  transform: rotate(180deg) scale(1.2);
+}
+
+/* =================================
+   OUTLINE BUTTON
+================================= */
+
+.outline-button {
+  @apply border-slate-600
+    bg-transparent text-slate-200
+    hover:border-indigo-400
+    hover:bg-indigo-500/10
+    hover:text-indigo-300;
+}
+
+.outline-button::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  border: 1px solid transparent;
+
+  transform: scale(0.8);
+
+  opacity: 0;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.outline-button:hover::after {
+  transform: scale(1.08);
+  opacity: 1;
+
+  border-color: rgb(129 140 248);
+}
+
+/* =================================
+   HEART BUTTON
+================================= */
+
+.heart-button {
+  @apply border-slate-700
+    bg-slate-900 text-slate-300
+    hover:border-pink-500
+    hover:text-pink-500;
+}
+
+.heart-button svg {
+  transition:
+    transform 0.3s ease,
+    fill 0.3s ease;
+}
+
+.heart-button:hover svg {
+  transform: scale(1.2);
+}
+
+.heart-button.liked {
+  @apply border-pink-500
+    bg-pink-500/10 text-pink-500;
+}
+
+.heart-button.liked svg {
+  animation: heartBeat 0.5s ease;
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.5);
+  }
+
+  60% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* =================================
+   STAR BUTTON
+================================= */
+
+.star-button {
+  @apply border-yellow-500/50
+    bg-yellow-500/10
+    text-yellow-400;
+}
+
+.star-button svg {
+  transition: transform 0.4s ease;
+}
+
+.star-button:hover svg {
+  transform: rotate(360deg) scale(1.2);
+}
+
+.star-button:hover {
+  @apply bg-yellow-500/20;
+}
+
+/* =================================
+   SEARCH CONTAINER
+================================= */
+
+.search-container {
+  @apply flex justify-center;
+}
+
+/* =================================
+   ANIMATED SEARCH
+================================= */
+
+.animated-search {
+  @apply flex w-full max-w-xl
+    items-center gap-3 rounded-2xl
+    border border-slate-700
+    bg-slate-900 px-4 py-4
+    text-slate-400
+    shadow-lg;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.animated-search:focus-within {
+  @apply border-indigo-500;
+
+  transform: scale(1.02);
+
+  box-shadow:
+    0 0 0 4px rgba(99, 102, 241, 0.12),
+    0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.search-icon {
+  flex-shrink: 0;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.animated-search:focus-within .search-icon {
+  @apply text-indigo-400;
+
+  transform: rotate(-10deg) scale(1.1);
+}
+
+.animated-search input {
+  @apply w-full bg-transparent
+    text-sm text-white outline-none
+    placeholder:text-slate-500;
+}
+
+.search-clear {
+  @apply flex h-7 w-7 shrink-0
+    items-center justify-center
+    rounded-full bg-slate-800
+    text-slate-400
+    transition-all duration-200
+    hover:bg-red-500/20
+    hover:text-red-400;
+}
+
+/* =================================
+   SEARCH RESULTS
+================================= */
+
+.search-results {
+  @apply mx-auto mt-6 max-w-xl;
+}
+
+.search-result {
+  @apply mb-3 flex cursor-pointer
+    items-center justify-between
+    rounded-xl border border-slate-800
+    bg-slate-900 p-4;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.search-result:hover {
+  @apply border-indigo-500/50
+    bg-slate-800;
+
+  transform: translateX(6px);
+}
+
+.search-result h3 {
+  @apply m-0 text-sm font-semibold
+    text-white;
+}
+
+.search-result span {
+  @apply mt-1 block text-xs
+    text-slate-500;
+}
+
+.result-arrow {
+  @apply text-slate-500;
+
+  transition: transform 0.3s ease;
+}
+
+.search-result:hover .result-arrow {
+  @apply text-indigo-400;
+
+  transform: translateX(5px);
+}
+
+.no-results {
+  @apply rounded-xl border
+    border-slate-800 bg-slate-900
+    p-6 text-center text-sm
+    text-slate-500;
+}
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 640px) {
+  .animation-page {
+    @apply px-4 py-10;
+  }
+
+  .animation-heading {
+    @apply mb-12;
+  }
+
+  .animation-heading h1 {
+    @apply text-3xl;
+  }
+
+  .button-container {
+    @apply flex-col items-stretch;
+  }
+
+  .animated-button {
+    @apply w-full;
+  }
+}

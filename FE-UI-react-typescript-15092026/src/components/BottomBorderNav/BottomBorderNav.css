@@ -1,0 +1,187 @@
+@reference "../../index.css";
+
+/* ========================================
+   Page
+======================================== */
+
+.bottom-nav-page {
+  @apply bg-slate-950 px-5 py-16 text-white;
+}
+
+.bottom-nav-container {
+  @apply mx-auto max-w-5xl;
+}
+
+/* ========================================
+   Heading
+======================================== */
+
+.bottom-nav-heading {
+  @apply mx-auto mb-12 max-w-2xl text-center;
+}
+
+.bottom-nav-heading > span {
+  @apply text-font12 font-bold tracking-[3px] text-cyan-400;
+}
+
+.bottom-nav-heading h1 {
+  @apply mt-3 text-font48 font-black tracking-tight;
+}
+
+.bottom-nav-heading h1 strong {
+  @apply bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent;
+}
+
+.bottom-nav-heading p {
+  @apply mt-5 text-font16 leading-7 text-slate-400;
+}
+
+/* ========================================
+   Navigation
+======================================== */
+
+.bottom-border-nav {
+  @apply rounded-2xl border border-slate-800 bg-slate-900/80 p-2 backdrop-blur-xl;
+}
+
+.bottom-nav-list {
+  @apply flex items-center justify-center gap-1;
+}
+
+/* ========================================
+   Navigation Link
+======================================== */
+
+.bottom-nav-link {
+  @apply relative flex cursor-pointer items-center gap-2 rounded-xl px-5 py-4 text-font14 font-semibold text-slate-500 transition-all duration-300;
+}
+
+.bottom-nav-link:hover {
+  @apply text-white;
+}
+
+.bottom-nav-link.active {
+  @apply text-cyan-400;
+}
+
+/* ========================================
+   Icon
+======================================== */
+
+.bottom-nav-icon {
+  @apply transition-all duration-300;
+}
+
+.bottom-nav-link:hover .bottom-nav-icon {
+  transform: translateY(-2px);
+}
+
+.bottom-nav-link.active .bottom-nav-icon {
+  @apply text-cyan-400;
+}
+
+/* ========================================
+   Bottom Border
+======================================== */
+
+.bottom-nav-border {
+  @apply absolute bottom-0 left-1/2 h-0.5 w-0 -translate-x-1/2 rounded-full bg-cyan-400 transition-all duration-300;
+}
+
+.bottom-nav-link:hover .bottom-nav-border {
+  @apply w-3/5;
+}
+
+.bottom-nav-link.active .bottom-nav-border {
+  @apply w-full;
+}
+
+/* ========================================
+   Glow
+======================================== */
+
+.bottom-nav-link.active::after {
+  content: "";
+
+  @apply pointer-events-none absolute bottom-0 left-1/2 h-8 w-16 -translate-x-1/2 translate-y-1/2 rounded-full bg-cyan-400/20 blur-xl;
+}
+
+/* ========================================
+   Active Result
+======================================== */
+
+.bottom-nav-result {
+  @apply mx-auto mt-10 max-w-lg rounded-3xl border border-slate-800 bg-slate-900 p-8 text-center;
+}
+
+.bottom-nav-result > span {
+  @apply text-font12 font-bold tracking-[2px] text-cyan-400;
+}
+
+.bottom-nav-result h2 {
+  @apply mt-3 text-font32 font-black;
+}
+
+.bottom-nav-result p {
+  @apply mt-3 text-font14 leading-6 text-slate-400;
+}
+
+.bottom-nav-result strong {
+  @apply font-bold text-white;
+}
+
+/* ========================================
+   Hover Animation
+======================================== */
+
+.bottom-nav-link::before {
+  content: "";
+
+  @apply absolute inset-0 -z-0 scale-90 rounded-xl bg-white/0 transition-all duration-300;
+}
+
+.bottom-nav-link:hover::before {
+  @apply scale-100 bg-white/5;
+}
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width: 767px) {
+  .bottom-nav-page {
+    @apply px-4 py-10;
+  }
+
+  .bottom-nav-heading {
+    @apply mb-8;
+  }
+
+  .bottom-nav-heading h1 {
+    @apply text-font36;
+  }
+
+  .bottom-nav-heading p {
+    @apply text-font14 leading-6;
+  }
+
+  .bottom-border-nav {
+    @apply overflow-x-auto;
+  }
+
+  .bottom-nav-list {
+    @apply min-w-max justify-start;
+  }
+
+  .bottom-nav-link {
+    @apply px-4 py-3 text-font14;
+  }
+
+  .bottom-nav-result {
+    @apply mt-8 p-6;
+  }
+
+  .bottom-nav-result h2 {
+    @apply text-font28;
+  }
+}

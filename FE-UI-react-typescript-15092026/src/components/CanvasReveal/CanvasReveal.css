@@ -1,0 +1,214 @@
+@reference "../../index.css";
+
+/* Page */
+
+.canvas-reveal-page {
+  @apply min-h-screen bg-slate-950 px-5 py-16 text-white;
+}
+
+.canvas-reveal-container {
+  @apply mx-auto max-w-6xl;
+}
+
+/* Heading */
+
+.canvas-reveal-heading {
+  @apply mx-auto mb-10 max-w-2xl text-center;
+}
+
+.canvas-reveal-heading > span {
+  @apply text-font12 font-bold tracking-[3px] text-cyan-400;
+}
+
+.canvas-reveal-heading h1 {
+  @apply mt-3 text-font48 font-black tracking-tight;
+}
+
+.canvas-reveal-heading h1 strong {
+  @apply bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent;
+}
+
+.canvas-reveal-heading p {
+  @apply mt-5 text-font16 leading-7 text-slate-400;
+}
+
+/* Card */
+
+.canvas-reveal-card {
+  @apply relative mx-auto min-h-[520px] max-w-5xl overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-950;
+  cursor: crosshair;
+  isolation: isolate;
+}
+
+.canvas-reveal-card:hover {
+  @apply border-slate-700;
+}
+
+/* Canvas */
+
+.canvas-reveal-canvas {
+  @apply absolute inset-0 h-full w-full;
+  z-index: -3;
+}
+
+/* Overlay */
+
+.canvas-reveal-overlay {
+  @apply pointer-events-none absolute inset-0;
+  z-index: -2;
+
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    rgba(2, 6, 23, 0.35) 45%,
+    rgba(2, 6, 23, 0.92) 100%
+  );
+}
+
+/* Content */
+
+.canvas-reveal-content {
+  @apply relative z-10 flex min-h-[520px] flex-col items-center justify-center px-6 text-center;
+}
+
+.canvas-reveal-icon {
+  @apply mb-5 flex h-14 w-14 items-center justify-center rounded-2xl border border-cyan-400/20 bg-cyan-400/10 text-cyan-400;
+  box-shadow: 0 0 40px rgba(34, 211, 238, 0.12);
+}
+
+.canvas-reveal-label {
+  @apply text-font12 font-bold tracking-[3px] text-cyan-400;
+}
+
+.canvas-reveal-content h2 {
+  @apply mt-4 text-font48 font-black leading-tight tracking-tight;
+}
+
+.canvas-reveal-content h2 strong {
+  @apply bg-gradient-to-r from-cyan-300 via-purple-300 to-pink-300 bg-clip-text text-transparent;
+}
+
+.canvas-reveal-content p {
+  @apply mt-5 max-w-xl text-font16 leading-7 text-slate-400;
+}
+
+/* Button */
+
+.canvas-reveal-button {
+  @apply mt-7 flex cursor-pointer items-center gap-2 rounded-xl border border-white/10 bg-white px-5 py-3 text-font14 font-bold text-slate-950 transition-all duration-300;
+}
+
+.canvas-reveal-button:hover {
+  @apply bg-cyan-300;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(34, 211, 238, 0.18);
+}
+
+.canvas-reveal-button:active {
+  transform: scale(0.96);
+}
+
+.canvas-reveal-button:focus-visible {
+  @apply outline-none ring-2 ring-cyan-400 ring-offset-2 ring-offset-slate-950;
+}
+
+/* Cursor Hint */
+
+.canvas-reveal-cursor {
+  @apply absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2 rounded-full border border-white/10 bg-slate-950/70 px-4 py-2 text-font12 font-medium text-slate-400 backdrop-blur-md transition-all duration-300;
+}
+
+.canvas-reveal-cursor-hidden {
+  @apply pointer-events-none opacity-0;
+}
+
+/* Decorative Corners */
+
+.canvas-reveal-corner {
+  @apply absolute h-16 w-16 border-cyan-400/30;
+  transition: all 500ms ease;
+}
+
+.canvas-reveal-corner-top {
+  @apply left-5 top-5 rounded-tl-2xl border-l border-t;
+}
+
+.canvas-reveal-corner-bottom {
+  @apply bottom-5 right-5 rounded-br-2xl border-b border-r;
+}
+
+.canvas-reveal-card:hover .canvas-reveal-corner-top {
+  @apply border-cyan-400/70;
+  transform: translate(5px, 5px);
+}
+
+.canvas-reveal-card:hover .canvas-reveal-corner-bottom {
+  @apply border-pink-400/70;
+  transform: translate(-5px, -5px);
+}
+
+/* Info */
+
+.canvas-reveal-info {
+  @apply mx-auto mt-5 grid max-w-5xl grid-cols-3 gap-3;
+}
+
+.canvas-reveal-info > div {
+  @apply rounded-2xl border border-slate-800 bg-slate-900/60 p-4 text-center;
+}
+
+.canvas-reveal-info span {
+  @apply block text-font10 font-bold tracking-[2px] text-slate-600;
+}
+
+.canvas-reveal-info strong {
+  @apply mt-1 block text-font14 font-semibold text-slate-300;
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .canvas-reveal-page {
+    @apply px-4 py-10;
+  }
+
+  .canvas-reveal-heading {
+    @apply mb-8;
+  }
+
+  .canvas-reveal-heading h1 {
+    @apply text-font36;
+  }
+
+  .canvas-reveal-heading p {
+    @apply text-font14 leading-6;
+  }
+
+  .canvas-reveal-card {
+    @apply min-h-[460px] rounded-3xl;
+  }
+
+  .canvas-reveal-content {
+    @apply min-h-[460px];
+  }
+
+  .canvas-reveal-content h2 {
+    @apply text-font32;
+  }
+
+  .canvas-reveal-content p {
+    @apply text-font14 leading-6;
+  }
+
+  .canvas-reveal-button {
+    @apply text-font14;
+  }
+
+  .canvas-reveal-info {
+    @apply grid-cols-1;
+  }
+
+  .canvas-reveal-info > div {
+    @apply p-3;
+  }
+}

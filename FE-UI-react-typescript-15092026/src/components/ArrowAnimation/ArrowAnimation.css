@@ -1,0 +1,199 @@
+@reference '../../index.css';
+/* =====================================
+   PAGE
+===================================== */
+
+.arrow-page {
+  @apply min-h-screen bg-slate-950
+    px-5 py-16 text-white;
+}
+
+/* =====================================
+   HEADING
+===================================== */
+
+.arrow-heading {
+  @apply mx-auto mb-14 max-w-2xl text-center;
+}
+
+.arrow-heading span {
+  @apply text-xs font-bold tracking-[3px]
+    text-indigo-400;
+}
+
+.arrow-heading h1 {
+  @apply mt-3 text-4xl font-extrabold
+    md:text-5xl;
+}
+
+.arrow-heading p {
+  @apply mt-4 text-sm text-slate-400
+    md:text-base;
+}
+
+/* =====================================
+   GRID
+===================================== */
+
+.arrow-grid {
+  @apply mx-auto grid max-w-4xl
+    grid-cols-1 gap-6
+    sm:grid-cols-2
+    lg:grid-cols-4;
+}
+
+/* =====================================
+   CARD
+===================================== */
+
+.arrow-card {
+  @apply flex min-h-[180px]
+    cursor-pointer flex-col
+    items-center justify-center
+    gap-5 rounded-2xl
+    border border-slate-800
+    bg-slate-900
+    text-slate-300
+    transition-all duration-300;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.arrow-card:hover {
+  @apply border-indigo-500
+    bg-slate-800 text-indigo-400;
+
+  transform: translateY(-6px);
+
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+}
+
+/* =====================================
+   ICON
+===================================== */
+
+.arrow-icon {
+  @apply flex h-16 w-16
+    items-center justify-center
+    rounded-full
+    bg-slate-800
+    transition-all duration-300;
+}
+
+.arrow-card:hover .arrow-icon {
+  @apply bg-indigo-500
+    text-white;
+}
+
+/* =====================================
+   TITLE
+===================================== */
+
+.arrow-title {
+  @apply text-sm font-semibold
+    uppercase tracking-wider;
+}
+
+/* =====================================
+   UP
+===================================== */
+
+.arrow-up .arrow-icon {
+  animation: arrowUp 1.5s ease-in-out infinite;
+}
+
+@keyframes arrowUp {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* =====================================
+   RIGHT
+===================================== */
+
+.arrow-right .arrow-icon {
+  animation: arrowRight 1.5s ease-in-out infinite;
+}
+
+@keyframes arrowRight {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(12px);
+  }
+}
+
+/* =====================================
+   DOWN
+===================================== */
+
+.arrow-down .arrow-icon {
+  animation: arrowDown 1.5s ease-in-out infinite;
+}
+
+@keyframes arrowDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(12px);
+  }
+}
+
+/* =====================================
+   LEFT
+===================================== */
+
+.arrow-left .arrow-icon {
+  animation: arrowLeft 1.5s ease-in-out infinite;
+}
+
+@keyframes arrowLeft {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-12px);
+  }
+}
+
+/* =====================================
+   HOVER - STOP / SCALE
+===================================== */
+
+.arrow-card:hover .arrow-icon {
+  animation-play-state: paused;
+
+  transform: scale(1.15);
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 640px) {
+  .arrow-page {
+    @apply px-4 py-10;
+  }
+
+  .arrow-heading h1 {
+    @apply text-3xl;
+  }
+
+  .arrow-card {
+    @apply min-h-[150px];
+  }
+}

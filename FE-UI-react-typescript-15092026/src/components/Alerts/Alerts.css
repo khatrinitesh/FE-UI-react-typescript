@@ -1,0 +1,167 @@
+@reference "../../index.css";
+
+.alerts-section {
+  @apply min-h-screen bg-slate-100 px-5 py-[70px];
+}
+
+/* Heading */
+
+.alerts-heading {
+  @apply mx-auto mb-11 max-w-[700px] text-center;
+}
+
+.alerts-subtitle {
+  @apply mb-2.5 inline-block text-[13px] font-bold
+    tracking-[2px] text-indigo-500;
+}
+
+.alerts-heading h1 {
+  @apply m-0 text-[42px] font-extrabold text-gray-900;
+}
+
+.alerts-heading p {
+  @apply mt-3 text-base text-gray-500;
+}
+
+/* Grid */
+
+.alerts-grid {
+  @apply mx-auto grid w-full max-w-[900px]
+    grid-cols-3 gap-5;
+}
+
+/* Buttons */
+
+.alert-button {
+  @apply flex min-h-[60px] items-center justify-center
+    gap-2.5 rounded-xl border bg-white
+    text-[15px] font-semibold
+    transition-all duration-300
+    hover:-translate-y-1
+    hover:shadow-lg
+    active:translate-y-0;
+}
+
+/* Alert Types */
+
+.alert-success {
+  @apply border-green-300 bg-green-50 text-green-700;
+}
+
+.alert-info {
+  @apply border-blue-300 bg-blue-50 text-blue-600;
+}
+
+.alert-warning {
+  @apply border-yellow-300 bg-yellow-50 text-yellow-600;
+}
+
+.alert-error {
+  @apply border-red-300 bg-red-50 text-red-600;
+}
+
+.alert-notification {
+  @apply border-purple-300 bg-purple-50 text-purple-700;
+}
+
+.alert-security {
+  @apply border-cyan-300 bg-cyan-50 text-cyan-700;
+}
+
+.alert-pending {
+  @apply border-orange-300 bg-orange-50 text-orange-600;
+}
+
+.alert-help {
+  @apply border-indigo-300 bg-indigo-50 text-indigo-600;
+}
+
+.alert-update {
+  @apply border-pink-300 bg-pink-50 text-pink-600;
+}
+
+/* Alert Popup */
+
+.alert-wrapper {
+  @apply fixed right-6 top-6 z-[9999]
+    w-[400px] max-w-[calc(100%-40px)];
+
+  animation: alertSlideIn 0.35s ease;
+}
+
+.alert-box {
+  @apply flex items-start gap-3.5 rounded-[14px]
+    border bg-white p-[18px] shadow-2xl;
+}
+
+.alert-icon {
+  @apply flex shrink-0 items-center justify-center;
+}
+
+.alert-content {
+  @apply flex-1;
+}
+
+.alert-content h3 {
+  @apply mb-1.5 text-base font-bold text-gray-900;
+}
+
+.alert-content p {
+  @apply m-0 text-sm leading-6 text-gray-500;
+}
+
+/* Close Button */
+
+.alert-close {
+  @apply flex h-8 w-8 shrink-0 items-center
+    justify-center rounded-lg border-0
+    bg-transparent text-gray-500
+    transition-colors duration-200
+    hover:bg-black/10 hover:text-gray-900;
+}
+
+/* Animation */
+
+@keyframes alertSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .alerts-grid {
+    @apply grid-cols-2;
+  }
+
+  .alerts-heading h1 {
+    @apply text-[34px];
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+  .alerts-section {
+    @apply px-4 py-[50px];
+  }
+
+  .alerts-grid {
+    @apply grid-cols-1;
+  }
+
+  .alerts-heading h1 {
+    @apply text-[30px];
+  }
+
+  .alert-wrapper {
+    @apply left-[15px] right-[15px] top-[15px] w-auto max-w-none;
+  }
+}

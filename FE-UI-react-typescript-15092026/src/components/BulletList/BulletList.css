@@ -1,0 +1,199 @@
+@reference "../../index.css";
+
+/* ========================================
+   Page
+======================================== */
+
+.bullet-list-page {
+  @apply min-h-screen bg-slate-950 px-5 py-16 text-white;
+}
+
+.bullet-list-container {
+  @apply mx-auto max-w-3xl;
+}
+
+/* ========================================
+   Heading
+======================================== */
+
+.bullet-list-heading {
+  @apply mx-auto mb-12 max-w-2xl text-center;
+}
+
+.bullet-list-heading > span {
+  @apply text-font12 font-bold tracking-[3px] text-cyan-400;
+}
+
+.bullet-list-heading h1 {
+  @apply mt-3 text-font48 font-black tracking-tight;
+}
+
+.bullet-list-heading h1 strong {
+  @apply bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent;
+}
+
+.bullet-list-heading p {
+  @apply mt-5 text-font16 leading-7 text-slate-400;
+}
+
+/* ========================================
+   Card
+======================================== */
+
+.bullet-list-card {
+  @apply rounded-3xl border border-slate-800 bg-slate-900 p-8 shadow-2xl;
+}
+
+.bullet-list-card-header > span {
+  @apply text-font12 font-bold tracking-[2px] text-slate-500;
+}
+
+.bullet-list-card-header h2 {
+  @apply mt-2 text-font28 font-black;
+}
+
+/* ========================================
+   List
+======================================== */
+
+.bullet-list {
+  @apply mt-8 space-y-5;
+}
+
+.bullet-list-item {
+  @apply flex items-start gap-4 rounded-2xl border border-transparent p-3 transition-all duration-300;
+}
+
+.bullet-list-item:hover {
+  @apply border-slate-800 bg-slate-800/60;
+}
+
+/* ========================================
+   Bullet
+======================================== */
+
+.bullet-icon {
+  @apply mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/5 transition-all duration-300;
+}
+
+.bullet-list-item:hover .bullet-icon {
+  transform: scale(1.12);
+}
+
+/* ========================================
+   Content
+======================================== */
+
+.bullet-content h3 {
+  @apply text-font18 font-bold text-white;
+}
+
+.bullet-content p {
+  @apply mt-1 text-font14 leading-6 text-slate-400;
+}
+
+/* ========================================
+   Cyan Bullet
+======================================== */
+
+.bullet-color-cyan .bullet-icon {
+  @apply text-cyan-400;
+}
+
+.bullet-color-cyan .bullet-list-item:hover .bullet-icon {
+  @apply bg-cyan-400/10;
+}
+
+/* ========================================
+   Purple Bullet
+======================================== */
+
+.bullet-color-purple .bullet-icon {
+  @apply text-purple-400;
+}
+
+.bullet-color-purple .bullet-list-item:hover .bullet-icon {
+  @apply bg-purple-400/10;
+}
+
+/* ========================================
+   Pink Bullet
+======================================== */
+
+.bullet-color-pink .bullet-icon {
+  @apply text-pink-400;
+}
+
+.bullet-color-pink .bullet-list-item:hover .bullet-icon {
+  @apply bg-pink-400/10;
+}
+
+/* ========================================
+   Green Bullet
+======================================== */
+
+.bullet-color-green .bullet-icon {
+  @apply text-emerald-400;
+}
+
+.bullet-color-green .bullet-list-item:hover .bullet-icon {
+  @apply bg-emerald-400/10;
+}
+
+/* ========================================
+   Yellow Bullet
+======================================== */
+
+.bullet-color-yellow .bullet-icon {
+  @apply text-yellow-400;
+}
+
+.bullet-color-yellow .bullet-list-item:hover .bullet-icon {
+  @apply bg-yellow-400/10;
+}
+
+/* ========================================
+   Red Bullet
+======================================== */
+
+.bullet-color-red .bullet-icon {
+  @apply text-red-400;
+}
+
+.bullet-color-red .bullet-list-item:hover .bullet-icon {
+  @apply bg-red-400/10;
+}
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width: 767px) {
+  .bullet-list-page {
+    @apply px-4 py-10;
+  }
+
+  .bullet-list-heading h1 {
+    @apply text-font36;
+  }
+
+  .bullet-list-heading p {
+    @apply text-font14 leading-6;
+  }
+
+  .bullet-list-card {
+    @apply p-5;
+  }
+
+  .bullet-list-card-header h2 {
+    @apply text-font24;
+  }
+
+  .bullet-content h3 {
+    @apply text-font16;
+  }
+
+  .bullet-content p {
+    @apply text-font14;
+  }
+}
