@@ -1,0 +1,230 @@
+@import "tailwindcss";
+
+
+:root {
+  --fontBase: 2vh;
+  --font1: .0625rem;
+  --font2: .125rem;
+  --font3: .1875rem;
+  --font4: .25rem;
+  --font5: .3125rem;
+  --font6: .375rem;
+  --font7: .4375rem;
+  --font8: .5rem;
+  --font9: .5625rem;
+  --font10: .625rem;
+  --font11: .6875rem;
+  --font12: .75rem;
+  --font13: .8125rem;
+  --font14: .875rem;
+  --font15: .9375rem;
+  --font16: 1rem;
+  --font17: 1.0625rem;
+  --font18: 1.125rem;
+  --font19: 1.1875rem;
+  --font20: 1.25rem;
+  --font21: 1.3125rem;
+  --font22: 1.375rem;
+  --font23: 1.4375rem;
+  --font24: 1.5rem;
+  --font25: 1.5625rem;
+  --font26: 1.625rem;
+  --font27: 1.6875rem;
+  --font28: 1.75rem;
+  --font29: 1.8125rem;
+  --font30: 1.875rem;
+  --font31: 1.9375rem;
+  --font32: 2rem;
+  --font33: 2.0625rem;
+  --font34: 2.125rem;
+  --font35: 2.1875rem;
+  --font36: 2.25rem;
+  --font37: 2.3125rem;
+  --font38: 2.375rem;
+  --font39: 2.4375rem;
+  --font40: 2.5rem;
+  --font41: 2.5625rem;
+  --font42: 2.625rem;
+  --font43: 2.6875rem;
+  --font44: 2.75rem;
+  --font45: 2.8125rem;
+  --font46: 2.875rem;
+  --font47: 2.9375rem;
+  --font48: 3rem;
+  --font49: 3.0625rem;
+  --font50: 3.125rem;
+  --font51: 3.1875rem;
+  --font52: 3.25rem;
+  --font53: 3.3125rem;
+  --font54: 3.375rem;
+  --font55: 3.4375rem;
+  --font56: 3.5rem;
+  --font57: 3.5625rem;
+  --font58: 3.625rem;
+  --font59: 3.6875rem;
+  --font60: 3.75rem;
+  --font61: 3.8125rem;
+  --font62: 3.875rem;
+  --font63: 3.9375rem;
+  --font64: 4rem;
+  --font65: 4.0625rem;
+  --font66: 4.125rem;
+  --font67: 4.1875rem;
+  --font68: 4.25rem;
+  --font69: 4.3125rem;
+  --font70: 4.375rem;
+  --font71: 4.4375rem;
+  --font72: 4.5rem;
+  --font73: 4.5625rem;
+  --font74: 4.625rem;
+  --font75: 4.6875rem;
+  --font76: 4.75rem;
+  --font77: 4.8125rem;
+  --font78: 4.875rem;
+  --font79: 4.9375rem;
+  --font80: 5rem;
+  --font81: 5.0625rem;
+  --font82: 5.125rem;
+  --font83: 5.1875rem;
+  --font84: 5.25rem;
+  --font85: 5.3125rem;
+  --font86: 5.375rem;
+  --font87: 5.4375rem;
+  --font88: 5.5rem;
+  --font89: 5.5625rem;
+  --font90: 5.625rem;
+  --font91: 5.6875rem;
+  --font92: 5.75rem;
+  --font93: 5.8125rem;
+  --font94: 5.875rem;
+  --font95: 5.9375rem;
+  --font96: 6rem;
+  --font97: 6.0625rem;
+  --font98: 6.125rem;
+  --font99: 6.1875rem;
+  --font100: 6.25rem;
+}
+
+
+
+@theme inline {
+  --text-font1: var(--font1);
+  --text-font2: var(--font2);
+  --text-font3: var(--font3);
+  --text-font4: var(--font4);
+  --text-font5: var(--font5);
+  --text-font6: var(--font6);
+  --text-font7: var(--font7);
+  --text-font8: var(--font8);
+  --text-font9: var(--font9);
+  --text-font10: var(--font10);
+  --text-font11: var(--font11);
+  --text-font12: var(--font12);
+  --text-font13: var(--font13);
+  --text-font14: var(--font14);
+  --text-font15: var(--font15);
+  --text-font16: var(--font16);
+  --text-font17: var(--font17);
+  --text-font18: var(--font18);
+  --text-font19: var(--font19);
+  --text-font20: var(--font20);
+  --text-font21: var(--font21);
+  --text-font22: var(--font22);
+  --text-font23: var(--font23);
+  --text-font24: var(--font24);
+  --text-font25: var(--font25);
+  --text-font26: var(--font26);
+  --text-font27: var(--font27);
+  --text-font28: var(--font28);
+  --text-font29: var(--font29);
+  --text-font30: var(--font30);
+  --text-font31: var(--font31);
+  --text-font32: var(--font32);
+  --text-font33: var(--font33);
+  --text-font34: var(--font34);
+  --text-font35: var(--font35);
+  --text-font36: var(--font36);
+  --text-font37: var(--font37);
+  --text-font38: var(--font38);
+  --text-font39: var(--font39);
+  --text-font40: var(--font40);
+  --text-font41: var(--font41);
+  --text-font42: var(--font42);
+  --text-font43: var(--font43);
+  --text-font44: var(--font44);
+  --text-font45: var(--font45);
+  --text-font46: var(--font46);
+  --text-font47: var(--font47);
+  --text-font48: var(--font48);
+  --text-font49: var(--font49);
+  --text-font50: var(--font50);
+  --text-font51: var(--font51);
+  --text-font52: var(--font52);
+  --text-font53: var(--font53);
+  --text-font54: var(--font54);
+  --text-font55: var(--font55);
+  --text-font56: var(--font56);
+  --text-font57: var(--font57);
+  --text-font58: var(--font58);
+  --text-font59: var(--font59);
+  --text-font60: var(--font60);
+  --text-font61: var(--font61);
+  --text-font62: var(--font62);
+  --text-font63: var(--font63);
+  --text-font64: var(--font64);
+  --text-font65: var(--font65);
+  --text-font66: var(--font66);
+  --text-font67: var(--font67);
+  --text-font68: var(--font68);
+  --text-font69: var(--font69);
+  --text-font70: var(--font70);
+  --text-font71: var(--font71);
+  --text-font72: var(--font72);
+  --text-font73: var(--font73);
+  --text-font74: var(--font74);
+  --text-font75: var(--font75);
+  --text-font76: var(--font76);
+  --text-font77: var(--font77);
+  --text-font78: var(--font78);
+  --text-font79: var(--font79);
+  --text-font80: var(--font80);
+  --text-font81: var(--font81);
+  --text-font82: var(--font82);
+  --text-font83: var(--font83);
+  --text-font84: var(--font84);
+  --text-font85: var(--font85);
+  --text-font86: var(--font86);
+  --text-font87: var(--font87);
+  --text-font88: var(--font88);
+  --text-font89: var(--font89);
+  --text-font90: var(--font90);
+  --text-font91: var(--font91);
+  --text-font92: var(--font92);
+  --text-font93: var(--font93);
+  --text-font94: var(--font94);
+  --text-font95: var(--font95);
+  --text-font96: var(--font96);
+  --text-font97: var(--font97);
+  --text-font98: var(--font98); 
+  --text-font99: var(--font99);
+  --text-font100: var(--font100);
+}
+
+html {
+  font-size: var(--fontBase);
+}
+
+body {
+  line-height: 1.5;
+}
+
+.container{
+  @apply mx-auto w-full max-w-full;
+  
+  @media (min-width:992px){
+  @apply px-[8%]
+  }
+  @media (max-width:991px){
+  @apply px-4
+  }
+}

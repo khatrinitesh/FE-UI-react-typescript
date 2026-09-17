@@ -1,0 +1,81 @@
+@reference "../../index.css";
+
+.alerts {
+  @apply flex w-full flex-col gap-6;
+}
+
+.alertButtons {
+  @apply flex flex-wrap gap-3;
+}
+
+.alertButton {
+  @apply rounded-lg border border-black/10 px-4 py-2 text-font14 font-medium transition-colors;
+}
+
+.alertButton:hover {
+  @apply bg-black text-white;
+}
+
+.alert {
+  @apply flex w-full items-start gap-4 rounded-xl border p-4;
+}
+
+.alert-success {
+  @apply border-green-200 bg-green-50;
+}
+
+.alert-error {
+  @apply border-red-200 bg-red-50;
+}
+
+.alert-warning {
+  @apply border-yellow-200 bg-yellow-50;
+}
+
+.alert-info {
+  @apply border-blue-200 bg-blue-50;
+}
+
+.alertIcon {
+  @apply flex h-6 w-6 shrink-0 items-center justify-center;
+}
+
+.alertIcon svg {
+  @apply h-full w-full;
+}
+
+.alert-success .alertIcon {
+  @apply text-green-600;
+}
+
+.alert-error .alertIcon {
+  @apply text-red-600;
+}
+
+.alert-warning .alertIcon {
+  @apply text-yellow-600;
+}
+
+.alert-info .alertIcon {
+  @apply text-blue-600;
+}
+
+.alertContent {
+  @apply flex flex-1 flex-col gap-1;
+}
+
+.alertTitle {
+  @apply text-font16 font-semibold;
+}
+
+.alertDescription {
+  @apply text-font14 text-black/60;
+}
+
+.alertClose {
+  @apply flex h-6 w-6 shrink-0 items-center justify-center text-black/50;
+}
+
+.alertClose svg {
+  @apply h-full w-full;
+}

@@ -1,0 +1,14 @@
+@reference "../../index.css";
+
+.bulletList {
+  @apply flex flex-col gap-2;
+}
+
+.bulletListItem {
+  @apply relative pl-5 text-font14;
+}
+
+.bulletListItem::before {
+  @apply absolute left-0 top-[0.65em] h-2 w-2 rounded-full bg-blue-500 content-[''];
+  transform: translateY(-50%);
+}

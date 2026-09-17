@@ -1,0 +1,91 @@
+@reference "../../index.css";
+
+.bentoGrid {
+  @apply grid w-full grid-cols-4 gap-4;
+}
+
+.bentoItem {
+  @apply relative flex min-h-64 flex-col overflow-hidden rounded-2xl border border-black/10 bg-white p-6;
+}
+
+.bentoItem.large {
+  @apply col-span-2 row-span-2;
+}
+
+.bentoItem.wide {
+  @apply col-span-2;
+}
+
+.bentoItem.tall {
+  @apply row-span-2;
+}
+
+.bentoItem.small {
+  @apply col-span-1;
+}
+
+.bentoImageWrapper {
+  @apply mb-5 h-48 w-full overflow-hidden rounded-xl;
+}
+
+.bentoItem.large .bentoImageWrapper {
+  @apply h-72;
+}
+
+.bentoItem.tall .bentoImageWrapper {
+  @apply h-80;
+}
+
+.bentoImage {
+  @apply h-full w-full object-cover;
+}
+
+.bentoContent {
+  @apply mt-auto flex flex-col gap-2;
+}
+
+.bentoTitle {
+  @apply text-font20 font-semibold;
+}
+
+.bentoDescription {
+  @apply text-font14 leading-[1.6] text-black/60;
+}
+
+@media (max-width: 991px) {
+  .bentoGrid {
+    @apply grid-cols-2;
+  }
+
+  .bentoItem.large {
+    @apply col-span-2;
+  }
+
+  .bentoItem.wide {
+    @apply col-span-2;
+  }
+
+  .bentoItem.tall {
+    @apply row-span-1;
+  }
+}
+
+@media (max-width: 767px) {
+  .bentoGrid {
+    @apply grid-cols-1;
+  }
+
+  .bentoItem,
+  .bentoItem.large,
+  .bentoItem.wide,
+  .bentoItem.tall,
+  .bentoItem.small {
+    @apply col-span-1 row-span-1;
+  }
+
+  .bentoImageWrapper,
+  .bentoItem.large .bentoImageWrapper,
+  .bentoItem.tall .bentoImageWrapper {
+    @apply h-52;
+  }
+}

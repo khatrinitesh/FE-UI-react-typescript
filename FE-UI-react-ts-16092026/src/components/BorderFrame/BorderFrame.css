@@ -1,0 +1,13 @@
+@reference "../../index.css";
+
+.borderFrame {
+  @apply w-full max-w-md border-8 border-black bg-white p-2;
+}
+
+.borderFrameInner {
+  @apply border-2 border-black/20 p-2;
+}
+
+.borderFrameImage {
+  @apply h-auto w-full object-cover;
+}

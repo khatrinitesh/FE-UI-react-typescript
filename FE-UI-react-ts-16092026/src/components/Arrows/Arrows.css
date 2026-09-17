@@ -1,0 +1,22 @@
+@reference "../../index.css";
+
+.arrows {
+  @apply flex flex-wrap items-center gap-3;
+}
+
+.arrowButton {
+  @apply flex h-12 w-12 items-center justify-center rounded-full border border-black/10 transition-all duration-300;
+}
+
+.arrowButton svg {
+  @apply h-5 w-5;
+  transition: transform 0.3s ease;
+}
+
+.arrowButton:hover {
+  @apply bg-black text-white;
+}
+
+.arrowButton:hover svg {
+  transform: translateX(0.2rem);
+}

@@ -1,0 +1,33 @@
+@reference "../../index.css";
+
+.accordion {
+  @apply flex w-full flex-col;
+}
+
+.accordionItem {
+  @apply w-full border-b border-black/10;
+}
+
+.accordionHeader {
+  @apply flex w-full items-center justify-between px-4 py-5 text-left;
+}
+
+.accordionTitle {
+  @apply pr-5 text-font18 font-medium;
+}
+
+.accordionIcon {
+  @apply flex h-6 w-6 shrink-0 items-center justify-center;
+}
+
+.accordionIcon svg {
+  @apply h-full w-full;
+}
+
+.accordionContent {
+  @apply w-full px-4 pb-5;
+}
+
+.accordionDescription {
+  @apply pr-10 text-font14 leading-[1.6] text-black/60;
+}

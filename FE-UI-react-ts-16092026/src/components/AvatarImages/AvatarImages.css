@@ -1,0 +1,33 @@
+@reference "../../index.css";
+
+.avatarImages {
+  @apply flex flex-wrap items-center gap-6;
+}
+
+.avatarItem {
+  @apply flex flex-col items-center gap-2;
+}
+
+.avatarImageWrapper {
+  @apply relative h-14 w-14;
+}
+
+.avatarImage {
+  @apply h-full w-full rounded-full object-cover;
+}
+
+.avatarStatus {
+  @apply absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full border-2 border-white;
+}
+
+.avatarStatus.online {
+  @apply bg-green-500;
+}
+
+.avatarStatus.offline {
+  @apply bg-gray-400;
+}
+
+.avatarName {
+  @apply text-font14 font-medium;
+}

@@ -1,0 +1,13 @@
+@reference "../../index.css";
+
+.borderImage {
+  @apply flex w-full items-center justify-center;
+}
+
+.borderImageFrame {
+  @apply relative w-full max-w-md rounded-2xl border-2 border-black p-2;
+}
+
+.borderImagePicture {
+  @apply h-auto w-full rounded-xl object-cover;
+}

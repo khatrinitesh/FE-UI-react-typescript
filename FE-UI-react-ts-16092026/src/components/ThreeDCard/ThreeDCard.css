@@ -1,0 +1,98 @@
+@reference "../../index.css";
+
+.threeDCard {
+  @apply w-full max-w-md;
+  perspective: 1200px;
+}
+
+.threeDCardInner {
+  @apply relative flex min-h-120 w-full flex-col overflow-hidden rounded-3xl border border-black/10 bg-white text-font24;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg) translateZ(0);
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.threeDCard:hover .threeDCardInner {
+  transform: rotateX(6deg) rotateY(-8deg) translateY(-0.5rem)
+    translateZ(1rem);
+  box-shadow:
+    0 2rem 4rem rgb(0 0 0 / 12%),
+    0 0.5rem 1rem rgb(0 0 0 / 6%);
+}
+
+.threeDCardImageWrapper {
+  @apply relative h-64 w-full overflow-hidden rounded-2xl;
+  transform: translateZ(2.5rem);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.threeDCard:hover .threeDCardImageWrapper {
+  transform: translateZ(3.5rem) scale(1.02);
+}
+
+.threeDCardImage {
+  @apply h-full w-full object-cover;
+}
+
+.threeDCardContent {
+  @apply flex flex-1 flex-col pt-5;
+  transform: translateZ(1.5rem);
+}
+
+.threeDCardTag {
+  @apply mb-5 w-fit rounded-full border border-black/10 px-5 py-6 text-font12 font-medium;
+}
+
+.threeDCardTitle {
+  @apply text-font32 font-semibold leading-[1.1];
+}
+
+.threeDCardDescription {
+  @apply mt-5 text-font16  text-black/60;
+}
+
+.threeDCardButton {
+  @apply mt-auto flex items-center gap-8 pt-5 text-font14 font-medium;
+}
+
+.threeDCardShine {
+  @apply pointer-events-none absolute inset-0;
+  background: linear-gradient(
+    125deg,
+    transparent 20%,
+    rgb(255 255 255 / 35%) 45%,
+    transparent 70%
+  );
+  opacity: 0;
+  transform: translateX(-100%);
+  transition:
+    transform 0.7s ease,
+    opacity 0.4s ease;
+}
+
+.threeDCard:hover .threeDCardShine {
+  opacity: 1;
+  transform: translateX(100%);
+}
+
+@media (hover: none) {
+  .threeDCard:hover .threeDCardInner {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .threeDCard:hover .threeDCardImageWrapper {
+    transform: translateZ(2.5rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .threeDCardInner,
+  .threeDCardImageWrapper,
+  .threeDCardShine {
+    transition: none;
+  }
+}

@@ -1,0 +1,18 @@
+@reference "../../index.css";
+
+.bottomBorderNav {
+  @apply flex items-center gap-6;
+}
+
+.bottomBorderNavLink {
+  @apply relative py-2 text-font14 font-medium;
+}
+
+.bottomBorderNavLink::after {
+  @apply absolute bottom-0 left-0 h-[2px] w-0 bg-black content-[''];
+  transition: width 0.3s ease;
+}
+
+.bottomBorderNavLink:hover::after {
+  @apply w-full;
+}

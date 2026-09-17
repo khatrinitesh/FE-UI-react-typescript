@@ -1,0 +1,66 @@
+@reference "../../index.css";
+
+.animateIcons {
+  @apply flex items-center gap-4;
+}
+
+.animateIconButton {
+  @apply flex h-12 w-12 items-center justify-center rounded-full border border-black/10;
+}
+
+.animateIconButton svg {
+  @apply h-5 w-5;
+}
+
+.animateIconHeart {
+  transition: transform 0.3s ease;
+}
+
+.animateIconButton:hover .animateIconHeart {
+  transform: scale(1.3);
+}
+
+.animateIconBell {
+  transform-origin: top center;
+}
+
+.animateIconButton:hover .animateIconBell {
+  animation: bellShake 0.5s ease;
+}
+
+.animateIconRotate {
+  transition: transform 0.5s ease;
+}
+
+.animateIconButton:hover .animateIconRotate {
+  transform: rotate(90deg);
+}
+
+.animateIconSpin {
+  animation: iconSpin 1.5s linear infinite;
+}
+
+@keyframes bellShake {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(15deg);
+  }
+
+  50% {
+    transform: rotate(-15deg);
+  }
+
+  75% {
+    transform: rotate(8deg);
+  }
+}
+
+@keyframes iconSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}

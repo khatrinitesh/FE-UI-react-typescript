@@ -1,0 +1,45 @@
+@reference "../../index.css";
+
+.autocomplete {
+  @apply relative w-full max-w-md;
+}
+
+.autocompleteInputWrapper {
+  @apply flex w-full items-center rounded-lg border border-black/10 bg-white px-4;
+}
+
+.autocompleteSearchIcon {
+  @apply flex h-5 w-5 shrink-0 items-center justify-center;
+}
+
+.autocompleteSearchIcon svg {
+  @apply h-full w-full;
+}
+
+.autocompleteInput {
+  @apply w-full bg-transparent px-3 py-3 text-font14 outline-none;
+}
+
+.autocompleteClear {
+  @apply flex h-5 w-5 shrink-0 items-center justify-center;
+}
+
+.autocompleteClear svg {
+  @apply h-full w-full;
+}
+
+.autocompleteDropdown {
+  @apply absolute left-0 top-full z-20 mt-2 flex max-h-60 w-full flex-col overflow-y-auto rounded-lg border border-black/10 bg-white p-1 shadow-lg;
+}
+
+.autocompleteOption {
+  @apply w-full rounded-md px-3 py-2 text-left text-font14 transition-colors;
+}
+
+.autocompleteOption:hover {
+  @apply bg-black/5;
+}
+
+.autocompleteEmpty {
+  @apply px-3 py-3 text-font14 text-black/50;
+}

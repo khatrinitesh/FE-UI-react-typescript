@@ -1,0 +1,25 @@
+@reference "../../index.css";
+
+.blurBackground {
+  @apply relative flex min-h-120 w-full items-center justify-center overflow-hidden rounded-2xl;
+}
+
+.blurBackgroundImage {
+  @apply absolute inset-0 h-full w-full scale-110 object-cover blur-xl;
+}
+
+.blurBackgroundOverlay {
+  @apply absolute inset-0 bg-black/30;
+}
+
+.blurBackgroundContent {
+  @apply relative z-10 flex max-w-2xl flex-col items-center gap-3 px-6 text-center text-white;
+}
+
+.blurBackgroundTitle {
+  @apply text-font40 font-semibold;
+}
+
+.blurBackgroundDescription {
+  @apply text-font16 text-white/80;
+}

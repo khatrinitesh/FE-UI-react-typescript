@@ -1,0 +1,45 @@
+@reference "../../index.css";
+
+.blockButtons {
+  @apply flex w-full max-w-md flex-col gap-3;
+}
+
+.blockButtonPrimary {
+  @apply flex w-full items-center justify-between rounded-lg bg-blue-600 px-5 py-3 text-font14 font-medium text-white transition-colors;
+}
+
+.blockButtonPrimary:hover {
+  @apply bg-blue-700;
+}
+
+.blockButtonSecondary {
+  @apply flex w-full items-center justify-center gap-2 rounded-lg bg-gray-100 px-5 py-3 text-font14 font-medium text-black transition-colors;
+}
+
+.blockButtonSecondary:hover {
+  @apply bg-gray-200;
+}
+
+.blockButtonOutline {
+  @apply flex w-full items-center justify-center gap-2 rounded-lg border border-black/20 px-5 py-3 text-font14 font-medium transition-colors;
+}
+
+.blockButtonOutline:hover {
+  @apply bg-black/5;
+}
+
+.blockButtonDark {
+  @apply flex w-full items-center justify-center gap-2 rounded-lg bg-black px-5 py-3 text-font14 font-medium text-white transition-colors;
+}
+
+.blockButtonDark:hover {
+  @apply bg-black/80;
+}
+
+.blockButtonText {
+  @apply block;
+}
+
+.blockButtonIcon {
+  @apply h-4 w-4 shrink-0;
+}
