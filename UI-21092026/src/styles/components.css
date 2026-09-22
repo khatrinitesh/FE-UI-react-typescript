@@ -1,0 +1,57 @@
+@layer components {
+  
+  /* animated - icon button and search */
+  .animated-icon {
+    @apply inline-flex items-center justify-center transition-transform duration-200;
+  }
+
+  .animated-button {
+    @apply inline-flex items-center justify-center gap-2
+      px-4 py-2 font-medium
+      transition-all duration-200
+      active:scale-[0.97];
+  }
+
+  .animated-search {
+    @apply flex items-center border border-neutral-200
+      bg-white transition-all duration-300;
+  }
+
+  /* alerts */
+  .alert-button {
+    @apply relative inline-flex size-10 items-center justify-center
+      rounded-full border border-neutral-200 bg-white
+      text-neutral-700 transition
+      hover:bg-neutral-100 hover:text-neutral-950;
+  }
+
+  .alert-badge {
+    @apply absolute -right-0.5 -top-0.5 flex min-h-4 min-w-4
+      items-center justify-center rounded-full bg-red-500
+      px-1 text-[10px] font-semibold text-white;
+  }
+
+  .alert-panel {
+    @apply absolute right-0 top-full z-50 mt-3 w-90
+      overflow-hidden rounded-xl border border-neutral-200
+      bg-white shadow-lg;
+  }
+
+  .alert-header {
+    @apply flex items-center justify-between border-b
+      border-neutral-200 px-4 py-3;
+  }
+
+  .alert-item {
+    @apply flex gap-3 border-b border-neutral-100
+      px-4 py-3 transition hover:bg-neutral-50;
+  }
+
+  .alert-item-unread {
+    @apply bg-blue-50/50;
+  }
+
+  .alert-dot {
+    @apply mt-2 size-2 shrink-0 rounded-full bg-blue-500;
+  }
+}

@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-alert-info: #2563eb;
+  --color-alert-success: #16a34a;
+  --color-alert-warning: #d97706;
+  --color-alert-error: #dc2626;
+
+  --color-alert-bg: #ffffff;
+  --color-alert-border: #e5e7eb;
+  --color-alert-muted: #6b7280;
+
+   --animate-icon-pop: icon-pop 300ms ease-out;
+  --animate-icon-spin: icon-spin 500ms ease-out;
+  --animate-search-open: search-open 250ms ease-out;
+}
+
+@keyframes icon-pop {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes icon-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes search-open {
+  from {
+    opacity: 0;
+    transform: scaleX(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
