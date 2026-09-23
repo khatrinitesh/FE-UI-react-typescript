@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+
+body{
+  background-color: white;
+}
+
+@layer base {
+  /* Homepage Banner / Hero H1 */
+  .home-banner h1 {
+    @apply text-3xl font-bold leading-tight  ;
+  }
+
+  /* Every Section H2 */
+  .home-section h2 {
+    @apply text-3xl font-bold leading-tight ;
+  }
+
+  /* Every Section Paragraph */
+  .home-section p {
+    @apply text-sm leading-7  md:leading-8;
+  }
+}
