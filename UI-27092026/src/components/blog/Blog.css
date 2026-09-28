@@ -1,0 +1,236 @@
+@import "tailwindcss";
+
+/* stylelint-disable at-rule-no-unknown */
+@layer components {
+  .blog-layout {
+    @apply min-h-screen bg-white text-gray-900;
+  }
+
+  /* Header */
+
+  .blog-header {
+    @apply sticky top-0 z-50
+      border-b border-gray-200
+      bg-white/90 backdrop-blur;
+  }
+
+  .blog-header__inner {
+    @apply mx-auto flex max-w-7xl
+      items-center justify-between
+      px-6 py-4;
+  }
+
+  .blog-header__logo {
+    @apply text-2xl font-bold
+      tracking-tight text-gray-950;
+  }
+
+  .blog-header__nav {
+    @apply hidden items-center gap-8
+      text-sm font-medium
+      text-gray-600 md:flex;
+  }
+
+  .blog-header__nav a {
+    @apply transition hover:text-black;
+  }
+
+  .blog-header__button {
+    @apply rounded-lg bg-black
+      px-4 py-2 text-sm
+      font-medium text-white
+      transition hover:bg-gray-800;
+  }
+
+  /* Main */
+
+  .blog-main {
+    @apply mx-auto grid max-w-7xl
+      grid-cols-1 gap-10
+      px-6 py-12
+      lg:grid-cols-[1fr_300px];
+  }
+
+  .blog-main__content {
+    @apply min-w-0;
+  }
+
+  .blog-main__sidebar {
+    @apply lg:sticky lg:top-24 lg:self-start;
+  }
+
+  /* Featured */
+
+  .blog-featured {
+    @apply mb-12 overflow-hidden
+      rounded-3xl bg-gray-950
+      text-white;
+  }
+
+  .blog-featured__image {
+    @apply h-72 w-full
+      object-cover opacity-80
+      transition duration-500
+      hover:scale-105;
+  }
+
+  .blog-featured__content {
+    @apply p-8;
+  }
+
+  .blog-featured__category {
+    @apply text-sm font-medium
+      text-blue-400;
+  }
+
+  .blog-featured__title {
+    @apply mt-3 max-w-3xl
+      text-3xl font-bold
+      md:text-4xl;
+  }
+
+  .blog-featured__description {
+    @apply mt-4 max-w-2xl
+      text-gray-400;
+  }
+
+  /* Cards */
+
+  .blog-grid {
+    @apply grid grid-cols-1 gap-8
+      md:grid-cols-2;
+  }
+
+  .blog-card {
+    @apply overflow-hidden
+      rounded-2xl border
+      border-gray-200 bg-white
+      transition duration-300
+      hover:-translate-y-1
+      hover:shadow-xl;
+  }
+
+  .blog-card__image-wrapper {
+    @apply overflow-hidden;
+  }
+
+  .blog-card__image {
+    @apply h-56 w-full
+      object-cover
+      transition duration-500
+      hover:scale-105;
+  }
+
+  .blog-card__body {
+    @apply p-6;
+  }
+
+  .blog-card__category {
+    @apply text-xs font-semibold
+      uppercase tracking-wider
+      text-blue-600;
+  }
+
+  .blog-card__title {
+    @apply mt-3 text-xl
+      font-bold leading-snug;
+  }
+
+  .blog-card__description {
+    @apply mt-3 text-sm
+      leading-6 text-gray-500;
+  }
+
+  .blog-card__footer {
+    @apply mt-6 flex
+      items-center justify-between;
+  }
+
+  .blog-card__author {
+    @apply text-sm font-medium;
+  }
+
+  .blog-card__meta {
+    @apply mt-1 text-xs text-gray-400;
+  }
+
+  .blog-card__arrow {
+    @apply flex h-10 w-10
+      items-center justify-center
+      rounded-full border
+      border-gray-200
+      transition
+      hover:bg-black
+      hover:text-white;
+  }
+
+  /* Sidebar */
+
+  .blog-sidebar {
+    @apply space-y-8;
+  }
+
+  .blog-sidebar__title {
+    @apply text-lg font-bold;
+  }
+
+  .blog-sidebar__categories {
+    @apply mt-4 flex flex-col gap-1;
+  }
+
+  .blog-sidebar__category {
+    @apply rounded-lg px-4 py-2
+      text-left text-sm
+      text-gray-600
+      transition
+      hover:bg-gray-100
+      hover:text-black;
+  }
+
+  .blog-sidebar__newsletter {
+    @apply rounded-2xl
+      bg-gray-950 p-6
+      text-white;
+  }
+
+  .blog-sidebar__newsletter h3 {
+    @apply text-lg font-semibold;
+  }
+
+  .blog-sidebar__newsletter p {
+    @apply mt-2 text-sm
+      leading-6 text-gray-400;
+  }
+
+  .blog-sidebar__input {
+    @apply mt-5 w-full rounded-lg
+      border border-white/10
+      bg-white/10 px-3 py-2
+      text-sm text-white
+      outline-none
+      placeholder:text-gray-500
+      focus:border-white/30;
+  }
+
+  .blog-sidebar__button {
+    @apply mt-3 w-full
+      rounded-lg bg-white
+      px-4 py-2 text-sm
+      font-semibold text-black
+      transition hover:bg-gray-200;
+  }
+
+  /* Footer */
+
+  .blog-footer {
+    @apply border-t border-gray-200
+      py-8 text-center
+      text-sm text-gray-400;
+  }
+
+  @media (max-width: 767px) {
+    .blog-header__button {
+      @apply hidden;
+    }
+  }
+}

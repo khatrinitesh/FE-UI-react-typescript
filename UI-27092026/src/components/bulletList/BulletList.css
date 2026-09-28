@@ -1,0 +1,33 @@
+
+
+@layer components {
+  .bullet-list {
+    @apply space-y-2;
+  }
+
+  .bullet-list__item {
+    @apply relative pl-5 text-gray-700;
+  }
+
+  .bullet-list__item::before {
+    content: "";
+    @apply absolute left-0 top-2.5
+      h-2 w-2 rounded-full;
+  }
+
+  .bullet-list--black .bullet-list__item::before {
+    @apply bg-black;
+  }
+
+  .bullet-list--blue .bullet-list__item::before {
+    @apply bg-blue-600;
+  }
+
+  .bullet-list--red .bullet-list__item::before {
+    @apply bg-red-600;
+  }
+
+  .bullet-list--green .bullet-list__item::before {
+    @apply bg-green-600;
+  }
+}

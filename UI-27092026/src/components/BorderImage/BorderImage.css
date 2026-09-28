@@ -1,0 +1,54 @@
+@reference "../../index.css";
+
+@layer components {
+  .border-image {
+    @apply inline-block overflow-hidden bg-white p-2;
+  }
+
+  .border-image__img {
+    @apply block h-auto w-full object-cover;
+  }
+
+  .border-image__title {
+    @apply px-2 py-3 text-center text-sm font-medium text-gray-800;
+  }
+
+  /* Border Colors */
+  .border-image--black {
+    @apply border-black;
+  }
+
+  .border-image--white {
+    @apply border-white;
+  }
+
+  .border-image--primary {
+    @apply border-blue-600;
+  }
+
+  .border-image--gray {
+    @apply border-gray-300;
+  }
+
+  /* Border Width */
+  .border-image--thin {
+    @apply border;
+  }
+
+  .border-image--medium {
+    @apply border-2;
+  }
+
+  .border-image--thick {
+    @apply border-4;
+  }
+
+  /* Rounded */
+  .border-image--rounded {
+    @apply rounded-xl;
+  }
+
+  .border-image--rounded .border-image__img {
+    @apply rounded-lg;
+  }
+}

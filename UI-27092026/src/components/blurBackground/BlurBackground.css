@@ -1,0 +1,44 @@
+@reference "../../index.css"
+
+@layer components {
+  .blur-background {
+    @apply relative min-h-screen
+      overflow-hidden bg-black;
+  }
+
+  .blur-background__image {
+    @apply absolute inset-0
+      scale-110
+      bg-cover bg-center
+      bg-no-repeat
+      transition-all duration-700;
+  }
+
+  .blur-background__image--sm {
+    @apply blur-sm;
+  }
+
+  .blur-background__image--md {
+    @apply blur-md;
+  }
+
+  .blur-background__image--lg {
+    @apply blur-lg;
+  }
+
+  .blur-background__image--xl {
+    @apply blur-xl;
+  }
+
+  .blur-background__overlay {
+    @apply absolute inset-0
+      bg-black/50;
+  }
+
+  .blur-background__content {
+    @apply relative z-10
+      flex min-h-screen
+      items-center justify-center
+      px-6;
+  }
+}
