@@ -1,0 +1,40 @@
+/* Mobile first: below 576px */
+.box {
+  width: 100%;
+  padding: 12px;
+}
+
+/* Small devices and above */
+@media (width >= 576px) {
+  .box {
+    width: 50%;
+  }
+}
+
+/* Tablets and above */
+@media (width >= 768px) {
+  .box {
+    padding: 24px;
+  }
+}
+
+/* Desktop and above */
+@media (width >= 1024px) {
+  .box {
+    width: 33.333%;
+  }
+}
+
+/* Large desktop and above */
+@media (width >= 1280px) {
+  .box {
+    width: 25%;
+  }
+}
+
+/* 2XL screens and above */
+@media (width >= 1536px) {
+  .box {
+    padding: 32px;
+  }
+}
